@@ -1,0 +1,993 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AC_MASK	bc1602e.c	78;"	d	file:
+AL_CTRL_RG_ADR	pcf8583.c	14;"	d	file:
+AL_EBL_B	pcf8583.c	25;"	d	file:
+AL_INT_EBL_FL	pcf8583.c	43;"	d	file:
+AL_INT_FL	pcf8583.c	24;"	d	file:
+AL_TIME_RG_ADR	pcf8583.c	15;"	d	file:
+CHK_MASK	ds1631.c	31;"	d	file:
+CLC_	clc.c	/^} CLC_;$/;"	t	typeref:struct:__anon1	file:
+CLK_AL_FUN_B0	pcf8583.c	40;"	d	file:
+CLK_AL_FUN_B1	pcf8583.c	41;"	d	file:
+CMD_ACCESS_CONFIG	ds1631.c	15;"	d	file:
+CMD_ACCESS_T	ds1631.c	12;"	d	file:
+CMD_ACCESS_TH	ds1631.c	13;"	d	file:
+CMD_ACCESS_TL	ds1631.c	14;"	d	file:
+CMD_RESET	ds1631.c	16;"	d	file:
+CMD_START_CONVERT	ds1631.c	10;"	d	file:
+CMD_STOP_CONVERT	ds1631.c	11;"	d	file:
+COL1_B	kbd.c	25;"	d	file:
+COL2_B	kbd.c	26;"	d	file:
+COL3_B	kbd.c	27;"	d	file:
+COL4_B	kbd.c	28;"	d	file:
+COL5_B	kbd.c	29;"	d	file:
+COLS	kbd.c	69;"	d	file:
+COL_DDR	kbd.c	23;"	d	file:
+COL_MASK	kbd.c	65;"	d	file:
+COL_PIN	kbd.c	24;"	d	file:
+COL_PORT	kbd.c	22;"	d	file:
+CONFIG	ds1631.c	37;"	d	file:
+CONF_R0	ds18b20.c	10;"	d	file:
+CONF_R1	ds18b20.c	11;"	d	file:
+CRC16_table_Hi	crc.c	/^static uint8_pr_t CRC16_table_Hi[256] = {$/;"	v	file:
+CRC16_table_Lo	crc.c	/^static uint8_pr_t CRC16_table_Lo[256] = {$/;"	v	file:
+CRC8_table	crc.c	/^static uint8_pr_t CRC8_table[256] = {$/;"	v	file:
+CTRL_RG	wdt.c	8;"	d	file:
+CTRL_STATUS_RG_ADR	pcf8583.c	11;"	d	file:
+DATA_TO_RD	bc1602e.c	66;"	d	file:
+DATA_TO_WR	bc1602e.c	60;"	d	file:
+DATE_MASK	pcf8583.c	52;"	d	file:
+DAYINF_	mctr.c	/^} DAYINF_;$/;"	t	typeref:struct:__anon2	file:
+DELAY_BEFOR_TRY	iic.c	31;"	d	file:
+DELAY_BEFOR_TRY	iic.c	42;"	d	file:
+DELAY_HIGH_LEV	iic.c	25;"	d	file:
+DELAY_HIGH_LEV	iic.c	36;"	d	file:
+DELAY_LOW_LEV	iic.c	24;"	d	file:
+DELAY_LOW_LEV	iic.c	35;"	d	file:
+DELAY_NEW_OPR	iic.c	28;"	d	file:
+DELAY_NEW_OPR	iic.c	39;"	d	file:
+DELAY_PAST_RESET_RDY	wire.c	28;"	d	file:
+DELAY_PAST_STOP	iic.c	30;"	d	file:
+DELAY_PAST_STOP	iic.c	41;"	d	file:
+DELAY_PRESENCE_CHK	wire.c	27;"	d	file:
+DELAY_RECOV	wire.c	32;"	d	file:
+DELAY_RESET_PULSE	wire.c	26;"	d	file:
+DELAY_SCL_TO_SDA	iic.c	29;"	d	file:
+DELAY_SCL_TO_SDA	iic.c	40;"	d	file:
+DELAY_SLAVE_UNSLEEP	iic.c	46;"	d	file:
+DELAY_SLOTE	wire.c	31;"	d	file:
+DELAY_START	wire.c	30;"	d	file:
+DELAY_STOP_COND	iic.c	26;"	d	file:
+DELAY_STOP_COND	iic.c	37;"	d	file:
+DELAY_STROBE	bc1602e.c	91;"	d	file:
+DELAY_STR_COND	iic.c	27;"	d	file:
+DELAY_STR_COND	iic.c	38;"	d	file:
+DONE_B	ds1631.c	29;"	d	file:
+DOWNWRT_BD	wrt.c	100;"	d	file:
+DOWNWRT_NP	wrt.c	154;"	d	file:
+DOWNWRT_TM	wrt.c	118;"	d	file:
+DOWNWRT_TR	wrt.c	136;"	d	file:
+DOWN_COLS	kbd.c	90;"	d	file:
+DOWN_ROWS	kbd.c	83;"	d	file:
+DQ_DOWN	wire.c	8;"	d	file:
+DQ_IS_HI	wire.c	20;"	d	file:
+DQ_VOID	wire.c	14;"	d	file:
+EBL_BIT	wdt.c	10;"	d	file:
+EBL_TIMEOUTSEQ	wdt.c	22;"	d	file:
+EBL_TURNOFF	wdt.c	21;"	d	file:
+EKEY_B	kbd.c	151;"	d	file:
+EKEY_CLEAR_FL	kbd.c	154;"	d	file:
+EKEY_DBL_INT	kbd.c	153;"	d	file:
+EKEY_DDR	kbd.c	150;"	d	file:
+EKEY_PORT	kbd.c	149;"	d	file:
+EKEY_PULLUP	kbd.c	158;"	d	file:
+EKEY_SET_INT_TYPE	kbd.c	155;"	d	file:
+EKEY_WAS_INT	kbd.c	156;"	d	file:
+FUNC_CONVERT_T	ds18b20.c	17;"	d	file:
+FUNC_COPY_SCRATCHPAD	ds18b20.c	20;"	d	file:
+FUNC_READ_POWER_SUPPLY	ds18b20.c	22;"	d	file:
+FUNC_READ_SCRATCHPAD	ds18b20.c	19;"	d	file:
+FUNC_RECALL_E2	ds18b20.c	21;"	d	file:
+FUNC_WRITE_SCRATCHPAD	ds18b20.c	18;"	d	file:
+FUN_MODE_B0	pcf8583.c	27;"	d	file:
+FUN_MODE_B1	pcf8583.c	28;"	d	file:
+HOLD_LAST_COUNT_B	pcf8583.c	29;"	d	file:
+INT_B	kbd.c	34;"	d	file:
+INT_DDR	kbd.c	32;"	d	file:
+INT_PIN	kbd.c	33;"	d	file:
+INT_PORT	kbd.c	31;"	d	file:
+INT_ROW1_CLEAR_FL	kbd.c	104;"	d	file:
+INT_ROW1_DBL	kbd.c	106;"	d	file:
+INT_ROW1_SET_TYPE	kbd.c	105;"	d	file:
+INT_ROW1_WAS	kbd.c	107;"	d	file:
+INT_ROW2_CLEAR_FL	kbd.c	109;"	d	file:
+INT_ROW2_DBL	kbd.c	111;"	d	file:
+INT_ROW2_SET_TYPE	kbd.c	110;"	d	file:
+INT_ROW2_WAS	kbd.c	112;"	d	file:
+INT_ROW3_CLEAR_FL	kbd.c	114;"	d	file:
+INT_ROW3_DBL	kbd.c	116;"	d	file:
+INT_ROW3_SET_TYPE	kbd.c	115;"	d	file:
+INT_ROW3_WAS	kbd.c	117;"	d	file:
+INT_ROW_CLEAR_FLS	kbd.c	127;"	d	file:
+INT_ROW_DBL	kbd.c	134;"	d	file:
+INT_ROW_SET_TYPES	kbd.c	120;"	d	file:
+IS_RDY	bc1602e.c	72;"	d	file:
+IS_SDA	iic.c	96;"	d	file:
+KTMR_OFF	kbd.c	180;"	d	file:
+KTMR_SET	kbd.c	172;"	d	file:
+KTMR_SOURCE	kbd.c	169;"	d	file:
+KTMR_TOP	kbd.c	168;"	d	file:
+KTMR_WAS_INT	kbd.c	170;"	d	file:
+LEFTWRT_BD	wrt.c	98;"	d	file:
+LEFTWRT_INI	wrt.c	66;"	d	file:
+LEFTWRT_Inf	wrt.c	50;"	d	file:
+LEFTWRT_LUNARPHASE	wrt.c	35;"	d	file:
+LEFTWRT_NP	wrt.c	152;"	d	file:
+LEFTWRT_TIMETEMP	wrt.c	82;"	d	file:
+LEFTWRT_TM	wrt.c	116;"	d	file:
+LEFTWRT_TR	wrt.c	134;"	d	file:
+MASK_FL	pcf8583.c	26;"	d	file:
+MODE_CELSIUS_TO_FAHRENHEIT	ctmp.c	8;"	d	file:
+MODE_CELSIUS_TO_KELVIN	ctmp.c	9;"	d	file:
+MODE_FAHRENHEIT_TO_CELSIUS	ctmp.c	12;"	d	file:
+MODE_FAHRENHEIT_TO_KELVIN	ctmp.c	13;"	d	file:
+MODE_KELVIN_TO_CELSIUS	ctmp.c	10;"	d	file:
+MODE_KELVIN_TO_FAHRENHEIT	ctmp.c	11;"	d	file:
+MONTH_MASK	pcf8583.c	53;"	d	file:
+NOTE_SYM_BELL	note.c	155;"	d	file:
+NOTE_SYM_RADIOOFF	note.c	157;"	d	file:
+NOTE_SYM_RADIOON	note.c	156;"	d	file:
+NVB_B	ds1631.c	26;"	d	file:
+OFF_EBL	bc1602e.c	41;"	d	file:
+OFF_RS	bc1602e.c	15;"	d	file:
+OFF_RW	bc1602e.c	28;"	d	file:
+ON_EBL	bc1602e.c	35;"	d	file:
+ON_RS	bc1602e.c	9;"	d	file:
+ON_RW	bc1602e.c	22;"	d	file:
+POL_B	ds1631.c	23;"	d	file:
+PULLUP_COLS	kbd.c	97;"	d	file:
+PULLUP_ROWS	kbd.c	76;"	d	file:
+R0_B	ds1631.c	24;"	d	file:
+R1_B	ds1631.c	25;"	d	file:
+RD_OPR	iic.c	63;"	d	file:
+RIGHTWRT_BD	wrt.c	99;"	d	file:
+RIGHTWRT_INI	wrt.c	67;"	d	file:
+RIGHTWRT_Inf	wrt.c	51;"	d	file:
+RIGHTWRT_LUNARPHASE	wrt.c	36;"	d	file:
+RIGHTWRT_NP	wrt.c	153;"	d	file:
+RIGHTWRT_TIMETEMP	wrt.c	83;"	d	file:
+RIGHTWRT_TM	wrt.c	117;"	d	file:
+RIGHTWRT_TR	wrt.c	135;"	d	file:
+ROW1_1	kbd.c	40;"	d	file:
+ROW1_2	kbd.c	41;"	d	file:
+ROW1_3	kbd.c	42;"	d	file:
+ROW1_4	kbd.c	43;"	d	file:
+ROW1_5	kbd.c	44;"	d	file:
+ROW1_B	kbd.c	18;"	d	file:
+ROW1_INTERRUPT_VECT	kbd.c	141;"	d	file:
+ROW2_1	kbd.c	46;"	d	file:
+ROW2_2	kbd.c	47;"	d	file:
+ROW2_3	kbd.c	48;"	d	file:
+ROW2_4	kbd.c	49;"	d	file:
+ROW2_5	kbd.c	50;"	d	file:
+ROW2_B	kbd.c	19;"	d	file:
+ROW2_INTERRUPT_VECT	kbd.c	142;"	d	file:
+ROW3_1	kbd.c	52;"	d	file:
+ROW3_2	kbd.c	53;"	d	file:
+ROW3_3	kbd.c	54;"	d	file:
+ROW3_4	kbd.c	55;"	d	file:
+ROW3_5	kbd.c	56;"	d	file:
+ROW3_B	kbd.c	20;"	d	file:
+ROW3_INTERRUPT_VECT	kbd.c	143;"	d	file:
+ROWS	kbd.c	68;"	d	file:
+ROW_DDR	kbd.c	16;"	d	file:
+ROW_MASK	kbd.c	62;"	d	file:
+ROW_NUM	kbd.c	9;"	d	file:
+ROW_PIN	kbd.c	17;"	d	file:
+ROW_PORT	kbd.c	15;"	d	file:
+RTC_ADR	pcf8583.c	49;"	d	file:
+RX_DATA	bc1602e.c	48;"	d	file:
+SCL_B	iic.c	11;"	d	file:
+SCL_DDR	iic.c	9;"	d	file:
+SCL_PIN	iic.c	10;"	d	file:
+SCL_PORT	iic.c	8;"	d	file:
+SDA_B	iic.c	16;"	d	file:
+SDA_DDR	iic.c	14;"	d	file:
+SDA_PIN	iic.c	15;"	d	file:
+SDA_PORT	iic.c	13;"	d	file:
+SET_DBLBIT	wdt.c	20;"	d	file:
+SET_EBLBIT	wdt.c	19;"	d	file:
+SHOT_B	ds1631.c	22;"	d	file:
+SIGNAL_OFF	tmr.c	18;"	d	file:
+SIGNAL_ON	tmr.c	12;"	d	file:
+SIGNAL_STATE	tmr.c	31;"	d	file:
+SIGNAL_TO_Z	tmr.c	24;"	d	file:
+START_SCL	iic.c	69;"	d	file:
+START_SDA	iic.c	83;"	d	file:
+STOP_COUNT_B	pcf8583.c	30;"	d	file:
+STOP_SCL	iic.c	76;"	d	file:
+STOP_SDA	iic.c	90;"	d	file:
+STROBE	bc1602e.c	84;"	d	file:
+TH	ds18b20.c	28;"	d	file:
+THF_B	ds1631.c	28;"	d	file:
+TIMEOUTMASK	wdt.c	28;"	d	file:
+TIMER_AL_EBL_B	pcf8583.c	42;"	d	file:
+TIMER_FUN_B0	pcf8583.c	36;"	d	file:
+TIMER_FUN_B1	pcf8583.c	37;"	d	file:
+TIMER_FUN_B2	pcf8583.c	38;"	d	file:
+TIMER_INT_EBL_B	pcf8583.c	39;"	d	file:
+TIMER_NIT_FL	pcf8583.c	23;"	d	file:
+TIME_RG_ADR	pcf8583.c	12;"	d	file:
+TL	ds18b20.c	29;"	d	file:
+TLF_B	ds1631.c	27;"	d	file:
+TRG_1_OFF_WARM	trg.c	18;"	d	file:
+TRG_1_ON_WARM	trg.c	12;"	d	file:
+TRG_1_TO_Z	trg.c	24;"	d	file:
+TRG_2_OFF_WARM	trg.c	36;"	d	file:
+TRG_2_ON_WARM	trg.c	30;"	d	file:
+TRG_2_TO_Z	trg.c	42;"	d	file:
+TRG_CHECK_TRG1_OUT	trg.c	48;"	d	file:
+TRG_CHECK_TRG2_OUT	trg.c	49;"	d	file:
+TURN_OFF_EBL_BIT	wdt.c	9;"	d	file:
+TX_DATA	bc1602e.c	54;"	d	file:
+UPWRT_BD	wrt.c	101;"	d	file:
+UPWRT_NP	wrt.c	155;"	d	file:
+UPWRT_TM	wrt.c	119;"	d	file:
+UPWRT_TR	wrt.c	137;"	d	file:
+WAITE	wdt.c	29;"	d	file:
+WAITE_RELEASE_SCL	iic.c	53;"	d	file:
+WDP0_BIT	wdt.c	13;"	d	file:
+WDP1_BIT	wdt.c	12;"	d	file:
+WDP2_BIT	wdt.c	11;"	d	file:
+WR_OPR	iic.c	62;"	d	file:
+YEAR_CRT_RG2_OFFSET	pcf8583.c	55;"	d	file:
+YEAR_CRT_RG_ADR	pcf8583.c	17;"	d	file:
+YEAR_MASK	pcf8583.c	51;"	d	file:
+YEAR_NUM_CRT_RG_ADR	pcf8583.c	16;"	d	file:
+YE_DA_RG_ADR	pcf8583.c	13;"	d	file:
+alm	alm.c	/^void alm(void)$/;"	f
+alm_Default	alm.c	/^void alm_Default(ubase_t anum)$/;"	f
+alm_Handle	alm.c	/^void alm_Handle(ubase_t anum)$/;"	f
+alm_Ini	alm.c	/^void alm_Ini(void)$/;"	f
+alm_Is_Trigger	alm.c	/^bool alm_Is_Trigger(ubase_t anum)$/;"	f
+alm_Off	alm.c	/^bool alm_Off(ubase_t anum)$/;"	f
+alm_On	alm.c	/^bool alm_On(ubase_t anum)$/;"	f
+alm_ReSignal	alm.c	/^void alm_ReSignal(ubase_t anum)$/;"	f
+alm_Reset	alm.c	/^bool alm_Reset(ubase_t anum)$/;"	f
+alm_Reset_Ring	alm.c	/^void alm_Reset_Ring(ubase_t anum)$/;"	f
+alm_Restart	alm.c	/^bool alm_Restart(ubase_t anum)$/;"	f
+alm_Set_Day	alm.c	/^bool alm_Set_Day(ubase_t anum, day_t day)$/;"	f
+alm_Set_Melody	alm.c	/^bool alm_Set_Melody(ubase_t anum, uint8_t melody)$/;"	f
+alm_Set_Message	alm.c	/^bool alm_Set_Message(ubase_t anum, uint8_t message)$/;"	f
+alm_Set_Repnum	alm.c	/^bool alm_Set_Repnum(ubase_t anum, uint8_t repnum)$/;"	f
+alm_Set_Ring	alm.c	/^bool alm_Set_Ring(ubase_t anum)$/;"	f
+alm_Set_TimeDur	alm.c	/^bool alm_Set_TimeDur(ubase_t anum, time_t* time_dur)$/;"	f
+alm_Set_TimeOn	alm.c	/^bool alm_Set_TimeOn(ubase_t anum, time_t* time_on)$/;"	f
+alm_Set_TimeRep	alm.c	/^bool alm_Set_TimeRep(ubase_t anum, time_t* time_rep)$/;"	f
+alm_Set_Times	alm.c	/^bool alm_Set_Times(ubase_t anum, uint8_t times)$/;"	f
+alm_State	alm.c	/^bool alm_State(ubase_t anum)$/;"	f
+arr_Asci_to_Date	arr.c	/^bool arr_Asci_to_Date(uint8_t* asci, date_t* date, ubase_t type)$/;"	f
+arr_Asci_to_Fl64	arr.c	/^bool arr_Asci_to_Fl64(uint8_t* asci, fl64_t* num)$/;"	f
+arr_Asci_to_Int32	arr.c	/^bool arr_Asci_to_Int32(uint8_t* asci, int32_t* num)$/;"	f
+arr_Asci_to_Time	arr.c	/^bool arr_Asci_to_Time(uint8_t *asci, time_t *time)$/;"	f
+arr_Asci_to_Uint32	arr.c	/^bool arr_Asci_to_Uint32(uint8_t* asci, uint32_t* num)$/;"	f
+arr_Clear_Str	arr.c	/^ubase_t arr_Clear_Str(uint8_t* str, uint8_t* syms)$/;"	f
+arr_Date_to_Asci	arr.c	/^void arr_Date_to_Asci(date_t* date, uint8_t* asci, ubase_t type)$/;"	f
+arr_Is_Sym	arr.c	/^ubase_t arr_Is_Sym(uint8_t* str, uint8_t sym)$/;"	f
+arr_Roll_Str	arr.c	/^void arr_Roll_Str(uint8_t* str, ubase_t* pos, ubase_t out_size, uint8_t* out)$/;"	f
+arr_Str_Size	arr.c	/^ubase_t arr_Str_Size(uint8_t* str)$/;"	f
+arr_Time_to_Asci	arr.c	/^void arr_Time_to_Asci(time_t *time, uint8_t *asci)$/;"	f
+bc1602e_Cmd	bc1602e.c	/^void bc1602e_Cmd(uint8_t cmd)$/;"	f
+bc1602e_Get_Pos	bc1602e.c	/^void bc1602e_Get_Pos(uint8_t *AC)$/;"	f
+bc1602e_Get_Sym	bc1602e.c	/^void bc1602e_Get_Sym(uint8_t *sym)$/;"	f
+bc1602e_Ini	bc1602e.c	/^void bc1602e_Ini(void)$/;"	f
+bc1602e_Poll_Ready	bc1602e.c	/^void bc1602e_Poll_Ready(void)$/;"	f
+bc1602e_Set_Byte	bc1602e.c	/^void bc1602e_Set_Byte(uint8_t pos, uint8_t sym)$/;"	f
+bc1602e_Set_CurrentByte	bc1602e.c	/^void bc1602e_Set_CurrentByte(uint8_t sym)$/;"	f
+bc1602e_Set_SpecSymPos	bc1602e.c	/^void bc1602e_Set_SpecSymPos(uint8_t adr)$/;"	f
+bc1602e_Set_SymPos	bc1602e.c	/^void bc1602e_Set_SymPos(uint8_t adr)$/;"	f
+bcd_Bcd_to_Num	bcd.c	/^bool bcd_Bcd_to_Num(bcd_t bcd_num, uint8_t *num)$/;"	f
+bcd_Minus_Bcd	bcd.c	/^bool bcd_Minus_Bcd(bcd_t x1, bcd_t x2, bcd_t *y)$/;"	f
+bcd_Num_to_Bcd	bcd.c	/^bool bcd_Num_to_Bcd(uint8_t num, bcd_t *bcd_num)$/;"	f
+bcd_Plus_Bcd	bcd.c	/^bool bcd_Plus_Bcd(bcd_t x1, bcd_t x2, bcd_t *y)$/;"	f
+clcW	clc.c	/^usr_wnd_t clcW = {listClc, list_size(listClc)};$/;"	v
+clc_Calc	clc.c	/^bool clc_Calc(CLC_ *clc, uint8_t* str, fl64_t* res)$/;"	f
+clc_Calc	clc.c	/^bool clc_Calc(INT08U_* num_start, INT08U_* str, INT08U_ prev_sign, ubase_t dot, fl64_t* res)$/;"	f
+clc_Calculate_Str	clc.c	/^bool clc_Calculate_Str(INT08U_ *str, fl64_t* res)$/;"	f
+clc_Calculate_Str	clc.c	/^bool clc_Calculate_Str(uint8_t *str, fl64_t* res)$/;"	f
+clc_ChkStr	clc.c	/^bool clc_ChkStr(uint8_t* str)$/;"	f
+clc_I_Input	clc.c	/^void clc_I_Input(void)$/;"	f
+clc_I_Result	clc.c	/^void clc_I_Result(void)$/;"	f
+clc_Operate	clc.c	/^bool clc_Operate(ubase_t oper, fl64_t *add, fl64_t* res)$/;"	f
+crc_Count_Crc16	crc.c	/^uint16_t crc_Count_Crc16(const uint8_t din[], ubase_t dsize)$/;"	f
+crc_Count_Crc8	crc.c	/^uint8_t crc_Count_Crc8(const uint8_t din[], ubase_t dsize)$/;"	f
+crc_Count_NextCrc16	crc.c	/^void crc_Count_NextCrc16(const uint8_t din[], ubase_t dsize, uint16_t* crc)$/;"	f
+ctmpW	ctmp.c	/^usr_wnd_t ctmpW = {listCtmp, list_size(listCtmp)};$/;"	v
+ctmp_I_Input	ctmp.c	/^void ctmp_I_Input(void)$/;"	f
+ctmp_I_Result	ctmp.c	/^void ctmp_I_Result(void)$/;"	f
+date	mctr.c	/^	date_t date;$/;"	m	struct:__anon2	file:
+day	mctr.c	/^	day_t day;$/;"	m	struct:__anon2	file:
+dmem_Check_Fm24c64	dmem.c	/^bool dmem_Check_Fm24c64(void)$/;"	f
+dmem_Clear_FirstStart	dmem.c	/^void dmem_Clear_FirstStart(void)$/;"	f
+dmem_Is_First_Start	dmem.c	/^bool dmem_Is_First_Start(void)$/;"	f
+dmem_Rd_Alm_Day	dmem.c	/^bool dmem_Rd_Alm_Day(ubase_t anum, day_t* day)$/;"	f
+dmem_Rd_Alm_Melody	dmem.c	/^bool dmem_Rd_Alm_Melody(ubase_t anum, uint8_t* melody)$/;"	f
+dmem_Rd_Alm_Message	dmem.c	/^bool dmem_Rd_Alm_Message(ubase_t anum, uint8_t* message)$/;"	f
+dmem_Rd_Alm_Repnum	dmem.c	/^bool dmem_Rd_Alm_Repnum(ubase_t anum, uint8_t* repnum)$/;"	f
+dmem_Rd_Alm_State	dmem.c	/^bool dmem_Rd_Alm_State(ubase_t anum, uint8_t* state)$/;"	f
+dmem_Rd_Alm_TimeDur	dmem.c	/^bool dmem_Rd_Alm_TimeDur(ubase_t anum, time_t* time)$/;"	f
+dmem_Rd_Alm_TimeOn	dmem.c	/^bool dmem_Rd_Alm_TimeOn(ubase_t anum, time_t* time)$/;"	f
+dmem_Rd_Alm_TimeRep	dmem.c	/^bool dmem_Rd_Alm_TimeRep(ubase_t anum, time_t* time)$/;"	f
+dmem_Rd_Alm_Times	dmem.c	/^bool dmem_Rd_Alm_Times(ubase_t anum, uint8_t* times)$/;"	f
+dmem_Rd_Light_DefState	dmem.c	/^bool dmem_Rd_Light_DefState(uint8_t* def_state)$/;"	f
+dmem_Rd_Psw	dmem.c	/^bool dmem_Rd_Psw(uint32_t* psw)$/;"	f
+dmem_Rd_Psw_Use	dmem.c	/^bool dmem_Rd_Psw_Use(uint8_t* psw_use)$/;"	f
+dmem_Rd_Rmd	dmem.c	/^bool dmem_Rd_Rmd(ubase_t rnum, DRMD_* rmd)$/;"	f
+dmem_Rd_Rmd_DateOn	dmem.c	/^bool dmem_Rd_Rmd_DateOn(ubase_t rnum, date_t* date)$/;"	f
+dmem_Rd_Rmd_Filtr	dmem.c	/^bool dmem_Rd_Rmd_Filtr(ubase_t rnum, uint8_t* f)$/;"	f
+dmem_Rd_Rmd_Melody	dmem.c	/^bool dmem_Rd_Rmd_Melody(ubase_t rnum, uint8_t* melody)$/;"	f
+dmem_Rd_Rmd_Repnum	dmem.c	/^bool dmem_Rd_Rmd_Repnum(ubase_t rnum, uint8_t* repnum)$/;"	f
+dmem_Rd_Rmd_State	dmem.c	/^bool dmem_Rd_Rmd_State(ubase_t rnum, uint8_t* state)$/;"	f
+dmem_Rd_Rmd_String	dmem.c	/^bool dmem_Rd_Rmd_String(ubase_t rnum, uint8_t *str)$/;"	f
+dmem_Rd_Rmd_TimeDur	dmem.c	/^bool dmem_Rd_Rmd_TimeDur(ubase_t rnum, time_t* time)$/;"	f
+dmem_Rd_Rmd_TimeOn	dmem.c	/^bool dmem_Rd_Rmd_TimeOn(ubase_t rnum, time_t* time)$/;"	f
+dmem_Rd_Rmd_TimeRep	dmem.c	/^bool dmem_Rd_Rmd_TimeRep(ubase_t rnum, time_t* time)$/;"	f
+dmem_Rd_Rtc_AvtoShift	dmem.c	/^bool dmem_Rd_Rtc_AvtoShift(uint8_t* avto_shift)$/;"	f
+dmem_Rd_Rtc_HourSgn	dmem.c	/^bool dmem_Rd_Rtc_HourSgn(uint8_t* hour_sgn)$/;"	f
+dmem_Rd_Rtc_Pore	dmem.c	/^bool dmem_Rd_Rtc_Pore(wst_t* wst)$/;"	f
+dmem_Rd_Tmp_Use	dmem.c	/^bool dmem_Rd_Tmp_Use(ubase_t snum , uint8_t* use_sens)$/;"	f
+dmem_Rd_Tmr_Day	dmem.c	/^bool dmem_Rd_Tmr_Day(ubase_t tnum, day_t* day)$/;"	f
+dmem_Rd_Tmr_State	dmem.c	/^bool dmem_Rd_Tmr_State(ubase_t tnum, uint8_t* state)$/;"	f
+dmem_Rd_Tmr_TimeOff	dmem.c	/^bool dmem_Rd_Tmr_TimeOff(ubase_t tnum, time_t* time)$/;"	f
+dmem_Rd_Tmr_TimeOn	dmem.c	/^bool dmem_Rd_Tmr_TimeOn(ubase_t tnum, time_t* time)$/;"	f
+dmem_Rd_Tmr_Type	dmem.c	/^bool dmem_Rd_Tmr_Type(ubase_t tnum, uint8_t* type)$/;"	f
+dmem_Rd_Trg_State	dmem.c	/^bool dmem_Rd_Trg_State(ubase_t tnum, uint8_t* state)$/;"	f
+dmem_Rd_Trg_Tbottom	dmem.c	/^bool dmem_Rd_Trg_Tbottom(ubase_t tnum, int16_t* tbottom)$/;"	f
+dmem_Rd_Trg_Ttop	dmem.c	/^bool dmem_Rd_Trg_Ttop(ubase_t tnum, int16_t* ttop)$/;"	f
+dmem_Rd_Trg_Type	dmem.c	/^bool dmem_Rd_Trg_Type(ubase_t tnum, uint8_t* type)$/;"	f
+dmem_Wr_Alm_Day	dmem.c	/^bool dmem_Wr_Alm_Day(ubase_t anum, day_t day)$/;"	f
+dmem_Wr_Alm_Melody	dmem.c	/^bool dmem_Wr_Alm_Melody(ubase_t anum, uint8_t melody)$/;"	f
+dmem_Wr_Alm_Message	dmem.c	/^bool dmem_Wr_Alm_Message(ubase_t anum, uint8_t message)$/;"	f
+dmem_Wr_Alm_Repnum	dmem.c	/^bool dmem_Wr_Alm_Repnum(ubase_t anum, uint8_t repnum)$/;"	f
+dmem_Wr_Alm_State	dmem.c	/^bool dmem_Wr_Alm_State(ubase_t anum, uint8_t state)$/;"	f
+dmem_Wr_Alm_TimeDur	dmem.c	/^bool dmem_Wr_Alm_TimeDur(ubase_t anum, time_t* time)$/;"	f
+dmem_Wr_Alm_TimeOn	dmem.c	/^bool dmem_Wr_Alm_TimeOn(ubase_t anum, time_t* time)$/;"	f
+dmem_Wr_Alm_TimeRep	dmem.c	/^bool dmem_Wr_Alm_TimeRep(ubase_t anum, time_t* time)$/;"	f
+dmem_Wr_Alm_Times	dmem.c	/^bool dmem_Wr_Alm_Times(ubase_t anum, uint8_t times)$/;"	f
+dmem_Wr_Light_DefState	dmem.c	/^bool dmem_Wr_Light_DefState(uint8_t def_state)$/;"	f
+dmem_Wr_Psw	dmem.c	/^bool dmem_Wr_Psw(uint32_t psw)$/;"	f
+dmem_Wr_Psw_Use	dmem.c	/^bool dmem_Wr_Psw_Use(uint8_t psw_use)$/;"	f
+dmem_Wr_Rmd	dmem.c	/^bool dmem_Wr_Rmd(ubase_t rnum, DRMD_* rmd)$/;"	f
+dmem_Wr_Rmd_DateOn	dmem.c	/^bool dmem_Wr_Rmd_DateOn(ubase_t rnum, date_t* date)$/;"	f
+dmem_Wr_Rmd_Filtr	dmem.c	/^bool dmem_Wr_Rmd_Filtr(ubase_t rnum, uint8_t f)$/;"	f
+dmem_Wr_Rmd_Melody	dmem.c	/^bool dmem_Wr_Rmd_Melody(ubase_t rnum, uint8_t melody)$/;"	f
+dmem_Wr_Rmd_Repnum	dmem.c	/^bool dmem_Wr_Rmd_Repnum(ubase_t rnum, uint8_t repnum)$/;"	f
+dmem_Wr_Rmd_State	dmem.c	/^bool dmem_Wr_Rmd_State(ubase_t rnum, uint8_t state)$/;"	f
+dmem_Wr_Rmd_String	dmem.c	/^bool dmem_Wr_Rmd_String(ubase_t rnum, const uint8_t *str)$/;"	f
+dmem_Wr_Rmd_TimeDur	dmem.c	/^bool dmem_Wr_Rmd_TimeDur(ubase_t rnum, time_t* time)$/;"	f
+dmem_Wr_Rmd_TimeOn	dmem.c	/^bool dmem_Wr_Rmd_TimeOn(ubase_t rnum, time_t* time)$/;"	f
+dmem_Wr_Rmd_TimeRep	dmem.c	/^bool dmem_Wr_Rmd_TimeRep(ubase_t rnum, time_t* time)$/;"	f
+dmem_Wr_Rtc_AvtoShift	dmem.c	/^bool dmem_Wr_Rtc_AvtoShift(uint8_t avto_shift)$/;"	f
+dmem_Wr_Rtc_HourSgn	dmem.c	/^bool dmem_Wr_Rtc_HourSgn(uint8_t hour_sgn)$/;"	f
+dmem_Wr_Rtc_Pore	dmem.c	/^bool dmem_Wr_Rtc_Pore(wst_t wst)$/;"	f
+dmem_Wr_Tmp_Use	dmem.c	/^bool dmem_Wr_Tmp_Use(ubase_t snum , uint8_t use_sens)$/;"	f
+dmem_Wr_Tmr_Day	dmem.c	/^bool dmem_Wr_Tmr_Day(ubase_t tnum, day_t day)$/;"	f
+dmem_Wr_Tmr_State	dmem.c	/^bool dmem_Wr_Tmr_State(ubase_t tnum, uint8_t state)$/;"	f
+dmem_Wr_Tmr_TimeOff	dmem.c	/^bool dmem_Wr_Tmr_TimeOff(ubase_t tnum, time_t* time)$/;"	f
+dmem_Wr_Tmr_TimeOn	dmem.c	/^bool dmem_Wr_Tmr_TimeOn(ubase_t tnum, time_t* time)$/;"	f
+dmem_Wr_Tmr_Type	dmem.c	/^bool dmem_Wr_Tmr_Type(ubase_t tnum, uint8_t type)$/;"	f
+dmem_Wr_Trg_State	dmem.c	/^bool dmem_Wr_Trg_State(ubase_t tnum, uint8_t state)$/;"	f
+dmem_Wr_Trg_Tbottom	dmem.c	/^bool dmem_Wr_Trg_Tbottom(ubase_t tnum, int16_t tbottom)$/;"	f
+dmem_Wr_Trg_Ttop	dmem.c	/^bool dmem_Wr_Trg_Ttop(ubase_t tnum, int16_t ttop)$/;"	f
+dmem_Wr_Trg_Type	dmem.c	/^bool dmem_Wr_Trg_Type(ubase_t tnum, uint8_t type)$/;"	f
+dot	clc.c	/^	ubase_t dot;																	\/\/флаг ввода числа с плавающей запятой$/;"	m	struct:__anon1	file:
+ds1631_Code_to_Temp	ds1631.c	/^fl32_t ds1631_Code_to_Temp(int16_t code)$/;"	f
+ds1631_Ini	ds1631.c	/^bool ds1631_Ini()$/;"	f
+ds1631_Poll_EepromWr	ds1631.c	/^bool ds1631_Poll_EepromWr(void)$/;"	f
+ds1631_Recover_Config	ds1631.c	/^bool ds1631_Recover_Config(void)$/;"	f
+ds1631_Rx_Temp	ds1631.c	/^bool ds1631_Rx_Temp(fl32_t* temp)$/;"	f
+ds1631_Rx_TempCode	ds1631.c	/^bool ds1631_Rx_TempCode(int16_t* temp)$/;"	f
+ds1631_Temp_to_Code	ds1631.c	/^int16_t ds1631_Temp_to_Code(fl32_t temp)$/;"	f
+ds1631_Was_Convert	ds1631.c	/^bool ds1631_Was_Convert(bool* is_conv)$/;"	f
+ds1631_Wr_Config	ds1631.c	/^bool ds1631_Wr_Config(void)$/;"	f
+ds18b20_Code_to_Temp	ds18b20.c	/^fl32_t ds18b20_Code_to_Temp(int16_t code)$/;"	f
+ds18b20_Convert_Is_Done	ds18b20.c	/^bool ds18b20_Convert_Is_Done(void)$/;"	f
+ds18b20_Func	ds18b20.c	/^bool ds18b20_Func(uint8_t func)$/;"	f
+ds18b20_Ini	ds18b20.c	/^bool ds18b20_Ini(void)$/;"	f
+ds18b20_Rd_Scratchpad	ds18b20.c	/^bool ds18b20_Rd_Scratchpad(uint8_t* srp)$/;"	f
+ds18b20_Rd_Temp	ds18b20.c	/^bool ds18b20_Rd_Temp(int16_t* code)$/;"	f
+ds18b20_Rx_Data	ds18b20.c	/^void ds18b20_Rx_Data(uint8_t* data, ubase_t dsize)$/;"	f
+ds18b20_Start_Convert	ds18b20.c	/^bool ds18b20_Start_Convert(void)$/;"	f
+ds18b20_Temp_to_Code	ds18b20.c	/^int16_t ds18b20_Temp_to_Code(fl32_t temp)$/;"	f
+ds18b20_Tx_Data	ds18b20.c	/^void ds18b20_Tx_Data(uint8_t* data, ubase_t dsize)$/;"	f
+dsp_check_timer	ptimer.c	/^ubase_t dsp_check_timer;$/;"	v
+err_Alm_Rd_Day	err.c	/^void err_Alm_Rd_Day(ubase_t anum)$/;"	f
+err_Alm_Rd_Melody	err.c	/^void err_Alm_Rd_Melody(ubase_t anum)$/;"	f
+err_Alm_Rd_Message_Times	err.c	/^void err_Alm_Rd_Message_Times(ubase_t anum)$/;"	f
+err_Alm_Rd_Repnum	err.c	/^void err_Alm_Rd_Repnum(ubase_t anum)$/;"	f
+err_Alm_Rd_State	err.c	/^void err_Alm_Rd_State(ubase_t anum)$/;"	f
+err_Alm_Rd_TimeDur	err.c	/^void err_Alm_Rd_TimeDur(ubase_t anum)$/;"	f
+err_Alm_Rd_TimeOn	err.c	/^void err_Alm_Rd_TimeOn(ubase_t anum)$/;"	f
+err_Alm_Rd_TimeRep	err.c	/^void err_Alm_Rd_TimeRep(ubase_t anum)$/;"	f
+err_Ds1631	err.c	/^void err_Ds1631(void)$/;"	f
+err_Ds18b20	err.c	/^void err_Ds18b20(void)$/;"	f
+err_FM24C64	err.c	/^void err_FM24C64(void)$/;"	f
+err_IIC	err.c	/^void err_IIC(void)$/;"	f
+err_LightState_Rd	err.c	/^void err_LightState_Rd(void)$/;"	f
+err_Psw_Rd_Psw	err.c	/^void err_Psw_Rd_Psw(void)$/;"	f
+err_Psw_Rd_Use	err.c	/^void err_Psw_Rd_Use(void)$/;"	f
+err_Rmd_Rd_DateOn	err.c	/^void err_Rmd_Rd_DateOn(ubase_t rnum)$/;"	f
+err_Rmd_Rd_Filtr	err.c	/^void err_Rmd_Rd_Filtr(ubase_t rnum)$/;"	f
+err_Rmd_Rd_Melody	err.c	/^void err_Rmd_Rd_Melody(ubase_t rnum)$/;"	f
+err_Rmd_Rd_Repnum	err.c	/^void err_Rmd_Rd_Repnum(ubase_t rnum)$/;"	f
+err_Rmd_Rd_State	err.c	/^void err_Rmd_Rd_State(ubase_t rnum)$/;"	f
+err_Rmd_Rd_String	err.c	/^void err_Rmd_Rd_String(ubase_t rnum)$/;"	f
+err_Rmd_Rd_TimeDur	err.c	/^void err_Rmd_Rd_TimeDur(ubase_t rnum)$/;"	f
+err_Rmd_Rd_TimeOn	err.c	/^void err_Rmd_Rd_TimeOn(ubase_t rnum)$/;"	f
+err_Rmd_Rd_TimeRep	err.c	/^void err_Rmd_Rd_TimeRep(ubase_t rnum)$/;"	f
+err_Rtc	err.c	/^void err_Rtc(ubase_t err)$/;"	f
+err_Rtc_Rd_AvtoShift	err.c	/^void err_Rtc_Rd_AvtoShift(void)$/;"	f
+err_Rtc_Rd_HourSgn	err.c	/^void err_Rtc_Rd_HourSgn(void)$/;"	f
+err_Rtc_Rd_Pore	err.c	/^void err_Rtc_Rd_Pore(void)$/;"	f
+err_Tmp_Rd_Use	err.c	/^void err_Tmp_Rd_Use(ubase_t snum)$/;"	f
+err_Tmr_Rd_Day	err.c	/^void err_Tmr_Rd_Day(ubase_t tnum)$/;"	f
+err_Tmr_Rd_State	err.c	/^void err_Tmr_Rd_State(ubase_t tnum)$/;"	f
+err_Tmr_Rd_TimeOff	err.c	/^void err_Tmr_Rd_TimeOff(ubase_t tnum)$/;"	f
+err_Tmr_Rd_TimeOn	err.c	/^void err_Tmr_Rd_TimeOn(ubase_t tnum)$/;"	f
+err_Tmr_Rd_Type	err.c	/^void err_Tmr_Rd_Type(ubase_t tnum)$/;"	f
+err_Trg_Rd_State	err.c	/^void err_Trg_Rd_State(ubase_t tnum)$/;"	f
+err_Trg_Rd_Tbottom	err.c	/^void err_Trg_Rd_Tbottom(ubase_t tnum)$/;"	f
+err_Trg_Rd_Ttop	err.c	/^void err_Trg_Rd_Ttop(ubase_t tnum)$/;"	f
+err_Trg_Rd_Type	err.c	/^void err_Trg_Rd_Type(ubase_t tnum)$/;"	f
+fm24c64_Close	fm24c64.c	/^void fm24c64_Close(dir_t dir)$/;"	f
+fm24c64_Ini	fm24c64.c	/^void fm24c64_Ini(void)$/;"	f
+fm24c64_Open	fm24c64.c	/^bool fm24c64_Open(uint8_t dev_adr, uint16_t adr, dir_t dir)$/;"	f
+fm24c64_Rx_Byte	fm24c64.c	/^void fm24c64_Rx_Byte(uint8_t* byte)$/;"	f
+fm24c64_Tx_Byte	fm24c64.c	/^bool fm24c64_Tx_Byte(uint8_t byte)$/;"	f
+func_sign	clc.c	/^	uint8_t func_sign;															\/\/предыдущий знак функции$/;"	m	struct:__anon1	file:
+gAlm	alm.c	/^galm_t gAlm;$/;"	v
+gClc_res	clc.c	/^no_init_ fl64_t gClc_res;$/;"	v
+gCtmp_input	ctmp.c	/^no_init_ fl64_t gCtmp_input;$/;"	v
+gDayinf	mctr.c	/^DAYINF_ gDayinf;$/;"	v
+gKey	kbd.c	/^ubase_t gKey;$/;"	v
+gKey_waite_fl	kbd.c	/^ubase_t gKey_waite_fl;$/;"	v
+gLight	light.c	/^gLIGHT_ gLight;$/;"	v
+gMem	mem.c	/^no_init_ gMEM_ gMem;$/;"	v
+gMsg	msg.c	/^no_init_ gmsg_t gMsg;$/;"	v
+gRmd	rmd.c	/^no_init_ grmd_t gRmd[RMD_NUM];$/;"	v
+gRtc	rtc.c	/^grtc_t gRtc;$/;"	v
+gSgn	sgn.c	/^gsgn_t gSgn;$/;"	v
+gSta	sta.c	/^gsta_t gSta;$/;"	v
+gTmp	tmp.c	/^gtmp_t gTmp;$/;"	v
+gTmr	tmr.c	/^gtmr_t gTmr;$/;"	v
+gTrg	trg.c	/^gTRG_ gTrg;$/;"	v
+gUsr	usr.c	/^no_init_ gusr_t gUsr;$/;"	v
+iic_Close	iic.c	/^void iic_Close(void)$/;"	f
+iic_Ini	iic.c	/^void iic_Ini(void)$/;"	f
+iic_Open	iic.c	/^bool iic_Open(uint8_t dev, dir_t direct)$/;"	f
+iic_Rx_Byte	iic.c	/^void iic_Rx_Byte(uint8_t *byte, ubase_t ACK)$/;"	f
+iic_Tx_Byte	iic.c	/^bool iic_Tx_Byte(uint8_t byte)$/;"	f
+ini	ini.c	/^void ini(void)$/;"	f
+ini_Boot_Signal	ini.c	/^void ini_Boot_Signal(void)$/;"	f
+ini_Prepare_FirstStart	ini.c	/^bool ini_Prepare_FirstStart(void)$/;"	f
+kbd	kbd.c	/^void kbd(void)$/;"	f
+kbd_Ini	kbd.c	/^void kbd_Ini(void)$/;"	f
+kbd_Rx_Key	kbd.c	/^ubase_t kbd_Rx_Key(void)$/;"	f
+light_Default	light.c	/^void light_Default(void)$/;"	f
+light_Ini	light.c	/^void light_Ini(void)$/;"	f
+light_Set_DefState	light.c	/^bool light_Set_DefState(uint8_t def_state)$/;"	f
+light_Toggle	light.c	/^void light_Toggle(void)$/;"	f
+listAlmLost	msg.c	/^funcp_pr_t listAlmLost[] =$/;"	v
+listAlmWas	msg.c	/^funcp_pr_t listAlmWas[] =$/;"	v
+listBd	wrt.c	/^usrcw_ func_t* listBd[] =$/;"	v
+listClc	clc.c	/^funcp_pr_t listClc[] =$/;"	v
+listCtmp	ctmp.c	/^usrcw_ func_t* listCtmp[] =$/;"	v
+listFirstly	msg.c	/^funcp_pr_t listFirstly[] =$/;"	v
+listIicErr	msg.c	/^funcp_pr_t listIicErr[] =$/;"	v
+listInf	wrt.c	/^usrcw_ func_t* listInf[] =$/;"	v
+listIni	wrt.c	/^usrcw_ func_t* listIni[] =$/;"	v
+listLinkErr	msg.c	/^funcp_pr_t listLinkErr[] =$/;"	v
+listLunarPhase	wrt.c	/^usrcw_ func_t* listLunarPhase[] =$/;"	v
+listMemLinkErr	msg.c	/^funcp_pr_t listMemLinkErr[] =$/;"	v
+listNp	wrt.c	/^usrcw_ func_t* listNp[] =$/;"	v
+listRmdLost	msg.c	/^funcp_pr_t listRmdLost[] =$/;"	v
+listRmdSignal	msg.c	/^funcp_pr_t listRmdSignal[] =$/;"	v
+listStw	stw.c	/^funcp_pr_t listStw[] =$/;"	v
+listTimeTemp	wrt.c	/^usrcw_ func_t* listTimeTemp[] =$/;"	v
+listTm	wrt.c	/^usrcw_ func_t* listTm[] =$/;"	v
+listTmpOnSens	msg.c	/^funcp_pr_t listTmpOnSens[] =$/;"	v
+listTmrLost	msg.c	/^funcp_pr_t listTmrLost[] =$/;"	v
+listTr	wrt.c	/^usrcw_ func_t* listTr[] =$/;"	v
+listTrgLost	msg.c	/^funcp_pr_t listTrgLost[] =$/;"	v
+listTrgTbmoreTt	msg.c	/^funcp_pr_t listTrgTbmoreTt[] =$/;"	v
+listWasTimeShift	msg.c	/^funcp_pr_t listWasTimeShift[] =$/;"	v
+lunar_day	mctr.c	/^	fl32_t lunar_day;$/;"	m	struct:__anon2	file:
+lunar_phase	mctr.c	/^	ubase_t lunar_phase;$/;"	m	struct:__anon2	file:
+main	patima.c	/^void main(void)$/;"	f
+mat_Average	mat.c	/^uint32_t mat_Average(uint32_t* data, uint8_t dsize)$/;"	f
+mat_Mod_FL32	mat.c	/^fl32_t mat_Mod_FL32(fl32_t num)$/;"	f
+mat_Mod_INT16S	mat.c	/^uint16_t mat_Mod_INT16S(int16_t num)$/;"	f
+mat_Mod_INT32S	mat.c	/^uint32_t mat_Mod_INT32S(int32_t num)$/;"	f
+mat_Round_FL64	mat.c	/^int32_t mat_Round_FL64(fl64_t num)$/;"	f
+mat_sign	clc.c	/^	uint8_t mat_sign;																\/\/предыдущий мат. знак$/;"	m	struct:__anon1	file:
+mem_Close	dmem.c	/^void mem_Close(dir_t direct)$/;"	f
+mem_Fm24c64_Close	mem_fm24c64.c	/^void mem_Fm24c64_Close(dir_t dir)$/;"	f
+mem_Fm24c64_Open	mem_fm24c64.c	/^bool mem_Fm24c64_Open(uint8_t chip, dir_t dir)$/;"	f
+mem_Fm24c64_Rx_Data	mem_fm24c64.c	/^ubase_t mem_Fm24c64_Rx_Data(uint8_t* data, ubase_t dsize)$/;"	f
+mem_Fm24c64_Tx_Data	mem_fm24c64.c	/^ubase_t mem_Fm24c64_Tx_Data(uint8_t* data, ubase_t dsize)$/;"	f
+mem_Ini	dmem.c	/^void mem_Ini(void)$/;"	f
+mem_Open	dmem.c	/^bool mem_Open(dir_t direct)$/;"	f
+mem_Read_Param	mem.c	/^bool mem_Read_Param(uint32_t adr, void* data, ubase_t dsize)$/;"	f
+mem_Read_ResParam	mem.c	/^bool mem_Read_ResParam(uint32_t adr, uint32_t res_adr, void *data, ubase_t dsize)$/;"	f
+mem_Rx_Byte	dmem.c	/^bool mem_Rx_Byte(uint8_t* byte)$/;"	f
+mem_Rx_Data	dmem.c	/^bool mem_Rx_Data(uint8_t* data, ubase_t dsize)$/;"	f
+mem_Tx_Byte	dmem.c	/^bool mem_Tx_Byte(uint8_t byte)$/;"	f
+mem_Tx_Data	dmem.c	/^bool mem_Tx_Data(uint8_t* data, ubase_t dsize)$/;"	f
+mem_Write_Param	mem.c	/^bool mem_Write_Param(uint32_t adr, const void* data, ubase_t dsize)$/;"	f
+mem_Write_ResParam	mem.c	/^bool mem_Write_ResParam(uint32_t adr, uint32_t res_adr, const void* data, ubase_t dsize)$/;"	f
+menu_I_Alm_Days	mctr.c	/^void menu_I_Alm_Days(void)$/;"	f
+menu_I_Alm_Melody	mctr.c	/^void menu_I_Alm_Melody(void)$/;"	f
+menu_I_Alm_Message	mctr.c	/^void menu_I_Alm_Message(void)$/;"	f
+menu_I_Alm_OnOff	mctr.c	/^void menu_I_Alm_OnOff(void)$/;"	f
+menu_I_Alm_OneTime	mctr.c	/^void menu_I_Alm_OneTime(void)$/;"	f
+menu_I_Alm_Repnum	mctr.c	/^void menu_I_Alm_Repnum(void)$/;"	f
+menu_I_Alm_TimeDur	mctr.c	/^void menu_I_Alm_TimeDur(void)$/;"	f
+menu_I_Alm_TimeOn	mctr.c	/^void menu_I_Alm_TimeOn(void)$/;"	f
+menu_I_Alm_TimeRep	mctr.c	/^void menu_I_Alm_TimeRep(void)$/;"	f
+menu_I_Alm_Title	mctr.c	/^void menu_I_Alm_Title(void)$/;"	f
+menu_I_Alms_Alm	mctr.c	/^void menu_I_Alms_Alm(void)$/;"	f
+menu_I_Alms_Title	mctr.c	/^void menu_I_Alms_Title(void)$/;"	f
+menu_I_AskNum_Num	mctr.c	/^void menu_I_AskNum_Num(void)$/;"	f
+menu_I_AskNum_Title	mctr.c	/^void menu_I_AskNum_Title(void)$/;"	f
+menu_I_ChkPsw_Enter	mctr.c	/^void menu_I_ChkPsw_Enter(void)$/;"	f
+menu_I_ChkPsw_Title	mctr.c	/^void menu_I_ChkPsw_Title(void)$/;"	f
+menu_I_Confidence_OK	mctr.c	/^void menu_I_Confidence_OK(void)$/;"	f
+menu_I_Confidence_Title	mctr.c	/^void menu_I_Confidence_Title(void)$/;"	f
+menu_I_DayInf_Date	mctr.c	/^void menu_I_DayInf_Date(void)$/;"	f
+menu_I_DayInf_Inf	mctr.c	/^void menu_I_DayInf_Inf(void)$/;"	f
+menu_I_DayInf_Ini	mctr.c	/^void menu_I_DayInf_Ini(void)$/;"	f
+menu_I_Days_AllDays	mctr.c	/^void menu_I_Days_AllDays(void)$/;"	f
+menu_I_Days_Friday	mctr.c	/^void menu_I_Days_Friday(void)$/;"	f
+menu_I_Days_Monday	mctr.c	/^void menu_I_Days_Monday(void)$/;"	f
+menu_I_Days_Saturday	mctr.c	/^void menu_I_Days_Saturday(void)$/;"	f
+menu_I_Days_Sunday	mctr.c	/^void menu_I_Days_Sunday(void)$/;"	f
+menu_I_Days_Thursday	mctr.c	/^void menu_I_Days_Thursday(void)$/;"	f
+menu_I_Days_Title	mctr.c	/^void menu_I_Days_Title(void)$/;"	f
+menu_I_Days_Tuesday	mctr.c	/^void menu_I_Days_Tuesday(void)$/;"	f
+menu_I_Days_Wednesday	mctr.c	/^void menu_I_Days_Wednesday(void)$/;"	f
+menu_I_Enter_Enter	mctr.c	/^void menu_I_Enter_Enter(void)$/;"	f
+menu_I_Enter_Title	mctr.c	/^void menu_I_Enter_Title(void)$/;"	f
+menu_I_Filtr_Month	mctr.c	/^void menu_I_Filtr_Month(void)$/;"	f
+menu_I_Filtr_Off	mctr.c	/^void menu_I_Filtr_Off(void)$/;"	f
+menu_I_Filtr_Title	mctr.c	/^void menu_I_Filtr_Title(void)$/;"	f
+menu_I_Filtr_Year	mctr.c	/^void menu_I_Filtr_Year(void)$/;"	f
+menu_I_Firstly_OK	msg.c	/^void menu_I_Firstly_OK(void)$/;"	f
+menu_I_General_AvtoTimeShift	mctr.c	/^void menu_I_General_AvtoTimeShift(void)$/;"	f
+menu_I_General_ByDefault	mctr.c	/^void menu_I_General_ByDefault(void)$/;"	f
+menu_I_General_HourSgn	mctr.c	/^void menu_I_General_HourSgn(void)$/;"	f
+menu_I_General_Lightning	mctr.c	/^void menu_I_General_Lightning(void)$/;"	f
+menu_I_General_NewPassword	mctr.c	/^void menu_I_General_NewPassword(void)$/;"	f
+menu_I_General_TempSens	mctr.c	/^void menu_I_General_TempSens(void)$/;"	f
+menu_I_General_TimeDate	mctr.c	/^void menu_I_General_TimeDate(void)$/;"	f
+menu_I_General_Title	mctr.c	/^void menu_I_General_Title(void)$/;"	f
+menu_I_General_UsePassword	mctr.c	/^void menu_I_General_UsePassword(void)$/;"	f
+menu_I_Melody_Set	mctr.c	/^void menu_I_Melody_Set(void)$/;"	f
+menu_I_Melody_Title	mctr.c	/^void menu_I_Melody_Title(void)$/;"	f
+menu_I_Menu_Alms	mctr.c	/^void menu_I_Menu_Alms(void)$/;"	f
+menu_I_Menu_General	mctr.c	/^void menu_I_Menu_General(void)$/;"	f
+menu_I_Menu_Progs	mctr.c	/^void menu_I_Menu_Progs(void)$/;"	f
+menu_I_Menu_Rmds	mctr.c	/^void menu_I_Menu_Rmds(void)$/;"	f
+menu_I_Menu_Title	mctr.c	/^void menu_I_Menu_Title(void)$/;"	f
+menu_I_Menu_Tmrs	mctr.c	/^void menu_I_Menu_Tmrs(void)$/;"	f
+menu_I_Menu_Trgs	mctr.c	/^void menu_I_Menu_Trgs(void)$/;"	f
+menu_I_Password_InpPassword	mctr.c	/^void menu_I_Password_InpPassword(void)$/;"	f
+menu_I_Password_Title	mctr.c	/^void menu_I_Password_Title(void)$/;"	f
+menu_I_Progs_Clc	mctr.c	/^void menu_I_Progs_Clc(void)$/;"	f
+menu_I_Progs_Ctmp	mctr.c	/^void menu_I_Progs_Ctmp(void)$/;"	f
+menu_I_Progs_DayInf	mctr.c	/^void menu_I_Progs_DayInf(void)$/;"	f
+menu_I_Progs_Title	mctr.c	/^void menu_I_Progs_Title(void)$/;"	f
+menu_I_RmdExchange_NewNumber	mctr.c	/^void menu_I_RmdExchange_NewNumber(void)$/;"	f
+menu_I_RmdExchange_Title	mctr.c	/^void menu_I_RmdExchange_Title(void)$/;"	f
+menu_I_Rmd_DateOn	mctr.c	/^void menu_I_Rmd_DateOn(void)$/;"	f
+menu_I_Rmd_Filtr	mctr.c	/^void menu_I_Rmd_Filtr(void)$/;"	f
+menu_I_Rmd_Melody	mctr.c	/^void menu_I_Rmd_Melody(void)$/;"	f
+menu_I_Rmd_OnOff	mctr.c	/^void menu_I_Rmd_OnOff(void)$/;"	f
+menu_I_Rmd_Repnum	mctr.c	/^void menu_I_Rmd_Repnum(void)$/;"	f
+menu_I_Rmd_String	mctr.c	/^void menu_I_Rmd_String(void)$/;"	f
+menu_I_Rmd_TimeDur	mctr.c	/^void menu_I_Rmd_TimeDur(void)$/;"	f
+menu_I_Rmd_TimeOn	mctr.c	/^void menu_I_Rmd_TimeOn(void)$/;"	f
+menu_I_Rmd_TimeRep	mctr.c	/^void menu_I_Rmd_TimeRep(void)$/;"	f
+menu_I_Rmd_Title	mctr.c	/^void menu_I_Rmd_Title(void)$/;"	f
+menu_I_Rmds_Rmd	mctr.c	/^void menu_I_Rmds_Rmd(void)$/;"	f
+menu_I_Rmds_Title	mctr.c	/^void menu_I_Rmds_Title(void)$/;"	f
+menu_I_StrByDefault	mctr.c	/^void menu_I_StrByDefault(void)$/;"	f
+menu_I_TempSens_SensOn	mctr.c	/^void menu_I_TempSens_SensOn(void)$/;"	f
+menu_I_TempSens_Title	mctr.c	/^void menu_I_TempSens_Title(void)$/;"	f
+menu_I_TimeDate_Date	mctr.c	/^void menu_I_TimeDate_Date(void)$/;"	f
+menu_I_TimeDate_Time	mctr.c	/^void menu_I_TimeDate_Time(void)$/;"	f
+menu_I_TimeDate_Title	mctr.c	/^void menu_I_TimeDate_Title(void)$/;"	f
+menu_I_Tmr_Days	mctr.c	/^void menu_I_Tmr_Days(void)$/;"	f
+menu_I_Tmr_OnOff	mctr.c	/^void menu_I_Tmr_OnOff(void)$/;"	f
+menu_I_Tmr_TimeOff	mctr.c	/^void menu_I_Tmr_TimeOff(void)$/;"	f
+menu_I_Tmr_TimeOn	mctr.c	/^void menu_I_Tmr_TimeOn(void)$/;"	f
+menu_I_Tmr_Title	mctr.c	/^void menu_I_Tmr_Title(void)$/;"	f
+menu_I_Tmr_Type	mctr.c	/^void menu_I_Tmr_Type(void)$/;"	f
+menu_I_Tmrs_Title	mctr.c	/^void menu_I_Tmrs_Title(void)$/;"	f
+menu_I_Tmrs_Tmr	mctr.c	/^void menu_I_Tmrs_Tmr(void)$/;"	f
+menu_I_Trg_OnOff	mctr.c	/^void menu_I_Trg_OnOff(void)$/;"	f
+menu_I_Trg_Tbottom	mctr.c	/^void menu_I_Trg_Tbottom(void)$/;"	f
+menu_I_Trg_Title	mctr.c	/^void menu_I_Trg_Title(void)$/;"	f
+menu_I_Trg_Ttop	mctr.c	/^void menu_I_Trg_Ttop(void)$/;"	f
+menu_I_Trg_Type	mctr.c	/^void menu_I_Trg_Type(void)$/;"	f
+menu_I_Trgs_Title	mctr.c	/^void menu_I_Trgs_Title(void)$/;"	f
+menu_I_Trgs_Trg	mctr.c	/^void menu_I_Trgs_Trg(void)$/;"	f
+menu_Ini	mctr.c	/^void menu_Ini(void)$/;"	f
+mexe_Set_ByDef	mexe.c	/^void mexe_Set_ByDef(void)$/;"	f
+mopr_DayStr	mopr.c	/^const USRC_STR_* mopr_DayStr(day_t day)$/;"	f
+mopr_Disp_AboutRmd	mopr.c	/^void mopr_Disp_AboutRmd(void)$/;"	f
+mopr_Disp_CheckmarkStr	mopr.c	/^void mopr_Disp_CheckmarkStr(const USRC_STR_ *str, bool state)$/;"	f
+mopr_Disp_FiltrType	mopr.c	/^void mopr_Disp_FiltrType(ubase_t filtr)$/;"	f
+mopr_Disp_MelodyType	mopr.c	/^void mopr_Disp_MelodyType(ubase_t melody)$/;"	f
+mopr_Disp_OnDays	mopr.c	/^void mopr_Disp_OnDays(day_t day)$/;"	f
+mopr_Disp_RadioStr	mopr.c	/^void mopr_Disp_RadioStr(const USRC_STR_ *str, bool state)$/;"	f
+mopr_Disp_RtcDate	mopr.c	/^void mopr_Disp_RtcDate(void)$/;"	f
+mopr_Disp_RtcTime	mopr.c	/^void mopr_Disp_RtcTime(void)$/;"	f
+mopr_Disp_RtcTimeDate	mopr.c	/^void mopr_Disp_RtcTimeDate(void)$/;"	f
+mopr_Disp_Str_Date	mopr.c	/^void mopr_Disp_Str_Date(date_t* date, day_t day, ubase_t strtype)$/;"	f
+mopr_Disp_Str_Time	mopr.c	/^void mopr_Disp_Str_Time(const USRC_STR_ *str, time_t* time)$/;"	f
+mopr_ListUpDown_Num	mopr.c	/^void mopr_ListUpDown_Num(ubase_t max)$/;"	f
+mopr_MelStr	mopr.c	/^const USRC_STR_* mopr_MelStr(ubase_t mel)$/;"	f
+mopr_Set_Day	mopr.c	/^void mopr_Set_Day(const USRC_STR_ *str_day, day_t wday)$/;"	f
+mopr_Set_Melody	mopr.c	/^void mopr_Set_Melody(void)$/;"	f
+mopr_Set_RmdFiltr	mopr.c	/^void mopr_Set_RmdFiltr(const USRC_STR_ *str_r, ubase_t f)$/;"	f
+msgW_AlmLost	msg.c	/^usr_wnd_t msgW_AlmLost = {listAlmLost, list_size(listAlmLost)};$/;"	v
+msgW_AlmWas	msg.c	/^usr_wnd_t msgW_AlmWas = {listAlmWas, list_size(listAlmWas)};$/;"	v
+msgW_Firstly	msg.c	/^usr_wnd_t msgW_Firstly = {listFirstly, list_size(listFirstly)};$/;"	v
+msgW_IicErr	msg.c	/^usr_wnd_t msgW_IicErr = {listIicErr, list_size(listIicErr)};$/;"	v
+msgW_LinkErr	msg.c	/^usr_wnd_t msgW_LinkErr = {listLinkErr, list_size(listLinkErr)};$/;"	v
+msgW_MemLinkErr	msg.c	/^usr_wnd_t msgW_MemLinkErr = {listMemLinkErr, list_size(listMemLinkErr)};$/;"	v
+msgW_RmdLost	msg.c	/^usr_wnd_t msgW_RmdLost = {listRmdLost, list_size(listRmdLost)};$/;"	v
+msgW_RmdSignal	msg.c	/^usr_wnd_t msgW_RmdSignal = {listRmdSignal, list_size(listRmdSignal)};$/;"	v
+msgW_TmpOnSens	msg.c	/^usr_wnd_t msgW_TmpOnSens = {listTmpOnSens, list_size(listTmpOnSens)};$/;"	v
+msgW_TmrLost	msg.c	/^usr_wnd_t msgW_TmrLost = {listTmrLost, list_size(listTmrLost)};$/;"	v
+msgW_TrgLost	msg.c	/^usr_wnd_t msgW_TrgLost = {listTrgLost, list_size(listTrgLost)};$/;"	v
+msgW_TrgTbmoreTt	msg.c	/^usr_wnd_t msgW_TrgTbmoreTt = {listTrgTbmoreTt, list_size(listTrgTbmoreTt)};$/;"	v
+msgW_WasTimeShift	msg.c	/^usr_wnd_t msgW_WasTimeShift = {listWasTimeShift, list_size(listWasTimeShift)};$/;"	v
+msg_I_AlmWas_Time	msg.c	/^void msg_I_AlmWas_Time(void)$/;"	f
+msg_I_AlmWas_Title	msg.c	/^void msg_I_AlmWas_Title(void)$/;"	f
+msg_I_ErrCode	msg.c	/^void msg_I_ErrCode(void)$/;"	f
+msg_I_Firstly_Title	msg.c	/^void msg_I_Firstly_Title(void)$/;"	f
+msg_I_IicErr_Title	msg.c	/^void msg_I_IicErr_Title(void)$/;"	f
+msg_I_Link	msg.c	/^void msg_I_Link(void)$/;"	f
+msg_I_LinkErr_Title	msg.c	/^void msg_I_LinkErr_Title(void)$/;"	f
+msg_I_Lost	msg.c	/^void msg_I_Lost(void)$/;"	f
+msg_I_MemLinkErr_Title	msg.c	/^void msg_I_MemLinkErr_Title(void)$/;"	f
+msg_I_RmdLost_Title	msg.c	/^void msg_I_RmdLost_Title(void)$/;"	f
+msg_I_RmdSignal_Str	msg.c	/^void msg_I_RmdSignal_Str(void)$/;"	f
+msg_I_RmdSignal_Title	msg.c	/^void msg_I_RmdSignal_Title(void)$/;"	f
+msg_I_TmpOnSens_Sens	msg.c	/^void msg_I_TmpOnSens_Sens(void)$/;"	f
+msg_I_TmpOnSens_Title	msg.c	/^void msg_I_TmpOnSens_Title(void)$/;"	f
+msg_I_TmrLost_Title	msg.c	/^void msg_I_TmrLost_Title(void)$/;"	f
+msg_I_TrgLost_Title	msg.c	/^void msg_I_TrgLost_Title(void)$/;"	f
+msg_I_TrgTbmoreTt_TbMoreTt	msg.c	/^void msg_I_TrgTbmoreTt_TbMoreTt(void)$/;"	f
+msg_I_TrgTbmoreTt_Title	msg.c	/^void msg_I_TrgTbmoreTt_Title(void)$/;"	f
+msg_I_WasTimeShift_Time	msg.c	/^void msg_I_WasTimeShift_Time(void)$/;"	f
+msg_I_WasTimeShift_Title	msg.c	/^void msg_I_WasTimeShift_Title(void)$/;"	f
+msg_Ini	msg.c	/^void msg_Ini(void)$/;"	f
+mult_sign	clc.c	/^	uint8_t mult_sign;															\/\/предыдущий знак *, \/$/;"	m	struct:__anon1	file:
+note_0123456789	note.c	/^const USRC_STR_ note_0123456789[] = {0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39,0x00};	\/\/0123456789"$/;"	v
+note_12	note.c	/^const USRC_STR_ note_12[] = {0x31,0x32,0x00};	\/\/12"$/;"	v
+note_12345678	note.c	/^const USRC_STR_ note_12345678[] = {0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x00};	\/\/12345678"$/;"	v
+note_Bd	note.c	/^const USRC_STR_ note_Bd[] = {0xA0,0xE3,0x00};	\/\/Бд"$/;"	v
+note_L	note.c	/^const USRC_STR_ note_L[] = {0x4C,0x3A,0x00};	\/\/L:"$/;"	v
+note_LD	note.c	/^const USRC_STR_ note_LD[] = {0xA7,0xE0,0x3A,0x00};	\/\/ЛД:"$/;"	v
+note_Np	note.c	/^const USRC_STR_ note_Np[] = {0x48,0xBE,0x3A,0x00};	\/\/Нп:"$/;"	v
+note_Ph	note.c	/^const USRC_STR_ note_Ph[] = {0xAA,0x3A,0x00};	\/\/Ф:"$/;"	v
+note_Tb_more_Tt	note.c	/^const USRC_STR_ note_Tb_more_Tt[] = {0x74,0xBD,0x20,0x3C,0x20,0x74,0xB3,0x00};	\/\/tн < tв"$/;"	v
+note_Tm	note.c	/^const USRC_STR_ note_Tm[] = {0x54,0xBC,0x00};	\/\/Тм"$/;"	v
+note_Tr	note.c	/^const USRC_STR_ note_Tr[] = {0x54,0x70,0x00};	\/\/Тр"$/;"	v
+note__error	note.c	/^const USRC_STR_ note__error[] = {0x23,0x65,0x72,0x72,0x6F,0x72,0x00};	\/\/#error"$/;"	v
+note_aclock	note.c	/^const USRC_STR_ note_aclock[] = {0xA0,0x00};	\/\/Б"$/;"	v
+note_aclocks	note.c	/^const USRC_STR_ note_aclocks[] = {0xB2,0x79,0xE3,0xB8,0xBB,0xC4,0xBD,0xB8,0xBA,0xB8,0x00};	\/\/будильники"$/;"	v
+note_all	note.c	/^const USRC_STR_ note_all[] = {0xB3,0x63,0x65,0x00};	\/\/все"$/;"	v
+note_ascinput	note.c	/^const USRC_STR_ note_ascinput[] = {0xB3,0xB3,0x65,0xE3,0xB8,0xBF,0x65,0x00};	\/\/введите"$/;"	v
+note_ask_exchange_at	note.c	/^const USRC_STR_ note_ask_exchange_at[] = {0x6F,0xB2,0xBC,0x65,0xBD,0x20,0xBD,0x61,0x00};	\/\/обмен на"$/;"	v
+note_bla_bla	note.c	/^const USRC_STR_ note_bla_bla[] = {0x2D,0x2D,0x2D,0x00};	\/\/---"$/;"	v
+note_blink_1	note.c	/^const USRC_STR_ note_blink_1[] = {0x62,0x6C,0x69,0x6E,0x6B,0x20,0x31,0x00};	\/\/blink 1"$/;"	v
+note_blink_2	note.c	/^const USRC_STR_ note_blink_2[] = {0x62,0x6C,0x69,0x6E,0x6B,0x20,0x32,0x00};	\/\/blink 2"$/;"	v
+note_bomb	note.c	/^const USRC_STR_ note_bomb[] = {0x62,0x6F,0x6D,0x62,0x00};	\/\/bomb"$/;"	v
+note_bydef	note.c	/^const USRC_STR_ note_bydef[] = {0xBE,0x6F,0x79,0xBC,0x6F,0xBB,0xC0,0x61,0xBD,0xB8,0xC6,0x00};	\/\/поумолчанию"$/;"	v
+note_calc	note.c	/^const USRC_STR_ note_calc[] = {0xBA,0x61,0xBB,0xC4,0xBA,0x2E,0x00};	\/\/кальк."$/;"	v
+note_chaos	note.c	/^const USRC_STR_ note_chaos[] = {0x63,0x68,0x61,0x6F,0x73,0x00};	\/\/chaos"$/;"	v
+note_clava	note.c	/^const USRC_STR_ note_clava[] = {0x63,0x6C,0x61,0x76,0x61,0x00};	\/\/clava"$/;"	v
+note_cmd_23	note.c	/^const USRC_STR_ note_cmd_23[] = {0x25,0x6D,0x20,0x25,0x33,0x2E,0x31,0x66,0x20,0x25,0x6D,0x00};	\/\/%m %3.1f %m"$/;"	v
+note_cmd_24	note.c	/^const USRC_STR_ note_cmd_24[] = {0x25,0x63,0x20,0x25,0x6D,0x00};	\/\/%c %m"$/;"	v
+note_cmd_27	note.c	/^const USRC_STR_ note_cmd_27[] = {0x25,0x6D,0x25,0x75,0x20,0x25,0x54,0x20,0x25,0x63,0x00};	\/\/%m%u %T %c"$/;"	v
+note_cmd_28	note.c	/^const USRC_STR_ note_cmd_28[] = {0x25,0x44,0x20,0x25,0x6D,0x00};	\/\/%D %m"$/;"	v
+note_cmd_29	note.c	/^const USRC_STR_ note_cmd_29[] = {0x54,0x25,0x75,0x20,0x25,0x33,0x2E,0x31,0x66,0x2D,0x25,0x33,0x2E,0x31,0x66,0x20,0x25,0x63,0x00};	\/\/T%u %3.1f-%3.1f %c"$/;"	v
+note_cmd_30	note.c	/^const USRC_STR_ note_cmd_30[] = {0x25,0x6D,0x20,0x25,0x73,0x00};	\/\/%m %s"$/;"	v
+note_cmd_31	note.c	/^const USRC_STR_ note_cmd_31[] = {0x25,0x23,0x25,0x54,0x00};	\/\/%#%T"$/;"	v
+note_cmd_32	note.c	/^const USRC_STR_ note_cmd_32[] = {0x25,0x23,0x74,0x31,0x3A,0x25,0x33,0x2E,0x31,0x66,0x20,0x74,0x32,0x3A,0x25,0x33,0x2E,0x31,0x66,0x00};	\/\/%#t1:%3.1f t2:%3.1f"$/;"	v
+note_cmd_33	note.c	/^const USRC_STR_ note_cmd_33[] = {0x25,0x63,0x25,0x32,0x75,0x25,0x73,0x00};	\/\/%c%2u%s"$/;"	v
+note_cmd_34	note.c	/^const USRC_STR_ note_cmd_34[] = {0x25,0x32,0x75,0x2B,0x20,0x25,0x73,0x00};	\/\/%2u+ %s"$/;"	v
+note_cmd_35	note.c	/^const USRC_STR_ note_cmd_35[] = {0x25,0x23,0x25,0x44,0x20,0x25,0x6D,0x00};	\/\/%#%D %m"$/;"	v
+note_cmd_36	note.c	/^const USRC_STR_ note_cmd_36[] = {0x25,0x63,0x20,0x25,0x6D,0x20,0x25,0x75,0x00};	\/\/%c %m %u"$/;"	v
+note_cmd_37	note.c	/^const USRC_STR_ note_cmd_37[] = {0x25,0x6D,0x25,0x33,0x2E,0x32,0x66,0x20,0x25,0x6D,0x25,0x66,0x00};	\/\/%m%3.2f %m%f"$/;"	v
+note_cmd_38	note.c	/^const USRC_STR_ note_cmd_38[] = {0x25,0x6D,0x25,0x33,0x2E,0x32,0x66,0x20,0x25,0x6D,0x25,0x75,0x20,0x25,0x6D,0x00};	\/\/%m%3.2f %m%u %m"$/;"	v
+note_cmd_39	note.c	/^const USRC_STR_ note_cmd_39[] = {0x25,0x75,0x3A,0x25,0x6D,0x00};	\/\/%u:%m"$/;"	v
+note_conv_temp	note.c	/^const USRC_STR_ note_conv_temp[] = {0xBA,0x6F,0xBD,0xB3,0x2E,0x20,0xBF,0x65,0xBC,0xBE,0x2E,0x00};	\/\/конв. темп."$/;"	v
+note_conver	note.c	/^const USRC_STR_ note_conver[] = {0x63,0x6F,0x6E,0x76,0x65,0x72,0x00};	\/\/conver"$/;"	v
+note_converted	note.c	/^const USRC_STR_ note_converted[] = {0xBE,0x65,0x70,0x65,0xB3,0x65,0xE3,0x65,0xBD,0x6F,0x00};	\/\/переведено"$/;"	v
+note_dateon	note.c	/^const USRC_STR_ note_dateon[] = {0xE3,0x2E,0xB3,0x00};	\/\/д.в"$/;"	v
+note_day_inf	note.c	/^const USRC_STR_ note_day_inf[] = {0xB8,0xBD,0xE4,0x2E,0x20,0x6F,0x20,0xE3,0xBD,0x65,0x00};	\/\/инф. о дне"$/;"	v
+note_days	note.c	/^const USRC_STR_ note_days[] = {0xE3,0xBD,0xB8,0x3A,0x00};	\/\/дни:"$/;"	v
+note_defualt_reminder_string	note.c	/^const USRC_STR_ note_defualt_reminder_string[] = {0x30,0x35,0x96,0x00};$/;"	v
+note_device_started	note.c	/^const USRC_STR_ note_device_started[] = {0xBE,0x70,0xB8,0xB2,0x6F,0x70,0x20,0xB7,0x61,0xBE,0x79,0xE6,0x65,0xBD,0x00};	\/\/прибор запущен"$/;"	v
+note_devname	note.c	/^const USRC_STR_ note_devname[] = {0xA8,0x41,0x54,0xA5,0x4D,0x41,0x00};	\/\/ПАТИМА"$/;"	v
+note_down_1_hour	note.c	/^const USRC_STR_ note_down_1_hour[] = {0xBD,0x61,0x20,0xC0,0x61,0x63,0x20,0xBD,0x61,0xB7,0x61,0xE3,0x00};	\/\/на час назад"$/;"	v
+note_emerge	note.c	/^const USRC_STR_ note_emerge[] = {0x65,0x6D,0x65,0x72,0x67,0x65,0x00};	\/\/emerge"$/;"	v
+note_filtr	note.c	/^const USRC_STR_ note_filtr[] = {0xE4,0xB8,0xBB,0xC4,0xBF,0x70,0x3A,0x00};	\/\/фильтр:"$/;"	v
+note_first_quarter	note.c	/^const USRC_STR_ note_first_quarter[] = {0xBE,0x65,0x70,0x2E,0x20,0xC0,0x65,0xBF,0xB3,0x65,0x70,0xBF,0xC4,0x00};	\/\/пер. четверть"$/;"	v
+note_firstly	note.c	/^const USRC_STR_ note_firstly[] = {0xB3,0xBE,0x65,0x70,0xB3,0xC3,0x65,0x3F,0x00};	\/\/впервые?"$/;"	v
+note_friday	note.c	/^const USRC_STR_ note_friday[] = {0xBE,0xBF,0x00};	\/\/пт"$/;"	v
+note_full_luna	note.c	/^const USRC_STR_ note_full_luna[] = {0xBE,0x6F,0xBB,0xBD,0x61,0xC7,0x20,0xBB,0x79,0xBD,0x61,0x00};	\/\/полная луна"$/;"	v
+note_gC	note.c	/^const USRC_STR_ note_gC[] = {0x20,0x43,0x00};	\/\/C"$/;"	v
+note_general	note.c	/^const USRC_STR_ note_general[] = {0x6F,0xB2,0xE6,0xB8,0x65,0x00};	\/\/общие"$/;"	v
+note_hour_sgn	note.c	/^const USRC_STR_ note_hour_sgn[] = {0xC0,0x61,0x63,0x20,0x63,0xB8,0xB4,0xBD,0x2E,0x00};	\/\/час сигн."$/;"	v
+note_iic	note.c	/^const USRC_STR_ note_iic[] = {0x49,0x49,0x43,0x00};	\/\/IIC"$/;"	v
+note_in_own_mind	note.c	/^const USRC_STR_ note_in_own_mind[] = {0xB3,0x20,0x63,0xB3,0x6F,0x65,0xBC,0x20,0x79,0xBC,0x65,0x3F,0x00};	\/\/в своем уме?$/;"	v
+note_input	note.c	/^const USRC_STR_ note_input[] = {0xB3,0xB3,0x6F,0xE3,0x00};	\/\/ввод$/;"	v
+note_inv	note.c	/^const USRC_STR_ note_inv[] = {0xB8,0xBD,0xB3,0x65,0x70,0x2E,0x00};	\/\/инвер."$/;"	v
+note_last_quarter	note.c	/^const USRC_STR_ note_last_quarter[] = {0xBE,0x6F,0x63,0x2E,0x20,0xC0,0x65,0xBF,0xB3,0x65,0x70,0xBF,0xC4,0x00};	\/\/пос. четверть"$/;"	v
+note_less_eq	note.c	/^const USRC_STR_ note_less_eq[] = {0x3C,0x3D,0x00};	\/\/<="$/;"	v
+note_lightning	note.c	/^const USRC_STR_ note_lightning[] = {0xBE,0x6F,0xE3,0x63,0xB3,0x65,0xBF,0xBA,0x61,0x00};	\/\/подсветка"$/;"	v
+note_lost	note.c	/^const USRC_STR_ note_lost[] = {0x79,0xBF,0x65,0x70,0x2E,0x00};	\/\/утер."$/;"	v
+note_march	note.c	/^const USRC_STR_ note_march[] = {0x6D,0x61,0x72,0x63,0x68,0x00};	\/\/march"$/;"	v
+note_mel	note.c	/^const USRC_STR_ note_mel[] = {0xBC,0x65,0xBB,0x3A,0x00};	\/\/мел:"$/;"	v
+note_melody	note.c	/^const USRC_STR_ note_melody[] = {0xBC,0x65,0xBB,0x6F,0xE3,0xB8,0xC7,0x00};	\/\/мелодия"$/;"	v
+note_mem	note.c	/^const USRC_STR_ note_mem[] = {0x4D,0x45,0x4D,0x00};	\/\/MEM"$/;"	v
+note_menu	note.c	/^const USRC_STR_ note_menu[] = {0xBC,0x65,0xBD,0xC6,0x00};	\/\/меню"$/;"	v
+note_message	note.c	/^const USRC_STR_ note_message[] = {0x63,0x6F,0x6F,0xB2,0xE6,0x2E,0x00};	\/\/сообщ."$/;"	v
+note_monday	note.c	/^const USRC_STR_ note_monday[] = {0xBE,0xBD,0x00};	\/\/пн"$/;"	v
+note_month	note.c	/^const USRC_STR_ note_month[] = {0xBC,0x65,0x63,0xC7,0xE5,0x00};	\/\/месяц"$/;"	v
+note_more_eq	note.c	/^const USRC_STR_ note_more_eq[] = {0x3E,0x3D,0x00};	\/\/>="$/;"	v
+note_new_luna	note.c	/^const USRC_STR_ note_new_luna[] = {0xBD,0x6F,0xB3,0x61,0xC7,0x20,0xBB,0x79,0xBD,0x61,0x00};	\/\/новая луна"$/;"	v
+note_new_password	note.c	/^const USRC_STR_ note_new_password[] = {0xBD,0x6F,0xB3,0x2E,0xBE,0x61,0x70,0x2E,0x00};	\/\/нов.пар."$/;"	v
+note_not_can	note.c	/^const USRC_STR_ note_not_can[] = {0xBD,0x65,0x20,0xBC,0x6F,0xB6,0xBD,0x6F,0x00};	\/\/не можно"$/;"	v
+note_not_respond	note.c	/^const USRC_STR_ note_not_respond[] = {0xBD,0x65,0x20,0x6F,0xBF,0xB3,0x2E,0x00};	\/\/не отв."$/;"	v
+note_off	note.c	/^const USRC_STR_ note_off[] = {0x6F,0xBF,0xBA,0x00};	\/\/отк"$/;"	v
+note_on	note.c	/^const USRC_STR_ note_on[] = {0xB3,0xBA,0xBB,0x2E,0x00};	\/\/вкл."$/;"	v
+note_one_time	note.c	/^const USRC_STR_ note_one_time[] = {0x6F,0xE3,0xB8,0xBD,0x20,0x70,0x61,0xB7,0x00};	\/\/один раз"$/;"	v
+note_outtype	note.c	/^const USRC_STR_ note_outtype[] = {0xBF,0xB8,0xBE,0x20,0xB3,0xC3,0x78,0x2E,0x00};	\/\/тип вых."$/;"	v
+note_password	note.c	/^const USRC_STR_ note_password[] = {0xBE,0x61,0x70,0x6F,0xBB,0xC4,0x00};	\/\/пароль"$/;"	v
+note_pim	note.c	/^const USRC_STR_ note_pim[] = {0x70,0x69,0x6D,0x00};	\/\/pim"$/;"	v
+note_progs	note.c	/^const USRC_STR_ note_progs[] = {0xBE,0x70,0x6F,0xB4,0xB8,0x00};	\/\/проги"$/;"	v
+note_pum	note.c	/^const USRC_STR_ note_pum[] = {0x70,0x75,0x6D,0x00};	\/\/pum"$/;"	v
+note_reminder	note.c	/^const USRC_STR_ note_reminder[] = {0xBD,0x61,0xBE,0x6F,0xBC,0x2E,0x00};	\/\/напом."$/;"	v
+note_reminders	note.c	/^const USRC_STR_ note_reminders[] = {0xBD,0x61,0xBE,0x6F,0xBC,0xB8,0xBD,0x61,0xBB,0xBA,0xB8,0x00};	\/\/напоминалки"$/;"	v
+note_repnum	note.c	/^const USRC_STR_ note_repnum[] = {0x4E,0x20,0xBE,0x6F,0xB3,0x00};	\/\/N пов"$/;"	v
+note_ring	note.c	/^const USRC_STR_ note_ring[] = {0xB7,0xB3,0x6F,0xBD,0x3A,0x00};	\/\/звон:"$/;"	v
+note_rtc	note.c	/^const USRC_STR_ note_rtc[] = {0x52,0x54,0x43,0x00};	\/\/RTC"$/;"	v
+note_saturday	note.c	/^const USRC_STR_ note_saturday[] = {0x63,0xB2,0x00};	\/\/сб"$/;"	v
+note_shift_time	note.c	/^const USRC_STR_ note_shift_time[] = {0x61,0xB3,0xBF,0x6F,0xBE,0x65,0x70,0x2E,0xB3,0x70,0x2E,0x00};	\/\/автопер.вр."$/;"	v
+note_silence	note.c	/^const USRC_STR_ note_silence[] = {0x73,0x69,0x6C,0x65,0x6E,0x63,0x65,0x00};	\/\/silence"$/;"	v
+note_state	note.c	/^const USRC_STR_ note_state[] = {0x63,0xBF,0x61,0xBF,0x79,0x63,0x00};	\/\/статус"$/;"	v
+note_stopwatch	note.c	/^const USRC_STR_ note_stopwatch[] = {0x63,0x65,0xBA,0x79,0xBD,0xE3,0x6F,0xBC,0x65,0x70,0x00};	\/\/секундомер"$/;"	v
+note_str	note.c	/^const USRC_STR_ note_str[] = {0x63,0xBF,0x70,0x6F,0xBA,0x61,0x00};	\/\/строка"$/;"	v
+note_sunday	note.c	/^const USRC_STR_ note_sunday[] = {0xB3,0x63,0x00};	\/\/вс"$/;"	v
+note_tbottom	note.c	/^const USRC_STR_ note_tbottom[] = {0x54,0xBD,0x00};	\/\/Tн"$/;"	v
+note_temp_sens	note.c	/^const USRC_STR_ note_temp_sens[] = {0xE3,0x61,0xBF,0x2E,0xBF,0x65,0xBC,0xBE,0x2E,0x00};	\/\/дат.темп."$/;"	v
+note_tempsens1	note.c	/^const USRC_STR_ note_tempsens1[] = {0x44,0x53,0x31,0x36,0x33,0x31,0x00};	\/\/DS1631"$/;"	v
+note_tempsens2	note.c	/^const USRC_STR_ note_tempsens2[] = {0x44,0x53,0x31,0x38,0x42,0x32,0x30,0x00};	\/\/DS18B20"$/;"	v
+note_thursday	note.c	/^const USRC_STR_ note_thursday[] = {0xC0,0xBF,0x00};	\/\/чт"$/;"	v
+note_timeback	note.c	/^const USRC_STR_ note_timeback[] = {0x54,0x2E,0x6F,0xB2,0x00};	\/\/T.об"$/;"	v
+note_timedate	note.c	/^const USRC_STR_ note_timedate[] = {0xB3,0x70,0x65,0xBC,0xC7,0x2F,0xE3,0x61,0xBF,0x61,0x00};	\/\/время\/дата"$/;"	v
+note_timedur	note.c	/^const USRC_STR_ note_timedur[] = {0x54,0x2E,0x70,0x00};	\/\/T.р"$/;"	v
+note_timeforward	note.c	/^const USRC_STR_ note_timeforward[] = {0x54,0x2E,0xBE,0x70,0x00};	\/\/T.пр"$/;"	v
+note_timeoff	note.c	/^const USRC_STR_ note_timeoff[] = {0x54,0x2E,0x6F,0x00};	\/\/T.о"$/;"	v
+note_timeon	note.c	/^const USRC_STR_ note_timeon[] = {0x54,0x2E,0xB3,0x00};	\/\/T.в"$/;"	v
+note_timer	note.c	/^const USRC_STR_ note_timer[] = {0x54,0x00};	\/\/T"$/;"	v
+note_timerep	note.c	/^const USRC_STR_ note_timerep[] = {0x54,0x2E,0xBE,0x00};	\/\/T.п"$/;"	v
+note_timers	note.c	/^const USRC_STR_ note_timers[] = {0xBF,0x61,0xB9,0xBC,0x65,0x70,0x61,0x00};	\/\/таймера"$/;"	v
+note_trg	note.c	/^const USRC_STR_ note_trg[] = {0xBF,0x65,0x70,0xBC,0x6F,0x63,0xBF,0x61,0xBF,0x00};	\/\/термостат"$/;"	v
+note_ttop	note.c	/^const USRC_STR_ note_ttop[] = {0x54,0xB3,0x00};	\/\/Tв"$/;"	v
+note_tuesday	note.c	/^const USRC_STR_ note_tuesday[] = {0xB3,0xBF,0x00};	\/\/вт"$/;"	v
+note_up_1_hour	note.c	/^const USRC_STR_ note_up_1_hour[] = {0xBD,0x61,0x20,0xC0,0x61,0x63,0x20,0xB3,0xBE,0x65,0x70,0x65,0xE3,0x00};	\/\/на час вперед"$/;"	v
+note_use_password	note.c	/^const USRC_STR_ note_use_password[] = {0xB8,0x63,0xBE,0x2E,0xBE,0x61,0x70,0x6F,0xBB,0xC4,0x00};	\/\/исп.пароль"$/;"	v
+note_use_sens	note.c	/^const USRC_STR_ note_use_sens[] = {0xB8,0x63,0xBE,0x2E,0xE3,0x61,0xBF,0x2E,0x00};	\/\/исп.дат."$/;"	v
+note_value	note.c	/^const USRC_STR_ note_value[] = {0xB7,0xBD,0x61,0xC0,0x65,0xBD,0xB8,0x65,0x00};	\/\/значение$/;"	v
+note_version	note.c	/^const USRC_STR_ note_version[] = {0x76,0x2E,0x30,0x2E,0x33,0x2E,0x30,0x00};	\/\/v.0.2.9"$/;"	v
+note_waite	note.c	/^const USRC_STR_ note_waite[] = {0xBE,0x6F,0xE3,0x6F,0xB6,0xE3,0xB8,0xBF,0x65,0x2E,0x2E,0x2E,0x00};	\/\/подождите..."$/;"	v
+note_waning_crescent	note.c	/^const USRC_STR_ note_waning_crescent[] = {0x63,0x65,0x70,0xBE,0x20,0xBB,0x79,0xBD,0xC3,0x00};	\/\/серп луны"$/;"	v
+note_waning_gibbous	note.c	/^const USRC_STR_ note_waning_gibbous[] = {0x79,0xB2,0xC3,0xB3,0x2E,0x20,0xBE,0x6F,0xBB,0xBD,0x61,0xC7,0x00};	\/\/убыв. полная"$/;"	v
+note_waxing_crescent	note.c	/^const USRC_STR_ note_waxing_crescent[] = {0xBD,0x2E,0x20,0xBE,0x6F,0xBB,0x79,0xBC,0x65,0x63,0xC7,0xE5,0x00};	\/\/н. полумесяц"$/;"	v
+note_waxing_gibbous	note.c	/^const USRC_STR_ note_waxing_gibbous[] = {0xBD,0x61,0x70,0x2E,0x20,0xBE,0x6F,0xBB,0xBD,0x61,0xC7,0x00};	\/\/нар. полная"$/;"	v
+note_wdays	note.c	/^const USRC_STR_ note_wdays[] = {0xE3,0xBD,0xB8,0x20,0xBD,0x65,0xE3,0x2E,0x00};	\/\/дни нед."$/;"	v
+note_wednesday	note.c	/^const USRC_STR_ note_wednesday[] = {0x63,0x70,0x00};	\/\/ср"$/;"	v
+note_weekdays	note.c	/^const USRC_STR_ note_weekdays[] = {0xE3,0xBD,0xB8,0x20,0xBD,0x65,0xE3,0x65,0xBB,0xB8,0x00};	\/\/дни недели"$/;"	v
+note_will_on	note.c	/^const USRC_STR_ note_will_on[] = {0xB3,0xBA,0xBB,0xC6,0xC0,0xB8,0xBF,0x65,0x00};	\/\/включите"$/;"	v
+note_wrong	note.c	/^const USRC_STR_ note_wrong[] = {0xBD,0x65,0xBE,0x70,0x61,0xB3,0x2E,0x00};			\/\/неправ.$/;"	v
+note_year	note.c	/^const USRC_STR_ note_year[] = {0xB4,0x6F,0xE3,0x00};	\/\/год"$/;"	v
+note_you_exactly	note.c	/^const USRC_STR_ note_you_exactly[] = {0xB3,0xC3,0x20,0xBF,0x6F,0xC0,0xBD,0x6F,0x00};	\/\/вы точно"$/;"	v
+num_start	clc.c	/^	uint8_t* num_start;															\/\/указатель на начало числа в строке$/;"	m	struct:__anon1	file:
+pcf8583_Correct_RamYear	pcf8583.c	/^bool pcf8583_Correct_RamYear(void)$/;"	f
+pcf8583_Ini	pcf8583.c	/^bool pcf8583_Ini(void)$/;"	f
+pcf8583_Off_Alarm	pcf8583.c	/^bool pcf8583_Off_Alarm(void)$/;"	f
+pcf8583_Rd_1Param	pcf8583.c	/^bool pcf8583_Rd_1Param(uint8_t adr, uint8_t* data, ubase_t dnum)					\/\/прочитать один параметр$/;"	f
+pcf8583_Rd_Alarm	pcf8583.c	/^bool pcf8583_Rd_Alarm(time_t *time)$/;"	f
+pcf8583_Rd_Date	pcf8583.c	/^bool pcf8583_Rd_Date(date_t* date, day_t* day)$/;"	f
+pcf8583_Rd_Param	pcf8583.c	/^bool pcf8583_Rd_Param(uint8_t adr, uint8_t* data, ubase_t dnum)					\/\/прочитать два параметра$/;"	f
+pcf8583_Rd_Time	pcf8583.c	/^bool pcf8583_Rd_Time(time_t* time)$/;"	f
+pcf8583_Rx_Data	pcf8583.c	/^bool pcf8583_Rx_Data(uint8_t adr, uint8_t* data, ubase_t dsize)$/;"	f
+pcf8583_Tx_Data	pcf8583.c	/^bool pcf8583_Tx_Data(uint8_t adr, uint8_t* data, ubase_t dsize)$/;"	f
+pcf8583_Wr_1Param	pcf8583.c	/^bool pcf8583_Wr_1Param(uint8_t adr, uint8_t* data, ubase_t dnum)					\/\/запись одного параметра$/;"	f
+pcf8583_Wr_Alarm	pcf8583.c	/^bool pcf8583_Wr_Alarm(time_t* time)$/;"	f
+pcf8583_Wr_Data	pcf8583.c	/^bool pcf8583_Wr_Data(uint8_t adr, uint8_t* data, ubase_t dsize)$/;"	f
+pcf8583_Wr_Date	pcf8583.c	/^bool pcf8583_Wr_Date(date_t* date)$/;"	f
+pcf8583_Wr_Param	pcf8583.c	/^bool pcf8583_Wr_Param(uint8_t adr, uint8_t* data, ubase_t dnum)					\/\/запись двух параметров$/;"	f
+pcf8583_Wr_Time	pcf8583.c	/^bool pcf8583_Wr_Time(time_t* time)$/;"	f
+prm_Rd_Data	prm.c	/^void prm_Rd_Data(void *rd_val, uint8_t par_size, const void *prm_par)$/;"	f
+prm_Rd_Line	prm.c	/^void prm_Rd_Line(uint8_t *ram_line, const uint8_pr_t* prm_line)$/;"	f
+ptimer	ptimer.c	/^void ptimer(void)$/;"	f
+ptimer_Ini	ptimer.c	/^void ptimer_Ini(void)$/;"	f
+rmd	rmd.c	/^void rmd(void)$/;"	f
+rmd_Check_AlarmTime	rmd.c	/^void rmd_Check_AlarmTime(ubase_t rnum)$/;"	f
+rmd_Check_Trigger	rmd.c	/^bool rmd_Check_Trigger(ubase_t rnum)$/;"	f
+rmd_Default	rmd.c	/^void rmd_Default(ubase_t rnum)$/;"	f
+rmd_Handle	rmd.c	/^void rmd_Handle(ubase_t rnum)$/;"	f
+rmd_Ini	rmd.c	/^void rmd_Ini(void)$/;"	f
+rmd_Is_Date	rmd.c	/^bool rmd_Is_Date(ubase_t rnum, date_t* date)$/;"	f
+rmd_Off	rmd.c	/^bool rmd_Off(ubase_t rnum)$/;"	f
+rmd_On	rmd.c	/^bool rmd_On(ubase_t rnum)$/;"	f
+rmd_Reset	rmd.c	/^bool rmd_Reset(ubase_t rnum)$/;"	f
+rmd_Reset_Ring	rmd.c	/^void rmd_Reset_Ring(ubase_t rnum)$/;"	f
+rmd_Resignal	rmd.c	/^void rmd_Resignal(ubase_t rnum)$/;"	f
+rmd_Set_DateOn	rmd.c	/^bool rmd_Set_DateOn(ubase_t rnum, date_t* date)$/;"	f
+rmd_Set_Filtr	rmd.c	/^bool rmd_Set_Filtr(ubase_t rnum, uint8_t f)$/;"	f
+rmd_Set_Melody	rmd.c	/^bool rmd_Set_Melody(ubase_t rnum, uint8_t melody)$/;"	f
+rmd_Set_Repnum	rmd.c	/^bool rmd_Set_Repnum(ubase_t rnum, uint8_t repnum)$/;"	f
+rmd_Set_Ring	rmd.c	/^bool rmd_Set_Ring(ubase_t rnum)$/;"	f
+rmd_Set_TimeDur	rmd.c	/^bool rmd_Set_TimeDur(ubase_t rnum, time_t* time_dur)$/;"	f
+rmd_Set_TimeOn	rmd.c	/^bool rmd_Set_TimeOn(ubase_t rnum, time_t* time_on)$/;"	f
+rmd_Set_TimeRep	rmd.c	/^bool rmd_Set_TimeRep(ubase_t rnum, time_t* time_rep)$/;"	f
+rtc	rtc.c	/^void rtc(void)$/;"	f
+rtc_Default	rtc.c	/^void rtc_Default(void)$/;"	f
+rtc_Ini	rtc.c	/^void rtc_Ini(void)$/;"	f
+rtc_Rd_Date	rtc.c	/^bool rtc_Rd_Date(void)$/;"	f
+rtc_Rd_Time	rtc.c	/^bool rtc_Rd_Time(void)$/;"	f
+rtc_Restart_TimeDependensis	rtc.c	/^void rtc_Restart_TimeDependensis(void)$/;"	f
+rtc_Set_AvtoShift	rtc.c	/^bool rtc_Set_AvtoShift(ubase_t avto_shift)$/;"	f
+rtc_Set_Date	rtc.c	/^bool rtc_Set_Date(date_t* date)$/;"	f
+rtc_Set_HourSgn	rtc.c	/^bool rtc_Set_HourSgn(ubase_t hour_sgn)$/;"	f
+rtc_Set_Time	rtc.c	/^bool rtc_Set_Time(time_t* time)$/;"	f
+sgn	sgn.c	/^void sgn(void)$/;"	f
+sgn_Ini	sgn.c	/^void sgn_Ini(void)$/;"	f
+sgn_Mel_2TickTone	sgn.c	/^void sgn_Mel_2TickTone(uint16_t frq1, uint16_t frq2)$/;"	f
+sgn_Off	sgn.c	/^void sgn_Off(void)$/;"	f
+sgn_Try_On	sgn.c	/^void sgn_Try_On(ubase_t host_name, ubase_t host_num, ubase_t melody)$/;"	f
+sta_Ini	sta.c	/^void sta_Ini(void)$/;"	f
+stp_Handler	stp.c	/^void stp_Handler(void)$/;"	f
+stw	stw.c	/^void stw(void)$/;"	f
+stwW	stw.c	/^usr_wnd_t stwW = {listStw, list_size(listStw)};$/;"	v
+stw_I_Back	stw.c	/^void stw_I_Back(void)$/;"	f
+stw_I_Forward	stw.c	/^void stw_I_Forward(void)$/;"	f
+stw_Ini	stw.c	/^void stw_Ini(void)$/;"	f
+stw_Signal	mctr.c	/^void stw_Signal(void)$/;"	f
+stw_Signal_Off	mctr.c	/^void stw_Signal_Off(void)$/;"	f
+tdf_Count_Pore	tdf.c	/^void tdf_Count_Pore(date_t* date, time_t* time, day_t day, wst_t* wst)$/;"	f
+tdf_Date_Minus_Day	tdf.c	/^bool tdf_Date_Minus_Day(date_t* date, uint8_t day, date_t* new_date)$/;"	f
+tdf_Date_Plus_Day	tdf.c	/^bool tdf_Date_Plus_Day(date_t* date, uint8_t day, date_t* new_date)$/;"	f
+tdf_Date_to_Day	tdf.c	/^day_t tdf_Date_to_Day(date_t* date)$/;"	f
+tdf_Is_GoodDate	tdf.c	/^bool tdf_Is_GoodDate(date_t *date)$/;"	f
+tdf_Is_GoodTime	tdf.c	/^bool tdf_Is_GoodTime(time_t *time)$/;"	f
+tdf_Lunar_FlDay	tdf.c	/^fl32_t tdf_Lunar_FlDay(date_t* date)$/;"	f
+tdf_Lunar_FlDay_and_Distance	tdf.c	/^fl32_t tdf_Lunar_FlDay_and_Distance(date_t* date, fl32_t* distance)$/;"	f
+tdf_Lunar_Phase	tdf.c	/^ubase_t tdf_Lunar_Phase(fl32_t day)$/;"	f
+tdf_Minus_SecTime	tdf.c	/^uint32_t tdf_Minus_SecTime(uint32_t* sec_1, uint32_t* sec_2)$/;"	f
+tdf_Minus_Time	tdf.c	/^bool tdf_Minus_Time(time_t *time_1, time_t *time_2, uint32_t *sec)$/;"	f
+tdf_Month_Lenth	tdf.c	/^bcd_t tdf_Month_Lenth(bcd_t month, ubase_t num_year)$/;"	f
+tdf_NumYear	tdf.c	/^ubase_t tdf_NumYear(uint8_t year)$/;"	f
+tdf_Plus_Time	tdf.c	/^bool tdf_Plus_Time(time_t *time_1, time_t *time_2, uint32_t *sec)$/;"	f
+tdf_SWT	tdf.c	/^bool tdf_SWT(date_t* date, time_t* time, day_t day, wst_t* wst)$/;"	f
+tdf_Sec_to_Time	tdf.c	/^bool tdf_Sec_to_Time(uint32_t in_sec, time_t *out_time)$/;"	f
+tdf_Sunday	tdf.c	/^ubase_t tdf_Sunday(ubase_t cur_date, day_t cur_day)$/;"	f
+tdf_Time_Equal	tdf.c	/^bool tdf_Time_Equal(time_t* time1, time_t* time2)$/;"	f
+tdf_Time_More	tdf.c	/^bool tdf_Time_More(time_t* time1, time_t* time2)$/;"	f
+tdf_Time_to_Sec	tdf.c	/^bool tdf_Time_to_Sec(time_t *in_time, uint32_t *out_time)$/;"	f
+tdf_normalize	tdf.c	/^fl64_t tdf_normalize(fl64_t val)$/;"	f
+temp_res	clc.c	/^	fl64_t temp_res;																\/\/промежуточный результат$/;"	m	struct:__anon1	file:
+tmp	tmp.c	/^void tmp(void)$/;"	f
+tmp_Default	tmp.c	/^void tmp_Default(ubase_t snum)$/;"	f
+tmp_Ini	tmp.c	/^void tmp_Ini(void)$/;"	f
+tmp_Rd_Ds1631_TmpCode	tmp.c	/^void tmp_Rd_Ds1631_TmpCode(void)$/;"	f
+tmp_Rd_Ds18B20_TmpCode	tmp.c	/^void tmp_Rd_Ds18B20_TmpCode(void)$/;"	f
+tmp_Set_Use	tmp.c	/^bool tmp_Set_Use(ubase_t sens, uint8_t use_state)$/;"	f
+tmr	tmr.c	/^void tmr(void)$/;"	f
+tmr_Default	tmr.c	/^void tmr_Default(ubase_t tnum)$/;"	f
+tmr_Handle	tmr.c	/^void tmr_Handle(ubase_t tnum)$/;"	f
+tmr_Ini	tmr.c	/^void tmr_Ini(void)$/;"	f
+tmr_Off	tmr.c	/^bool tmr_Off(ubase_t tnum)$/;"	f
+tmr_Off_Signal	tmr.c	/^bool tmr_Off_Signal(ubase_t tnum)$/;"	f
+tmr_On	tmr.c	/^bool tmr_On(ubase_t tnum)$/;"	f
+tmr_On_Signal	tmr.c	/^bool tmr_On_Signal(ubase_t tnum)$/;"	f
+tmr_OutState	tmr.c	/^bool tmr_OutState(ubase_t tnum)$/;"	f
+tmr_Restart	tmr.c	/^bool tmr_Restart(ubase_t tnum)$/;"	f
+tmr_Set_Day	tmr.c	/^bool tmr_Set_Day(ubase_t tnum, day_t day)$/;"	f
+tmr_Set_TimeOff	tmr.c	/^bool tmr_Set_TimeOff(ubase_t tnum, time_t* timeoff)$/;"	f
+tmr_Set_TimeOn	tmr.c	/^bool tmr_Set_TimeOn(ubase_t tnum, time_t* timeon)$/;"	f
+tmr_Set_Type	tmr.c	/^bool tmr_Set_Type(ubase_t tnum, uint8_t type)$/;"	f
+trg	trg.c	/^void trg(void)$/;"	f
+trg_Default	trg.c	/^void trg_Default(ubase_t tnum)$/;"	f
+trg_Handle	trg.c	/^void trg_Handle(ubase_t tnum)$/;"	f
+trg_Ini	trg.c	/^void trg_Ini(void)$/;"	f
+trg_Off	trg.c	/^bool trg_Off(ubase_t tnum)$/;"	f
+trg_Off_Warm	trg.c	/^void trg_Off_Warm(ubase_t tnum)$/;"	f
+trg_On	trg.c	/^bool trg_On(ubase_t tnum)$/;"	f
+trg_On_Warm	trg.c	/^void trg_On_Warm(ubase_t tnum)$/;"	f
+trg_OutState	trg.c	/^bool trg_OutState(ubase_t tnum)$/;"	f
+trg_Out_to_Z	trg.c	/^void trg_Out_to_Z(ubase_t tnum)$/;"	f
+trg_Set_Tbottom	trg.c	/^bool trg_Set_Tbottom(ubase_t tnum, int16_t tbottom)$/;"	f
+trg_Set_Ttop	trg.c	/^bool trg_Set_Ttop(ubase_t tnum, int16_t ttop)$/;"	f
+trg_Set_Type	trg.c	/^bool trg_Set_Type(ubase_t tnum, uint8_t type)$/;"	f
+usr	usr.c	/^void usr(void)$/;"	f
+usr_Execute_Default	usr.c	/^void usr_Execute_Default(void)$/;"	f
+usr_Exit	usr.c	/^void usr_Exit(void)$/;"	f
+usr_Exit_to_Wrt	usr.c	/^void usr_Exit_to_Wrt(void)$/;"	f
+usr_Goto	usr.c	/^void usr_Goto(const usr_wnd_t* enter_window, ubase_t enter_pnum, ubase_t wnd_type)$/;"	f
+usr_Handle_HotKey_1	mctr.c	/^void usr_Handle_HotKey_1(void)$/;"	f
+usr_Handle_HotKey_2	mctr.c	/^void usr_Handle_HotKey_2(void)$/;"	f
+usr_Handle_HotKey_3	mctr.c	/^void usr_Handle_HotKey_3(void)$/;"	f
+usr_Ini	usr.c	/^void usr_Ini(void)$/;"	f
+usr_Off_Key	usr.c	/^void usr_Off_Key(uint8_t key)$/;"	f
+usr_Open_Window	usr.c	/^void usr_Open_Window(void)$/;"	f
+usr_Rd_Item	usr.c	/^func_t *usr_Rd_Item(const usr_wnd_t* wnd, int item_num)$/;"	f
+usr_Rd_WndSize	usr.c	/^ubase_t usr_Rd_WndSize(const usr_wnd_t* wnd)$/;"	f
+usr_Replace	usr.c	/^void usr_Replace(const usr_wnd_t* enter_window, ubase_t enter_pnum, ubase_t wnd_type)$/;"	f
+usr_ScrollDown_Window	usr.c	/^void usr_ScrollDown_Window(void)$/;"	f
+usr_ScrollUp_Window	usr.c	/^void usr_ScrollUp_Window(void)$/;"	f
+wdt_Off	wdt.c	/^void wdt_Off(void)$/;"	f
+wdt_On	wdt.c	/^void wdt_On(void)$/;"	f
+wdt_Reset_Dev_by_Wdt	wdt.c	/^void wdt_Reset_Dev_by_Wdt(void)$/;"	f
+wdt_Reset_Time	wdt.c	/^void wdt_Reset_Time(uint8_t time)$/;"	f
+wire_Ini	wire.c	/^void wire_Ini(void)$/;"	f
+wire_Rx_Bit	wire.c	/^bool wire_Rx_Bit(void)$/;"	f
+wire_Rx_Byte	wire.c	/^void wire_Rx_Byte(uint8_t* byte)$/;"	f
+wire_Start	wire.c	/^bool wire_Start(void)$/;"	f
+wire_Tx_Byte	wire.c	/^void wire_Tx_Byte(uint8_t byte)$/;"	f
+wrtW_Bd	wrt.c	/^usr_wnd_t wrtW_Bd = {listBd, list_size(listBd)};$/;"	v
+wrtW_Inf	wrt.c	/^usr_wnd_t wrtW_Inf = {listInf, list_size(listInf)};$/;"	v
+wrtW_Ini	wrt.c	/^usr_wnd_t wrtW_Ini = {listIni, list_size(listIni)};$/;"	v
+wrtW_LunarPhase	wrt.c	/^usr_wnd_t wrtW_LunarPhase = {listLunarPhase, list_size(listLunarPhase)};$/;"	v
+wrtW_Np	wrt.c	/^usr_wnd_t wrtW_Np = {listNp, list_size(listNp)};$/;"	v
+wrtW_TimeTemp	wrt.c	/^usr_wnd_t wrtW_TimeTemp = {listTimeTemp, list_size(listTimeTemp)};$/;"	v
+wrtW_Tm	wrt.c	/^usr_wnd_t wrtW_Tm = {listTm, list_size(listTm)};$/;"	v
+wrtW_Tr	wrt.c	/^usr_wnd_t wrtW_Tr = {listTr, list_size(listTr)};$/;"	v
+wrt_Disp_Str	wrt.c	/^void wrt_Disp_Str(const USRC_STR_ *str)$/;"	f
+wrt_Handle_HotKey_1	mctr.c	/^void wrt_Handle_HotKey_1(void)$/;"	f
+wrt_Handle_HotKey_2	mctr.c	/^void wrt_Handle_HotKey_2(void)$/;"	f
+wrt_Handle_HotKey_3	mctr.c	/^void wrt_Handle_HotKey_3(void)$/;"	f
+wrt_Handle_HotKey_4	mctr.c	/^void wrt_Handle_HotKey_4(void)$/;"	f
+wrt_I_Bd_Nums	wrt.c	/^void wrt_I_Bd_Nums(void)$/;"	f
+wrt_I_Bd_States	wrt.c	/^void wrt_I_Bd_States(void)$/;"	f
+wrt_I_Inf_Cholud	wrt.c	/^void wrt_I_Inf_Cholud(void)$/;"	f
+wrt_I_Inf_Version	wrt.c	/^void wrt_I_Inf_Version(void)$/;"	f
+wrt_I_Ini_Date	wrt.c	/^void wrt_I_Ini_Date(void)$/;"	f
+wrt_I_Ini_Time	wrt.c	/^void wrt_I_Ini_Time(void)$/;"	f
+wrt_I_LunarPhase_Day	wrt.c	/^void wrt_I_LunarPhase_Day(void)$/;"	f
+wrt_I_LunarPhase_Phase	wrt.c	/^void wrt_I_LunarPhase_Phase(void)$/;"	f
+wrt_I_Np_Nums	wrt.c	/^void wrt_I_Np_Nums(void)$/;"	f
+wrt_I_Np_States	wrt.c	/^void wrt_I_Np_States(void)$/;"	f
+wrt_I_TimeTemp_Temp	wrt.c	/^void wrt_I_TimeTemp_Temp(void)$/;"	f
+wrt_I_TimeTemp_Time	wrt.c	/^void wrt_I_TimeTemp_Time(void)$/;"	f
+wrt_I_Tm_Nums	wrt.c	/^void wrt_I_Tm_Nums(void)$/;"	f
+wrt_I_Tm_States	wrt.c	/^void wrt_I_Tm_States(void)$/;"	f
+wrt_I_Tr_Nums	wrt.c	/^void wrt_I_Tr_Nums(void)$/;"	f
+wrt_I_Tr_States	wrt.c	/^void wrt_I_Tr_States(void)$/;"	f
+zmr_Ini	zmr.c	/^void zmr_Ini(void)$/;"	f
+zmr_Off	zmr.c	/^void zmr_Off(void)$/;"	f
+zmr_On	zmr.c	/^void zmr_On(uint16_t frq)$/;"	f
