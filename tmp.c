@@ -57,31 +57,28 @@ void tmp(void)
 bool tmp_Set_Use(ubase_t sens, uint8_t use_state)
 //---устанавливает использвание датчика температуры
 {
-	if (use_state)
-	{
-		if (!CHKB(gTmp.state_vector, sens))
-		{
-			if (sens)
-			{
+	if (use_state) {
+		if (!CHKB(gTmp.state_vector, sens)) {
+			if (sens) {
 				STA_N(STA_TMP_1);
 				TMP_2_SET_TMR();
-				if (!ds18b20_Ini()) err_Ds18b20();
-			}
-			else
-			{
+				if (!ds18b20_Ini())
+					err_Ds18b20();
+			} else {
 				STA_N(STA_TMP_2);
-				if (!ds1631_Ini()) err_Ds1631();
+				if (!ds1631_Ini())
+					err_Ds1631();
 			}
 		}
 		SETB(gTmp.state_vector, sens);
-	}
-	else
-	{
+	} else {
 		trg_Off(sens);
 		CLRB(gTmp.state_vector, sens);
 	}
 
-	if (!dmem_Wr_Tmp_Use(sens, use_state)) return 0;
+	if (!dmem_Wr_Tmp_Use(sens, use_state))
+		return 0;
+
 	return 1;
 }
 
