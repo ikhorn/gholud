@@ -54,7 +54,7 @@ extern gsta_t gSta;
 
 void sta_Ini(void);
 #define STA_N(MOD)					SETB(gSta, MOD);							//переводит модуль в нормальное состояние
-#define STA_E(MOD)					CLRMSK(gSta, MOD);							//переводит модуль в состояние ошибки
+#define STA_E(MOD)					CLRB(gSta, MOD);							//переводит модуль в состояние ошибки
 #define STA_IS_N(MOD)				CHKB(gSta, MOD)								//проверяет состояние модуля
 #define STA_IS_E(MOD)				(!CHKB(gSta, MOD))							//проверяет состояние модуля
 
