@@ -11,7 +11,6 @@ gtmp_t gTmp;
 static void tmp_Rd_Ds1631_TmpCode(void);
 static void tmp_Rd_Ds18B20_TmpCode(void);
 
-
 void tmp_Ini(void)
 {
 	for (ubase_t i=0; i<TMP_NUM; i++) {
@@ -30,8 +29,6 @@ void tmp_Ini(void)
 		if (!ds1631_Ini())
 			err_Ds1631();
 	}
-
-	CLRB(gTmp.state_vector, 1);
 
 	if (CHKB(gTmp.state_vector, 1)) {
 		STA_N(STA_TMP_2);
