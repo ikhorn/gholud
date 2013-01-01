@@ -22,15 +22,16 @@
 #include "msg.h"
 
 //------------------------------------------------------------------------------
-//внеш. функции
-//------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
 //IIC
 //------------------------------------------------------------------------------
+/*
+ * err_IIC - ошибка IIC
+ */
 void err_IIC(void)
-//---шибка IIC
 {
-	if (STA_IS_E(STA_IIC)) return;
+	if (STA_IS_E(STA_IIC))
+		return;
+
 	usr_temp_t var;
 	var.uint8_t_d = ERR_CODE_IIC;
 	msg_Post(&msgW_IicErr, MSG_KEY_TYPE, &var);
@@ -126,17 +127,18 @@ void err_Ds1631(void)
 {
 	delay_ms(5);
 	time_t time;
-	if (!pcf8583_Rd_Time(&time))
-	{
-		if (!dmem_Check_Fm24c64())
-		{
+	if (!pcf8583_Rd_Time(&time)) {
+		if (!dmem_Check_Fm24c64()) {
 			err_IIC();
 			return;
 		}
 	}
 	ds1631_Ini();
 	gTmp.code[0] = 0;
-	if (STA_IS_E(STA_TMP_1)) return;
+
+	if (STA_IS_E(STA_TMP_1))
+		return;
+
 	usr_temp_t var;
 	var.uint8_t_d = ERR_CODE_TEMPSENS1_LINK;
 	var.uint8_t_b = MSG_TEMPSENS1;
@@ -144,12 +146,14 @@ void err_Ds1631(void)
 	STA_E(STA_TMP_1);
 }
 
-
 void err_Ds18b20(void)
 {
 	ds18b20_Ini();
 	gTmp.code[1] = 0;
-	if (STA_IS_E(STA_TMP_2)) return;
+
+	if (STA_IS_E(STA_TMP_2))
+		return;
+
 	usr_temp_t var;
 	var.uint8_t_d = ERR_CODE_TEMPSENS2_LINK;
 	var.uint8_t_b = MSG_TEMPSENS2;
@@ -160,7 +164,8 @@ void err_Ds18b20(void)
 
 void err_Tmp_Rd_Use(ubase_t snum)
 {
-	if (STA_IS_E(STA_MEM)) return;
+	if (STA_IS_E(STA_MEM))
+		return;
 	tmp_Set_Use(snum, DEF_TMP_USE);
 }
 
@@ -533,5 +538,3 @@ void err_Rmd_Rd_Melody(ubase_t rnum)
 	msg_Post(&msgW_RmdLost, MSG_KEY_TYPE, &var);
 	dmem_Wr_Rmd_Melody(rnum, DEF_RMD_MELODY);
 }
-
-
