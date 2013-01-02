@@ -28,7 +28,7 @@
 #define DELAY_PAST_RESET_RDY()					delay_us(211)					//�������� ����� ������������
 
 #define DELAY_START()							delay_us(1)						//�������� �� ������ ���� �����
-#define DELAY_SLOTE()							delay_us(18)					//�������� �� ���� ����
+#define DELAY_SLOTE()							delay_us(40)					//�������� �� ���� ����
 #define DELAY_RECOV()							delay_us(2)						//�������� �� ��������������, ����� ���� �����
 
 //------------------------------------------------------------------------------
