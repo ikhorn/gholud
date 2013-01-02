@@ -26,7 +26,7 @@
 #define DELAY_RESET_PULSE()	delay_us(481)	/* задржка reset */
 #define DELAY_PRESENCE_CHK()	delay_us(270)	/* задржка для проверки соеденения */
 #define DELAY_PAST_RESET_RDY()	delay_us(211)	/* задержка после перезагрузки */
-#define DELAY_START()		delay_us(1)	/* задержка на старте тайм слота */
+#define DELAY_START()		delay_us(5)	/* задержка на старте тайм слота */
 
 #define DELAY_SLOTE()		delay_us(40)	/* задержка на тайм слот */
 #define DELAY_RECOV()		delay_us(2)	/* задержка на восстановление, после тайм слота */
