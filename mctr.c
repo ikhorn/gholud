@@ -1261,14 +1261,14 @@ void menu_I_General_AvtoTimeShift(void)
 	menu_Navigate();
 }
 
-void menu_I_General_TempSens(void)
+void menu_I_Menu_TempSens(void)
 {
 	usr_Disp_Str(note_temp_sens);
 	if (USR_IS_ENTER)
 	{
 		usr_Set_InVar(uint8_t_a, 0);
 	}
-	menu_Navigate_(General_TempSens);
+	menu_Navigate_(Menu_TempSens);
 }
 
 void menu_I_General_UsePassword(void)

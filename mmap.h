@@ -54,49 +54,59 @@ usr_wnd_t menW_AskNum = {listAskNum, list_size(listAskNum)};
 #define ENTERMENU_AskNum_Num					menW_Rmds
 #define ENTERITEM_AskNum_Num					ITEM_Rmds_Rmd
 //------------------------------------------------------------------------------
-//								МЕНЮ
+//				Menu
 //------------------------------------------------------------------------------
+
 void menu_I_Menu_Title(void);
 void menu_I_Menu_Alms(void);
 void menu_I_Menu_Rmds(void);
 void menu_I_Menu_Tmrs(void);
+void menu_I_Menu_TempSens(void);
 void menu_I_Menu_Trgs(void);
 void menu_I_Menu_Progs(void);
 void menu_I_Menu_General(void);
-//массив обработчиков пунктов
+
+//array of item's handlers
 funcp_pr_t listMenu[] =
 {
 	menu_I_Menu_Title,
 	menu_I_Menu_Alms,
 	menu_I_Menu_Rmds,
 	menu_I_Menu_Tmrs,
+	menu_I_Menu_TempSens,
 	menu_I_Menu_Trgs,
 	menu_I_Menu_Progs,
 	menu_I_Menu_General
 };
 usr_wnd_t menW_Menu = {listMenu, list_size(listMenu)};
-//номера пунктов
-#define ITEM_Menu_Alms						1
-#define ITEM_Menu_Rmds						2
-#define ITEM_Menu_Tmrs						3
-#define ITEM_Menu_Trgs						4
-#define ITEM_Menu_Progs						5
-#define ITEM_Menu_General					6
-//входные меню пунктов
+
+//item's numbers
+#define ITEM_Menu_Alms					1
+#define ITEM_Menu_Rmds					2
+#define ITEM_Menu_Tmrs					3
+#define ITEM_Menu_TempSens				4
+#define ITEM_Menu_Trgs					5
+#define ITEM_Menu_Progs					6
+#define ITEM_Menu_General				7
+
+//input menus of items
 #define ENTERMENU_Menu_TimeDate				menW_TimeDate
 #define ENTERITEM_Menu_TimeDate				ITEM_TimeDate_Time
 
-#define ENTERMENU_Menu_Alms					menW_Alms
-#define ENTERITEM_Menu_Alms					ITEM_Alms_Alm
+#define ENTERMENU_Menu_Alms				menW_Alms
+#define ENTERITEM_Menu_Alms				ITEM_Alms_Alm
 
-#define ENTERMENU_Menu_Rmds					menW_Rmds
-#define ENTERITEM_Menu_Rmds					ITEM_Rmds_Rmd
+#define ENTERMENU_Menu_Rmds				menW_Rmds
+#define ENTERITEM_Menu_Rmds				ITEM_Rmds_Rmd
 
-#define ENTERMENU_Menu_Tmrs					menW_Tmrs
-#define ENTERITEM_Menu_Tmrs					ITEM_Tmrs_Tmr
+#define ENTERMENU_Menu_Tmrs				menW_Tmrs
+#define ENTERITEM_Menu_Tmrs				ITEM_Tmrs_Tmr
 
-#define ENTERMENU_Menu_Trgs					menW_Trgs
-#define ENTERITEM_Menu_Trgs					ITEM_Trgs_Trg
+#define ENTERMENU_Menu_TempSens				menW_TempSens
+#define ENTERITEM_Menu_TempSens				ITEM_TempSens_SensOn
+
+#define ENTERMENU_Menu_Trgs				menW_Trgs
+#define ENTERITEM_Menu_Trgs				ITEM_Trgs_Trg
 
 #define ENTERMENU_Menu_Progs				menW_Progs
 #define ENTERITEM_Menu_Progs				ITEM_Progs_Clc
@@ -499,19 +509,19 @@ usr_wnd_t menW_Filtr = {listFiltr, list_size(listFiltr)};
 //входные меню пунктов
 
 //------------------------------------------------------------------------------
-//						ОБЩИЕ НАСТ
+//				General settings
 //------------------------------------------------------------------------------
+
 void menu_I_General_Title(void);
 void menu_I_General_TimeDate(void);
 void menu_I_General_Lightning(void);
 void menu_I_General_HourSgn(void);
 void menu_I_General_ByDefault(void);
 void menu_I_General_AvtoTimeShift(void);
-void menu_I_General_TempSens(void);
 void menu_I_General_UsePassword(void);
 void menu_I_General_NewPassword(void);
 
-//массив обработчиков пунктов
+//array of item's handlers
 funcp_pr_t listGeneral[] =
 {
 	menu_I_General_Title,
@@ -520,33 +530,29 @@ funcp_pr_t listGeneral[] =
 	menu_I_General_HourSgn,
 	menu_I_General_ByDefault,
 	menu_I_General_AvtoTimeShift,
-	menu_I_General_TempSens,
 	menu_I_General_UsePassword,
 	menu_I_General_NewPassword
-	
 };
 usr_wnd_t menW_General = {listGeneral, list_size(listGeneral)};
-//номера пунктов
+
+//item's numbers
 #define ITEM_General_TimeDate					1
 #define ITEM_General_Lightning					2
 #define ITEM_General_HourSgn					3
 #define ITEM_General_ByDefault					4
 #define ITEM_General_AvtoTimeShift				5
-#define ITEM_General_TempSens					6
-#define ITEM_General_UsePassword				7
-#define ITEM_General_NewPassword				8
-//входные меню пунктов
+#define ITEM_General_UsePassword				6
+#define ITEM_General_NewPassword				7
+
+//input menus of items
 #define ENTERMENU_General_TimeDate				menW_TimeDate
 #define ENTERITEM_General_TimeDate				ITEM_TimeDate_Time
 
 #define ENTERMENU_General_ByDefault				menW_Confidence
 #define ENTERITEM_General_ByDefault				ITEM_Confidence_OK
 
-#define ENTERMENU_General_TempSens				menW_TempSens
-#define ENTERITEM_General_TempSens				ITEM_TempSens_SensOn
-
-#define ENTERMENU_General_NewPassword			menW_ChkPsw
-#define ENTERITEM_General_NewPassword			ITEM_ChkPsw_Enter
+#define ENTERMENU_General_NewPassword				menW_ChkPsw
+#define ENTERITEM_General_NewPassword				ITEM_ChkPsw_Enter
 
 //------------------------------------------------------------------------------
 //						НАСТРОЙКА ВРЕМЕНИ/ДАТЫ
