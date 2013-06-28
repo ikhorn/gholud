@@ -17,13 +17,13 @@
 #ifndef USR_LIST_TYPE
 #define USR_LIST_TYPE
 #define list_size(X)						(sizeof(X)/sizeof(func_t*))			//размер списка обработчиков
-typedef funcp_t usrcw_ funcp_pr_t;
+typedef const funcp_t usrcw_ funcp_pr_t;
 typedef funcp_pr_t* usr_list_t;
 #endif
 
 #ifndef USR_WND_TYPE
 #define USR_WND_TYPE
-typedef struct																			//тип окно
+typedef const struct																			//тип окно
 {
 	usr_list_t item0;
 	ubase_t size0;

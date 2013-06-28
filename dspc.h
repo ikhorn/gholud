@@ -51,7 +51,7 @@ typedef uint8_pr_t								DSPC_STR_;						//тип строки
 //------------------------------------------------------------------------------
 
 //#define dspt_									flash_							//спецификатор таблиц
-typedef uint8_pr_t								DSPC_TAB_;						//тип данных таблиц
+typedef const uint8_pr_t							DSPC_TAB_;						//тип данных таблиц
 
 	#define ___DSPC_UKR				1
 	#define ___DSPC_RUS				2
@@ -77,7 +77,7 @@ typedef uint8_pr_t								DSPC_TAB_;						//тип данных таблиц
 //------------------------------------------------------------------------------
 
 
-static DSPC_TAB_ special_symbols[] =
+const static DSPC_TAB_ special_symbols[] =
 {
 0x1F,	/*  ...@@@@@  */
 0x0E,	/*  ....@@@.  */

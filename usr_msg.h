@@ -23,7 +23,7 @@ extern const USRC_STR_ note_less_eq[];
 extern const USRC_STR_ note_value[];
 
 extern gusr_t gUsr;
-extern flash_ const usr_rstack_t* gUsrRstackEnd;
+extern flash_ const usr_rstack_t* const gUsrRstackEnd;
 
 #if USRC_USE_SUCH_GHOTKEY_1														//обработчики глобальных горячих клавиш
 extern void usr_Handle_HotKey_1(void);

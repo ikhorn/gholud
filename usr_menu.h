@@ -16,7 +16,7 @@
 
 extern gusr_t gUsr;
 
-flash_ const usr_rstack_t* gUsrRstackEnd = &gUsr.rstack[USRC_RETURN_STACK_SIZE-1];
+flash_ const usr_rstack_t* const gUsrRstackEnd = &gUsr.rstack[USRC_RETURN_STACK_SIZE-1];
 
 #if USRC_USE_SUCH_GHOTKEY_1														//обработчики глобальных горячих клавиш
 extern void usr_Handle_HotKey_1(void);

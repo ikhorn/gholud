@@ -1,34 +1,27 @@
-/* Module		: types
- * Created on	: 28 сент. 2011
- * Author		: Ivan Khoronzhook
- * Firstly used	: PATIMA
- */
-
 #ifndef TYPES_H_
 #define TYPES_H_
 
-typedef unsigned char						ubase_t;
-typedef signed char							base_t;
-typedef unsigned char						uint8_t;
-typedef signed char							int8_t;
-typedef unsigned int						uint16_t;
-typedef signed int							int16_t;
-typedef unsigned long int					uint32_t;
-typedef signed long int						int32_t;
-typedef unsigned long long int				uint64_t;
-typedef signed long long int				int64_t;
-typedef float 								fl32_t;
-typedef double								fl64_t;
+typedef unsigned char				ubase_t;
+typedef signed char				base_t;
+typedef unsigned char				uint8_t;
+typedef signed char				int8_t;
+typedef unsigned int				uint16_t;
+typedef signed int				int16_t;
+typedef unsigned long int			uint32_t;
+typedef signed long int				int32_t;
+typedef unsigned long long int			uint64_t;
+typedef signed long long int			int64_t;
+typedef float 					fl32_t;
+typedef double					fl64_t;
 typedef void func_t(void);
-typedef func_t*								funcp_t;;
-typedef uint8_t								bool;
-#define true			1
-#define false			0
+typedef func_t*					funcp_t;;
+typedef uint8_t					bool;
+#define true					1
+#define false					0
 
 
-typedef uint8_t flash_						uint8_pr_t;
-typedef uint8_t eeprom_						uint8_ee_t;
-
+typedef uint8_t flash_				uint8_pr_t;
+typedef uint8_t eeprom_				uint8_ee_t;
 
 typedef enum
 {

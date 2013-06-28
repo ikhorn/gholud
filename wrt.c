@@ -25,7 +25,7 @@ void wrt_Disp_Str(const USRC_STR_ *str);										//---отображает фл
 void wrt_I_LunarPhase_Day(void);
 void wrt_I_LunarPhase_Phase(void);
 //массив обработчиков пунктов
-usrcw_ func_t* listLunarPhase[] =
+usrcw_ func_t* const listLunarPhase[] =
 {
  	wrt_I_LunarPhase_Day,
  	wrt_I_LunarPhase_Phase
@@ -40,7 +40,7 @@ usr_wnd_t wrtW_LunarPhase = {listLunarPhase, list_size(listLunarPhase)};
 void wrt_I_Inf_Cholud(void);
 void wrt_I_Inf_Version(void);
 //массив обработчиков пунктов
-usrcw_ func_t* listInf[] =
+usrcw_ func_t* const listInf[] =
 {
  	wrt_I_Inf_Cholud,
  	wrt_I_Inf_Version
@@ -56,7 +56,7 @@ usr_wnd_t wrtW_Inf = {listInf, list_size(listInf)};
 void wrt_I_Ini_Time(void);
 void wrt_I_Ini_Date(void);
 //массив обработчиков пунктов
-usrcw_ func_t* listIni[] =
+usrcw_ func_t* const listIni[] =
 {
  	wrt_I_Ini_Time,
  	wrt_I_Ini_Date,
@@ -72,7 +72,7 @@ usr_wnd_t wrtW_Ini = {listIni, list_size(listIni)};
 void wrt_I_TimeTemp_Time(void);
 void wrt_I_TimeTemp_Temp(void);
 //массив обработчиков пунктов
-usrcw_ func_t* listTimeTemp[] =
+usrcw_ func_t* const listTimeTemp[] =
 {
  	wrt_I_TimeTemp_Time,
  	wrt_I_TimeTemp_Temp,
@@ -88,7 +88,7 @@ usr_wnd_t wrtW_TimeTemp = {listTimeTemp, list_size(listTimeTemp)};
 void wrt_I_Bd_Nums(void);
 void wrt_I_Bd_States(void);
 //массив обработчиков пунктов
-usrcw_ func_t* listBd[] =
+usrcw_ func_t* const listBd[] =
 {
  	wrt_I_Bd_Nums,
  	wrt_I_Bd_States,
@@ -106,7 +106,7 @@ usr_wnd_t wrtW_Bd = {listBd, list_size(listBd)};
 void wrt_I_Tm_Nums(void);
 void wrt_I_Tm_States(void);
 //массив обработчиков пунктов
-usrcw_ func_t* listTm[] =
+usrcw_ func_t* const listTm[] =
 {
  	wrt_I_Tm_Nums,
  	wrt_I_Tm_States,
@@ -124,7 +124,7 @@ usr_wnd_t wrtW_Tm = {listTm, list_size(listTm)};
 void wrt_I_Tr_Nums(void);
 void wrt_I_Tr_States(void);
 //массив обработчиков пунктов
-usrcw_ func_t* listTr[] =
+usrcw_ func_t* const listTr[] =
 {
  	wrt_I_Tr_Nums,
  	wrt_I_Tr_States,
@@ -142,7 +142,7 @@ usr_wnd_t wrtW_Tr = {listTr, list_size(listTr)};
 void wrt_I_Np_Nums(void);
 void wrt_I_Np_States(void);
 //массив обработчиков пунктов
-usrcw_ func_t* listNp[] =
+usrcw_ func_t* const listNp[] =
 {
  	wrt_I_Np_Nums,
  	wrt_I_Np_States,

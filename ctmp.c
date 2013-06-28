@@ -29,7 +29,7 @@ no_init_ fl64_t gCtmp_input;
 void ctmp_I_Input(void);
 void ctmp_I_Result(void);
 //массив обработчиков пунктов
-usrcw_ func_t* listCtmp[] =
+usrcw_ func_t* const listCtmp[] =
 {
 	ctmp_I_Result,
 	ctmp_I_Input
