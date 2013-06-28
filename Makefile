@@ -61,8 +61,11 @@ CSTANDARD = -std=gnu99
 #  -Wa,...:      tell GCC to pass this to the assembler.
 #    -adhlns...: create assembler listing
 #CFLAGS = -g$(DEBUG)
-CFLAGS += --combine
-CFLAGS += -fwhole-program
+
+# Use one object file of whole project for optimization
+#CFLAGS += --combine
+#CFLAGS += -fwhole-program
+
 CFLAGS += -Wall
 CFLAGS += -Wstrict-prototypes
 CFLAGS += -O$(OPT)
@@ -178,7 +181,8 @@ AVRDUDE_FLAGS += $(AVRDUDE_ERASE_COUNTER)
 
 
 SHELL = sh
-CC = avr-gcc
+#CC = avr-gcc
+CC = avr-gcc-4.7.2
 RELEASE_DIR = Release
 DEBUG_DIR = Debug
 
