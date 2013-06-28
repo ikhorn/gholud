@@ -74,22 +74,22 @@
 //функции
 //------------------------------------------------------------------------------
 
-void bc1602e_Ini(void);															//---инициализация, во время работы все порты настр. на запись
-void bc1602e_Cmd(uint8_t cmd);													//---посылает команду, для CLEAR_DISP нужня зад. 2мс
-void bc1602e_Set_SpecSymPos(uint8_t adr);										//---перейти на адрес специального символа
-void bc1602e_Set_SpecSymbols(void);												//---записывает специальные символы
-void bc1602e_Set_SymPos(uint8_t adr);											//---устанавливает курсор
-void bc1602e_Set_CurrentByte(uint8_t sym);										//---выводит должный символ
-void bc1602e_Set_Byte(uint8_t pos, uint8_t byte);								//---выводит должный символ на указанную позицию
-void bc1602e_Get_Sym(uint8_t *sym);												//---прочетать текущий символ
-void bc1602e_Get_Pos(uint8_t *AC);												//---читает счетчик адреса
+void bc1602e_Ini(void);
+void bc1602e_Cmd(uint8_t cmd);
+void bc1602e_Set_SpecSymPos(uint8_t adr);
+void bc1602e_Set_SpecSymbols(void);
+void bc1602e_Set_SymPos(uint8_t adr);
+void bc1602e_Set_CurrentByte(uint8_t sym);
+void bc1602e_Set_Byte(uint8_t pos, uint8_t byte);
+void bc1602e_Get_Sym(uint8_t *sym);
+void bc1602e_Get_Pos(uint8_t *AC);
 
-//bool bc1602e_Check(void);														//---проверка
+//bool bc1602e_Check(void);
 
 
-static inline void bc1602e_On_Light(void) __attribute__((always_inline));		//---включает подсветку
-static inline void bc1602e_Off_Light(void) __attribute__((always_inline));		//---выключает подсветку
-static inline void bc1602e_Inv_Light(void) __attribute__((always_inline));		//---меняет состояние подсветки на противоположное
+static inline void bc1602e_On_Light(void) __attribute__((always_inline));
+static inline void bc1602e_Off_Light(void) __attribute__((always_inline));
+static inline void bc1602e_Inv_Light(void) __attribute__((always_inline));
 
 
 //---включает подсветку
