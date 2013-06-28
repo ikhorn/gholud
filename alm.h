@@ -10,10 +10,6 @@
 
 #define ALM_NUM								8									//количество будильников
 
-//------------------------------------------------------------------------------
-//типы
-//------------------------------------------------------------------------------
-
 typedef struct
 {
 	uint8_t state_vector;														//отображает состояние вкл/отк
@@ -31,26 +27,21 @@ typedef struct
 
 extern galm_t gAlm;
 
-//------------------------------------------------------------------------------
-//функции
-//------------------------------------------------------------------------------
-
 void alm_Ini(void);
 void alm(void);
-bool alm_On(ubase_t anum);														//---включает будильник
-bool alm_Off(ubase_t anum);														//---отключает будильник
-bool alm_Reset(ubase_t anum);													//---сбрасывает будильник
-void alm_Reset_Ring(ubase_t anum);												//---сбрасывает текущий звонок будильника
-bool alm_Set_Melody(ubase_t anum, uint8_t melody);								//---устанавливает мелодию
-bool alm_Set_Day(ubase_t anum, day_t day);										//---устанавливает дни недели
-bool alm_Set_TimeOn(ubase_t anum, time_t* time_on);								//---устанавливает время срабатывания
-bool alm_Set_TimeDur(ubase_t anum, time_t* time_dur);							//---устанавливает время работы
-bool alm_Set_TimeRep(ubase_t anum, time_t* time_rep);							//---устанавливает время повтора
-bool alm_Set_Repnum(ubase_t anum, uint8_t repnum);								//---устанавливает количество повторов
-bool alm_Set_Message(ubase_t anum, uint8_t message);							//---устанавливает будет ли выводиться сообщение
-bool alm_Set_Times(ubase_t anum, uint8_t times);                                //---устанавливает разовое срабатывание будильника
-void alm_Default(ubase_t anum);													//---по умолчанию значения будильника
-void alm_ReSignal(ubase_t anum);												//---пересигналить
-bool alm_State(ubase_t anum);													//---узнать статус будильника, 1 - в сработанном состоянии, 2 - в несработанном состоянии
-
+bool alm_On(ubase_t anum);
+bool alm_Off(ubase_t anum);
+bool alm_Reset(ubase_t anum);
+void alm_Reset_Ring(ubase_t anum);
+bool alm_Set_Melody(ubase_t anum, uint8_t melody);
+bool alm_Set_Day(ubase_t anum, day_t day);
+bool alm_Set_TimeOn(ubase_t anum, time_t* time_on);
+bool alm_Set_TimeDur(ubase_t anum, time_t* time_dur);
+bool alm_Set_TimeRep(ubase_t anum, time_t* time_rep);
+bool alm_Set_Repnum(ubase_t anum, uint8_t repnum);
+bool alm_Set_Message(ubase_t anum, uint8_t message);
+bool alm_Set_Times(ubase_t anum, uint8_t times);
+void alm_Default(ubase_t anum);
+void alm_ReSignal(ubase_t anum);
+bool alm_State(ubase_t anum);
 

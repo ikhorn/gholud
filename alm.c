@@ -8,20 +8,10 @@
 #include "msg.h"
 #include "dmem.h"
 
-//------------------------------------------------------------------------------
-//прототипы
-//------------------------------------------------------------------------------
-
 galm_t gAlm;
-bool alm_Is_Trigger(ubase_t anum);											    //---проверяет или не сработал будильник
-void alm_Handle(ubase_t anum);													//---обрабатывает будильник
-bool alm_Set_Ring(ubase_t anum);												//---настраивает будильник на статус звонка
-bool alm_Reset(ubase_t anum);													//---перезапускает будильник
-bool alm_Restart(ubase_t anum);                                                 //---загружает начальные данные будильника заново
-
-//------------------------------------------------------------------------------
-//внеш. функции
-//------------------------------------------------------------------------------
+static void alm_Handle(ubase_t anum);
+static bool alm_Set_Ring(ubase_t anum);
+static bool alm_Restart(ubase_t anum);
 
 void alm_Ini(void)
 {
@@ -264,11 +254,7 @@ void alm_Default(ubase_t anum)
 	dmem_Wr_Alm_Times(anum, DEF_ALM_TIMES);
 }
 
-//------------------------------------------------------------------------------
-//внут. функции
-//------------------------------------------------------------------------------
-
-bool alm_Is_Trigger(ubase_t anum)
+static bool alm_Is_Trigger(ubase_t anum)
 //---проверяет или не сработал будильник
 {
 	for (;;)
@@ -288,7 +274,7 @@ bool alm_Is_Trigger(ubase_t anum)
 }
 
 
-void alm_Handle(ubase_t anum)
+static void alm_Handle(ubase_t anum)
 //---обрабатывает будильник
 {
 	if (!CHKB(gAlm.state_vector, anum)) return;
@@ -324,7 +310,7 @@ void alm_Handle(ubase_t anum)
 	alm_Restart(anum);
 }
 
-bool alm_Set_Ring(ubase_t anum)
+static bool alm_Set_Ring(ubase_t anum)
 //---настраивает будильник на статус звонка
 {
 	CLRB(gAlm.near_vector, anum);
@@ -342,7 +328,7 @@ bool alm_Set_Ring(ubase_t anum)
 }
 
 
-bool alm_Restart(ubase_t anum)
+static bool alm_Restart(ubase_t anum)
 //---загружает начальные данные будильника заново
 {
 	sgn_Off();
