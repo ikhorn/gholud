@@ -75,7 +75,13 @@ CFLAGS += -mno-interrupts
 CFLAGS += -mcall-prologues
 #CFLAGS += -mno-tablejump
 #CFLAGS += -finline-functions
+
+# Don't add not used functions to the binary
 CFLAGS += -ffunction-sections
+
+# Don't add not used data to the binary
+CFLAGS += -fdata-sections
+
 CFLAGS += $(CSTANDARD)
 CFLAGS += -funsigned-char
 CFLAGS += -funsigned-bitfields
