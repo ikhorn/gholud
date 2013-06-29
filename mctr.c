@@ -344,6 +344,17 @@ void menu_I_Menu_Rmds(void)
     }
 }
 
+void menu_I_Menu_TempSens(void)
+{
+	usr_Disp_Str(note_temp_sens);
+	if (USR_IS_ENTER)
+	{
+		usr_Set_InVar(uint8_t_a, 0);
+	}
+	menu_Navigate_(Menu_TempSens);
+}
+
+
 void menu_I_Menu_Progs(void)
 {
 	usr_Disp_Str(note_progs);
@@ -1261,16 +1272,6 @@ void menu_I_General_AvtoTimeShift(void)
 	menu_Navigate();
 }
 
-void menu_I_Menu_TempSens(void)
-{
-	usr_Disp_Str(note_temp_sens);
-	if (USR_IS_ENTER)
-	{
-		usr_Set_InVar(uint8_t_a, 0);
-	}
-	menu_Navigate_(Menu_TempSens);
-}
-
 void menu_I_General_UsePassword(void)
 {
 	uint8_t use_psw;
@@ -1394,7 +1395,7 @@ void menu_I_Password_InpPassword(void)
 }
 
 //------------------------------------------------------------------------------
-//						НАСТР ДАТЧИКОВ ТЕМПЕРАТУРЫ
+//				Temperature sensor select
 //------------------------------------------------------------------------------
 
 void menu_I_TempSens_Title(void)
@@ -1402,6 +1403,79 @@ void menu_I_TempSens_Title(void)
 	usr_Disp_Str(note_temp_sens);
 }
 
+void menu_I_TempSens_Select(void)
+{
+	uint8_t use_sens;
+
+	if (CHKB(gTmp.state_vector, usr_Get_Var(uint8_t_a)))
+		use_sens = 1;
+	else
+		use_sens = 0;
+
+	if (use_sens) {
+		dsp_Print(usr_CurStrNum(), usr_CurStrType, note_cmd_36,
+			  DSP_SYM_CHECKMARK, note_temp_sens,
+			  usr_Get_Var(uint8_t_a)+1);
+	} else {
+		usr_Disp_Str_INT16U(note_temp_sens, usr_Get_Var(uint8_t_a)+1);
+	}
+
+	mopr_ListUpDown_Num(TMP_NUM-1);
+	menu_Navigate_(TempSens_Select);
+}
+
+//------------------------------------------------------------------------------
+//				Temperature sensor settings
+//------------------------------------------------------------------------------
+
+void menu_I_TempSensSettings_Title(void)
+{
+	usr_Disp_Str_INT16U(note_temp_sens, usr_Get_Var(uint8_t_a)+1);
+}
+
+void menu_I_TempSensSettings_On(void)
+{
+	uint8_t use_sens;
+
+	if (CHKB(gTmp.state_vector, usr_Get_Var(uint8_t_a)))
+		use_sens = 1;
+	else
+		use_sens = 0;
+
+	mopr_Disp_CheckmarkStr(note_use_sens, use_sens);
+
+	if (USR_IS_ENTER) {
+		tmp_Set_Use(usr_Get_Var(uint8_t_a), !use_sens);
+		USR_REFRESH_DISP();
+	}
+
+	menu_Navigate();
+}
+
+void menu_I_TempSensSettings_StatisticOn(void)
+{
+	uint8_t use_statistic;
+
+	if (CHKB(gTmp.state_vector, usr_Get_Var(uint8_t_a)))
+		use_statistic = 1;
+	else
+		use_statistic = 0;
+
+	mopr_Disp_CheckmarkStr(note_use_statistic, use_statistic);
+
+	if (USR_IS_ENTER) {
+		//tmp_Set_StatisticUsage(usr_Get_Var(uint8_t_a), !use_statistic);
+		USR_REFRESH_DISP();
+	}
+
+	menu_Navigate();
+}
+
+//------------------------------------------------------------------------------
+//						НАСТР ДАТЧИКОВ ТЕМПЕРАТУРЫ
+//------------------------------------------------------------------------------
+
+/*
 void menu_I_TempSens_SensOn(void)
 {
 	uint8_t use_sens;
@@ -1422,6 +1496,7 @@ void menu_I_TempSens_SensOn(void)
 	mopr_ListUpDown_Num(TMP_NUM-1);
 	menu_Navigate();
 }
+*/
 
 //------------------------------------------------------------------------------
 //программы

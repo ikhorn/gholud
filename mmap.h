@@ -103,7 +103,7 @@ usr_wnd_t menW_Menu = {listMenu, list_size(listMenu)};
 #define ENTERITEM_Menu_Tmrs				ITEM_Tmrs_Tmr
 
 #define ENTERMENU_Menu_TempSens				menW_TempSens
-#define ENTERITEM_Menu_TempSens				ITEM_TempSens_SensOn
+#define ENTERITEM_Menu_TempSens				ITEM_TempSens_Select
 
 #define ENTERMENU_Menu_Trgs				menW_Trgs
 #define ENTERITEM_Menu_Trgs				ITEM_Trgs_Trg
@@ -615,21 +615,47 @@ usr_wnd_t menW_Password = {listPassword, list_size(listPassword)};
 #define ENTERITEM_Password_InpPassword			ITEM_---_----
 
 //------------------------------------------------------------------------------
-//						НАСТР ДАТЧИКОВ ТЕМПЕРАТУРЫ
+//				Temperature sensor select
 //------------------------------------------------------------------------------
 void menu_I_TempSens_Title(void);
-void menu_I_TempSens_SensOn(void);
-//массив обработчиков пунктов
+void menu_I_TempSens_Select(void);
+
+//array of item's handlers
 funcp_pr_t listTempSens[] =
 {
 	menu_I_TempSens_Title,
-	menu_I_TempSens_SensOn
+	menu_I_TempSens_Select,
 };
 usr_wnd_t menW_TempSens = {listTempSens, list_size(listTempSens)};
-//номера пунктов
-#define ITEM_TempSens_SensOn					1
-//входные меню пунктов
-#define ENTERMENU_TempSens_SensOn				menW_---
+
+//item's numbers
+#define ITEM_TempSens_Select				1
+
+//input menus of items
+#define ENTERMENU_TempSens_Select			menW_TempSensSettings
+#define ENTERITEM_TempSens_Select			ITEM_TempSensSettings_On
+
+//------------------------------------------------------------------------------
+//				Temperature sensor settings
+//------------------------------------------------------------------------------
+void menu_I_TempSensSettings_Title(void);
+void menu_I_TempSensSettings_On(void);
+void menu_I_TempSensSettings_StatisticOn(void);
+
+//array of item's handlers
+funcp_pr_t listTempSensSettings[] =
+{
+	menu_I_TempSensSettings_Title,
+	menu_I_TempSensSettings_On,
+	menu_I_TempSensSettings_StatisticOn,
+};
+usr_wnd_t menW_TempSensSettings = {listTempSensSettings, list_size(listTempSensSettings)};
+
+//item's numbers
+#define ITEM_TempSensSettings_On			1
+
+//input menus of items
+#define ENTERMENU_TempSensSettings_On			menW_---
 
 //------------------------------------------------------------------------------
 //						ПРОГРАММЫ
