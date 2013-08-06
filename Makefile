@@ -214,7 +214,10 @@ program: $(TARGET).hex
 
 # Display compiler version information.
 gccversion :
-	$(CC) --version
+	@echo
+	@echo "		  --- $(TARGET) compilation ---"
+	@echo
+	@$(CC) --version
 
 DRIVERS_SOURCES =\
 	drivers/bc1602e.c\
@@ -272,6 +275,8 @@ SOURCES =\
 	wrt.c\
 	zmr.c
 
+OBJECTS: $(SOURCES:.c=.0)
+
 # Compile all project
 $(TARGET).elf : $(SOURCES)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
@@ -281,7 +286,7 @@ $(TARGET).hex: $(TARGET).elf
 	$(OBJCOPY) -R .eeprom -O $(FORMAT) $(TARGET).elf "$(TARGET).hex"
 
 size: $(TARGET).elf
-	$(SIZE) --mcu=$(MCU) --format=avr $(TARGET).elf
+	@$(SIZE) --mcu=$(MCU) --format=avr $(TARGET).elf
 
 #$(TARGET) : $(RELEASE_OBJ)
 #$(CC) -Wl,--gc-sections -L"/home/ivan/DATA1/prog/embedded/PATI" -mmcu=$(MCU) -o $@ $^ -lp -lm
