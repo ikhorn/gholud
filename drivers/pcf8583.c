@@ -1,6 +1,6 @@
-#include "iic.h"
-#include "crc.h"
-#include "delay.h"
+#include "../iic.h"
+#include "../crc.h"
+#include "../delay.h"
 #include "pcf8583.h"
 
 

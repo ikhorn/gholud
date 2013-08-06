@@ -6,7 +6,7 @@
 #include "alm.h"
 #include "rmd.h"
 #include "dmem.h"
-#include "pcf8583.h"
+#include "drivers/pcf8583.h"
 #include "sgn.h"
 #include "res.h"
 

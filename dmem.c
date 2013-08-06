@@ -2,7 +2,7 @@
 #include "sta.h"
 #include "err.h"
 #include "dmem.h"
-#include "fm24c64.h"
+#include "drivers/fm24c64.h"
 #include "usr.h"
 
 //------------------------------------------------------------------------------

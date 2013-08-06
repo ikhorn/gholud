@@ -3,8 +3,8 @@
  * обновлен.....................................................................21.12.2010 16:55:23
 */
 
-#include "ds1631.h"
-#include "ds18b20.h"
+#include "drivers/ds1631.h"
+#include "drivers/ds18b20.h"
 
 #define TMP_NUM								2
 

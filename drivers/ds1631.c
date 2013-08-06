@@ -1,5 +1,5 @@
-#include "iic.h"
-#include "mat.h"
+#include "../iic.h"
+#include "../mat.h"
 #include "ds1631.h"
 
 

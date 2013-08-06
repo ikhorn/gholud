@@ -1,6 +1,6 @@
-#include "crc.h"
-#include "mat.h"
-#include "wire.h"
+#include "../crc.h"
+#include "../mat.h"
+#include "../wire.h"
 #include "ds18b20.h"
 
 //------------------------------------------------------------------------------

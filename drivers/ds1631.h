@@ -5,8 +5,8 @@
 #ifndef DS1631_H_
 #define DS1631_H_
 
-#include "ds1631c.h"
-#include "pdef.h"
+#include "../ds1631c.h"
+#include "../pdef.h"
 
 //------------------------------------------------------------------------------
 //

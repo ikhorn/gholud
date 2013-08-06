@@ -208,7 +208,7 @@ void dsp_Set_CursorPos(uint8_t str, uint8_t pos);								//---устанавли
 #elif (DSPC_INICATOR_MODEL == ___BC1602E)
 #ifndef BC1602E
 #define BC1602E
-#include "bc1602e.h"
+#include "drivers/bc1602e.h"
 #endif
 //------------------------------------------------------------------------------
 //типы строк

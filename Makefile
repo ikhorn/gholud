@@ -216,11 +216,18 @@ program: $(TARGET).hex
 gccversion :
 	$(CC) --version
 
+DRIVERS_SOURCES =\
+	drivers/bc1602e.c\
+	drivers/ds1631.c\
+	drivers/ds18b20.c\
+	drivers/fm24c64.c\
+	drivers/pcf8583.c
+
 SOURCES =\
+	$(DRIVERS_SOURCES)\
 	patima.c\
 	alm.c\
 	arr.c\
-	bc1602e.c\
 	bcd.c\
 	cint.c\
 	clc.c\
@@ -229,11 +236,8 @@ SOURCES =\
 	def.c\
 	delay.c\
 	dmem.c\
-	ds1631.c\
-	ds18b20.c\
 	dsp.c\
 	err.c\
-	fm24c64.c\
 	iic.c\
 	ini.c\
 	kbd.c\
@@ -246,7 +250,6 @@ SOURCES =\
 	mopr.c\
 	msg.c\
 	note.c\
-	pcf8583.c\
 	prm.c\
 	ptimer.c\
 	rmd.c\
