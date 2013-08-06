@@ -187,8 +187,6 @@ AVRDUDE_FLAGS += $(AVRDUDE_ERASE_COUNTER)
 SHELL = sh
 #CC = avr-gcc
 CC = avr-gcc-4.7.2
-RELEASE_DIR = Release
-DEBUG_DIR = Debug
 
 OBJCOPY = avr-objcopy
 OBJDUMP = avr-objdump
@@ -202,8 +200,6 @@ REMOVEDIR = rm -rf
 
 # Target file name (without extension).
 TARGET = patima
-RELEASE_OBJ = $(patsubst %.c,$(RELEASE_DIR)/%.o,$(wildcard *.c))
-DEBUG_OBJ = $(patsubst %.c,$(DEBUG_DIR)/%.o,$(wildcard *.c))
 
 # Create object files directory
 
@@ -296,16 +292,8 @@ size: $(TARGET).elf
 
 #include $(wildcard $(RELEASE_DIR)/*.d)
 
-
 clean:
 	rm -f $(TARGET).hex
 	rm -f $(TARGET).elf
-	rm -f $(DEBUG_DIR)/*.o
-	rm -f $(DEBUG_DIR)/*.d
-	rm -f $(RELEASE_DIR)/*.o
-	rm -f $(RELEASE_DIR)/*.d
-
-$(shell mkdir $(RELEASE_DIR) 2>/dev/null)
-$(shell mkdir $(DEBUG_DIR) 2>/dev/null)
 
 .PHONY: release db clean
