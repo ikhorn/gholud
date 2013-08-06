@@ -1,13 +1,11 @@
-#-------------------------------------------------------------------------------
-# Makefile PATIMA
-#-------------------------------------------------------------------------------
+#
+# GHOLUD
+#
 
-#------------------------ Define programs and commands -------------------------
-
-# MCU name																		***
+# MCU name
 MCU = atmega128
 
-# Processor frequency.															***
+# Processor frequency.
 #     This will define a symbol, F_CPU, in all source code files equal to the
 #     processor frequency. You can then use this symbol in your source code to
 #     calculate timings. Do NOT tack on a 'UL' at the end, this will be done
@@ -27,26 +25,26 @@ MCU = atmega128
 #         F_CPU = 20000000
 F_CPU = 3686400
 
-# Output format. (can be srec, ihex, binary)									***
+# Output format. (can be srec, ihex, binary)
 FORMAT = ihex
 
-# Optimization level, can be [0, 1, 2, 3, s]. 									***
+# Optimization level, can be [0, 1, 2, 3, s].
 #     0 = turn off optimization. s = optimize for size.
 #     (Note: 3 is not always the best optimization level. See avr-libc FAQ.)
 OPT = s
 
 
-# Place -D or -U options here for C sources										***
+# Place -D or -U options here for C sources
 CDEFS = -DF_CPU=$(F_CPU)UL
 
 
-# List any extra directories to look for include files here.					***
+# List any extra directories to look for include files here.
 #     Each directory must be seperated by a space.
 #     Use forward slashes for directory separators.
 #     For a directory that has spaces, enclose it in quotes.
 EXTRAINCDIRS =
 
-# Compiler flag to set the C Standard level.									***
+# Compiler flag to set the C Standard level.
 #     c89   = "ANSI" C
 #     gnu89 = c89 plus GCC extensions
 #     c99   = ISO C99 standard (not yet fully implemented)
@@ -104,7 +102,7 @@ PRINTF_LIB_MIN = -Wl,-u,vfprintf -lprintf_min
 # Floating point printf version (requires MATH_LIB = -lm below)
 PRINTF_LIB_FLOAT = -Wl,-u,vfprintf -lprintf_flt
 
-# If this is left blank, then it will use the Standard printf version.			***
+# If this is left blank, then it will use the Standard printf version.
 PRINTF_LIB =
 #PRINTF_LIB = $(PRINTF_LIB_MIN)
 #PRINTF_LIB = $(PRINTF_LIB_FLOAT)
@@ -115,7 +113,7 @@ SCANF_LIB_MIN = -Wl,-u,vfscanf -lscanf_min
 # Floating point + %[ scanf version (requires MATH_LIB = -lm below)
 SCANF_LIB_FLOAT = -Wl,-u,vfscanf -lscanf_flt
 
-# If this is left blank, then it will use the Standard scanf version.			***
+# If this is left blank, then it will use the Standard scanf version.
 SCANF_LIB =
 #SCANF_LIB = $(SCANF_LIB_MIN)
 #SCANF_LIB = $(SCANF_LIB_FLOAT)
@@ -202,7 +200,7 @@ REMOVE = rm -f
 REMOVEDIR = rm -rf
 
 
-# Target file name (without extension).											***
+# Target file name (without extension).
 TARGET = patima
 RELEASE_OBJ = $(patsubst %.c,$(RELEASE_DIR)/%.o,$(wildcard *.c))
 DEBUG_OBJ = $(patsubst %.c,$(DEBUG_DIR)/%.o,$(wildcard *.c))
@@ -218,8 +216,61 @@ program: $(TARGET).hex
 gccversion :
 	$(CC) --version
 
+SOURCES =\
+	patima.c\
+	alm.c\
+	arr.c\
+	bc1602e.c\
+	bcd.c\
+	cint.c\
+	clc.c\
+	crc.c\
+	ctmp.c\
+	def.c\
+	delay.c\
+	dmem.c\
+	ds1631.c\
+	ds18b20.c\
+	dsp.c\
+	err.c\
+	fm24c64.c\
+	iic.c\
+	ini.c\
+	kbd.c\
+	light.c\
+	mat.c\
+	mctr.c\
+	mem.c\
+	mem_fm24c64.c\
+	mexe.c\
+	mopr.c\
+	msg.c\
+	note.c\
+	pcf8583.c\
+	prm.c\
+	ptimer.c\
+	rmd.c\
+	rtc.c\
+	sgn.c\
+	sta.c\
+	stm.c\
+	stp.c\
+	stw.c\
+	tc0.c\
+	tc1.c\
+	tc3.c\
+	tdf.c\
+	tmp.c\
+	tmr.c\
+	trg.c\
+	usr.c\
+	wdt.c\
+	wire.c\
+	wrt.c\
+	zmr.c
+
 # Compile all project
-$(TARGET).elf : *.c
+$(TARGET).elf : $(SOURCES)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 # Convert elf to hex
@@ -250,5 +301,3 @@ $(shell mkdir $(RELEASE_DIR) 2>/dev/null)
 $(shell mkdir $(DEBUG_DIR) 2>/dev/null)
 
 .PHONY: release db clean
-
-
