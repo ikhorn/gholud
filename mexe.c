@@ -1,6 +1,6 @@
 #include "rtc.h"
 #include "usr.h"
-#include "dsp.h"
+#include "dsp/dsp.h"
 #include "alm.h"
 #include "tmr.h"
 #include "trg.h"

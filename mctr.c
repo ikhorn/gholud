@@ -4,7 +4,7 @@
 #include "rtc.h"
 #include "alm.h"
 #include "tmr.h"
-#include "dsp.h"
+#include "dsp/dsp.h"
 #include "rmd.h"
 #include "tmp.h"
 #include "trg.h"

@@ -5,7 +5,7 @@
 #include "sgn.h"
 #include "tmp.h"
 #include "err.h"
-#include "dsp.h"
+#include "dsp/dsp.h"
 #include "light.h"
 #include "mopr.h"
 #include "ptimer.h"

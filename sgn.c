@@ -1,5 +1,5 @@
 #include "sgn.h"
-#include "dsp.h"
+#include "dsp/dsp.h"
 #include "zmr.h"
 #include "res.h"
 #include "light.h"

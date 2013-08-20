@@ -10,7 +10,7 @@
 #include "tmr.h"
 #include "trg.h"
 #include "rmd.h"
-#include "dsp.h"
+#include "dsp/dsp.h"
 #include "light.h"
 #include "delay.h"
 #include "drivers/pcf8583.h"

@@ -1,6 +1,6 @@
 #include "msg.h"
 #include "err.h"
-#include "dsp.h"
+#include "dsp/dsp.h"
 #include "rmd.h"
 #include "alm.h"
 #include "tdf.h"

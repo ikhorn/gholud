@@ -3,7 +3,7 @@
 */
 
 #include "pdef.h"
-#include "dsp.h"
+#include "dsp/dsp.h"
 
 #ifndef USRC_H_
 #define USRC_H_

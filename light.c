@@ -1,4 +1,4 @@
-#include "dsp.h"
+#include "dsp/dsp.h"
 #include "def.h"
 #include "dmem.h"
 #include "light.h"

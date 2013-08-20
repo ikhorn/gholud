@@ -6,7 +6,7 @@
  *	обновлен....................................................................01.02.2011 23:05:04
  */
 
-#include "pdef.h"
+#include "../pdef.h"
 #include "dspc.h"
 
 #ifndef DSP_H_
@@ -208,7 +208,7 @@ void dsp_Set_CursorPos(uint8_t str, uint8_t pos);								//---устанавли
 #elif (DSPC_INICATOR_MODEL == ___BC1602E)
 #ifndef BC1602E
 #define BC1602E
-#include "drivers/bc1602e.h"
+#include "../drivers/bc1602e.h"
 #endif
 //------------------------------------------------------------------------------
 //типы строк

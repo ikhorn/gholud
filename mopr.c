@@ -1,4 +1,4 @@
-#include "dsp.h"
+#include "dsp/dsp.h"
 #include "mopr.h"
 #include "mctr.h"
 #include "dmem.h"

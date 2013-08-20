@@ -212,6 +212,7 @@ all: build_dir gccversion $(BUILD_DIR)/$(TARGET).elf\
 build_dir:
 	@mkdir -p $(BUILD_DIR)
 	@mkdir -p $(BUILD_DIR)/drivers
+	@mkdir -p $(BUILD_DIR)/dsp
 
 program: $(BUILD_DIR)/$(TARGET).hex
 	sudo $(AVRDUDE) $(AVRDUDE_FLAGS) $(AVRDUDE_WRITE_FLASH) $(AVRDUDE_WRITE_EEPROM)
@@ -232,8 +233,18 @@ DRIVERS_SOURCES =\
 
 # Make automatic rules to get all objects files from all files in catalogs,
 # including even files that is not in given object list made above.
+# Option -MD needed to generate .d files in order to include them.
 ${BUILD_DIR}/drivers/%.o: drivers/%.c
-	${CC} -c ${CFLAGS} -o ${@} ${<}
+	${CC} ${CFLAGS} -c -MD ${<} -o ${@}
+
+DSP_SOURCES =\
+	dsp/dsp.c
+
+# Make automatic rules to get all objects files from all files in catalogs,
+# including even files that is not in given object list made above.
+# Option -MD needed to generate .d files in order to include them.
+${BUILD_DIR}/dsp/%.o: dsp/%.c
+	${CC} ${CFLAGS} -c -MD ${<} -o ${@}
 
 ROOT_SOURCES =\
 	patima.c\
@@ -247,7 +258,6 @@ ROOT_SOURCES =\
 	def.c\
 	delay.c\
 	dmem.c\
-	dsp.c\
 	err.c\
 	iic.c\
 	ini.c\
@@ -283,14 +293,15 @@ ROOT_SOURCES =\
 	wrt.c\
 	zmr.c
 
-ALL_SOURCES = ${DRIVERS_SOURCES} ${ROOT_SOURCES}
-
-
 # Make automatic rules to get all objects files from all files in catalogs,
 # including even files that is not in given object list made above.
 # Option -MD needed to generate .d files in order to include them.
 ${BUILD_DIR}/%.o: %.c
 	${CC} ${CFLAGS} -c -MD ${<} -o ${@}
+
+
+ALL_SOURCES = ${DRIVERS_SOURCES} ${DSP_SOURCES} ${ROOT_SOURCES}
+
 
 # Make full list of object files, each name is unique and consist from catalog
 # and base name of c file.

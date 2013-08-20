@@ -1,6 +1,6 @@
 #include "sgn.h"
 #include "res.h"
-#include "dsp.h"
+#include "dsp/dsp.h"
 #include "alm.h"
 #include "note.h"
 #include "asci.h"

@@ -1,6 +1,6 @@
 #include "alm.h"
 #include "zmr.h"
-#include "dsp.h"
+#include "dsp/dsp.h"
 #include "usr.h"
 #include "rmd.h"
 #include "tmp.h"
