@@ -32,11 +32,11 @@ uint8_t dsp_Decode_Sym(uint8_t sym);											//---коррекция симв�
 void dsp_Ini(void)
 //---инициализация ГПИ
 {
-	bc1602e_Ini();
-	bc1602e_Set_SpecSymPos(0);													//записать специальные символы
+	bc1602e_ini();
+	bc1602e_set_spec_sym_pos(0);													//записать специальные символы
 	for (ubase_t i = 0; i < sizeof(special_symbols); i++)
 	{
-		dsp_Set_CurrentByte(prm_Rd_B(&special_symbols[i]));
+		bc1602e_set_current_byte(prm_Rd_B(&special_symbols[i]));
 	}
 	dsp_Set_SymPos(0);
 }
@@ -71,10 +71,10 @@ void dsp_Put_String(ubase_t strnum, uint8_t* str)
 	uint8_t str_pos;
     if (strnum) str_pos = BC1602E_STR_START_1;
     else str_pos = BC1602E_STR_START_0;
-	bc1602e_Set_SymPos(str_pos);
+	bc1602e_set_sym_pos(str_pos);
 	for (ubase_t i=0; i < DSP_VIR_STR_LENTH; i++)
 	{
-		bc1602e_Set_CurrentByte(*str++);
+		bc1602e_set_current_byte(*str++);
 	}
 }
 
@@ -86,12 +86,12 @@ void dsp_Clr_Str(ubase_t str)
     if (str) str_pos = BC1602E_STR_START_1;
     else str_pos = BC1602E_STR_START_0;
 
-	bc1602e_Set_SymPos(str_pos);
+	bc1602e_set_sym_pos(str_pos);
 	for (ubase_t i=0; i < DSP_VIR_STR_LENTH; i++)
 	{
-		bc1602e_Set_CurrentByte(' ');
+		bc1602e_set_current_byte(' ');
 	}
-	bc1602e_Set_SymPos(str_pos);
+	bc1602e_set_sym_pos(str_pos);
 }
 
 
@@ -100,7 +100,7 @@ void dsp_Clr(void)
 {
 	dsp_Clr_Str(0);
     dsp_Clr_Str(1);
-    bc1602e_Set_SymPos(0);
+    bc1602e_set_sym_pos(0);
 }
 
 
@@ -109,18 +109,18 @@ bool dsp_Check_Disp(void)
 {
 	enum {CHECK_POS = 79, CHECK_SYMBOL = ' '};
 	uint8_t sym_pos;
-	bc1602e_Get_Pos(&sym_pos);													//прочитать текущую позицию курсора
-    bc1602e_Set_SymPos(CHECK_POS);												//перейти на проверочную позицию
+	bc1602e_get_pos(&sym_pos);													//прочитать текущую позицию курсора
+    bc1602e_set_sym_pos(CHECK_POS);												//перейти на проверочную позицию
 	uint8_t sym;
-	bc1602e_Get_Sym(&sym);														//скопировать символ
-	bc1602e_Cmd(BC1602E_MOVE_CURSOR_LEFT);
-	bc1602e_Set_CurrentByte(CHECK_SYMBOL);										//вставить проверочный символ
-	bc1602e_Cmd(BC1602E_MOVE_CURSOR_LEFT);
+	bc1602e_get_sym(&sym);														//скопировать символ
+	bc1602e_cmd(BC1602E_MOVE_CURSOR_LEFT);
+	bc1602e_set_current_byte(CHECK_SYMBOL);										//вставить проверочный символ
+	bc1602e_cmd(BC1602E_MOVE_CURSOR_LEFT);
 	uint8_t check_sym = 0;
-	bc1602e_Get_Sym(&check_sym);												//прочитать проверочный символ
-	bc1602e_Cmd(BC1602E_MOVE_CURSOR_LEFT);				
-    bc1602e_Set_CurrentByte(sym);												//вставить символ, тот что был
-    bc1602e_Set_SymPos(sym_pos);												//вернуться на прежнюю позицию
+	bc1602e_get_sym(&check_sym);												//прочитать проверочный символ
+	bc1602e_cmd(BC1602E_MOVE_CURSOR_LEFT);				
+    bc1602e_set_current_byte(sym);												//вставить символ, тот что был
+    bc1602e_set_sym_pos(sym_pos);												//вернуться на прежнюю позицию
 	if (check_sym == CHECK_SYMBOL) return 1;			    					//проверить соответствие проверочного символа
 	return 0;
 }
@@ -534,7 +534,7 @@ void dsp_Print(ubase_t strnum, ubase_t strtype, const DSPC_CSTR_ *cmd_str,...)
 	}
 #endif
 	
-	bc1602e_Set_SymPos(str_pos);												//стать на стартовую позицию и приготовиться к передаче
+	bc1602e_set_sym_pos(str_pos);												//стать на стартовую позицию и приготовиться к передаче
 
 	for (ubase_t i=0, s=0; i<DSP_VIR_STR_LENTH; i++)								//вывести строку
 	{

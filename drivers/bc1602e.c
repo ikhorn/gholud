@@ -2,99 +2,95 @@
 #include "../delay.h"
 
 
-//------------------------------------------------------------------------------
-//работа с портами
-//------------------------------------------------------------------------------
-																				//RS
-#define ON_RS()																	\
-{																				\
-	SETB(BC1602E_RS_DDR, BC1602E_RS_B);											\
-	SETB(BC1602E_RS_PORT, BC1602E_RS_B);										\
+/*
+ * work with ports
+ */
+/* RS */
+#define ON_RS()\
+{\
+	SETB(BC1602E_RS_DDR, BC1602E_RS_B);\
+	SETB(BC1602E_RS_PORT, BC1602E_RS_B);\
 }
 
-#define OFF_RS()																\
-{																				\
-	SETB(BC1602E_RS_DDR, BC1602E_RS_B);											\
-	CLRB(BC1602E_RS_PORT, BC1602E_RS_B);										\
+#define OFF_RS()\
+{\
+	SETB(BC1602E_RS_DDR, BC1602E_RS_B);\
+	CLRB(BC1602E_RS_PORT, BC1602E_RS_B);\
 }
 
-																				//RW
-#define ON_RW()																	\
-{																				\
-	SETB(BC1602E_RW_DDR, BC1602E_RW_B);											\
-	SETB(BC1602E_RW_PORT, BC1602E_RW_B);										\
+/* RW */
+#define ON_RW()\
+{\
+	SETB(BC1602E_RW_DDR, BC1602E_RW_B);\
+	SETB(BC1602E_RW_PORT, BC1602E_RW_B);\
 }
 
-#define OFF_RW()																\
-{																				\
-	SETB(BC1602E_RW_DDR, BC1602E_RW_B);											\
-	CLRB(BC1602E_RW_PORT, BC1602E_RW_B);										\
+#define OFF_RW()\
+{\
+	SETB(BC1602E_RW_DDR, BC1602E_RW_B);\
+	CLRB(BC1602E_RW_PORT, BC1602E_RW_B);\
 }
 
-																				//EBL
-#define ON_EBL()																\
-{																				\
-	SETB(BC1602E_EBL_DDR, BC1602E_EBL_B);										\
-	SETB(BC1602E_EBL_PORT, BC1602E_EBL_B);										\
+/* EBL */
+#define ON_EBL()\
+{\
+	SETB(BC1602E_EBL_DDR, BC1602E_EBL_B);\
+	SETB(BC1602E_EBL_PORT, BC1602E_EBL_B);\
 }
 
-#define OFF_EBL()																\
-{																				\
-	SETB(BC1602E_EBL_DDR, BC1602E_EBL_B);										\
-	CLRB(BC1602E_EBL_PORT, BC1602E_EBL_B);										\
+#define OFF_EBL()\
+{\
+	SETB(BC1602E_EBL_DDR, BC1602E_EBL_B);\
+	CLRB(BC1602E_EBL_PORT, BC1602E_EBL_B);\
 }
 
-																				//DATA
-#define RX_DATA(DATA)															\
-{																				\
-	BC1602E_DATA_DDR = 0x00;													\
-	DATA = BC1602E_DATA_PIN;													\
+/* DATA */
+#define RX_DATA(DATA)\
+{\
+	BC1602E_DATA_DDR = 0x00;\
+	DATA = BC1602E_DATA_PIN;\
 }
 
-#define TX_DATA(DATA)															\
-{																				\
-	BC1602E_DATA_DDR = 0xFF;													\
-	BC1602E_DATA_PORT = DATA;													\
+#define TX_DATA(DATA)\
+{\
+	BC1602E_DATA_DDR = 0xFF;\
+	BC1602E_DATA_PORT = DATA;\
 }
 
-#define DATA_TO_WR()															\
-{																				\
-	BC1602E_DATA_PORT = 0x00;													\
-	BC1602E_DATA_DDR = 0xFF;													\
+#define DATA_TO_WR()\
+{\
+	BC1602E_DATA_PORT = 0x00;\
+	BC1602E_DATA_DDR = 0xFF;\
 }
 
-#define DATA_TO_RD()															\
-{																				\
-	BC1602E_DATA_PORT = 0x00;													\
-	BC1602E_DATA_DDR = 0x00;													\
+#define DATA_TO_RD()\
+{\
+	BC1602E_DATA_PORT = 0x00;\
+	BC1602E_DATA_DDR = 0x00;\
 }
 
-#define IS_RDY					(!CHKB(BC1602E_DATA_PIN, BC1602E_DATA_7B))		//проверяет готовность
+/* check readiness */
+#define IS_RDY		(!CHKB(BC1602E_DATA_PIN, BC1602E_DATA_7B))
 
-//------------------------------------------------------------------------------
-//остальные константы
-//------------------------------------------------------------------------------
+/* them mask to read adress counter */
+#define AC_MASK		0x7F
 
-#define AC_MASK								0x7F								//маска для чтения счетчика адреса
-
-//------------------------------------------------------------------------------
-//макро функции
-//------------------------------------------------------------------------------
-																				//---стробирует
-#define STROBE()																\
-{																				\
-	ON_EBL();																	\
-	DELAY_STROBE();																\
-	OFF_EBL();																	\
+/* strobing */
+#define STROBE()\
+{\
+	ON_EBL();\
+	DELAY_STROBE();\
+	OFF_EBL();\
 }
 
-#define DELAY_STROBE()						delay_us(2);						//---стробовая задержка
+/* strobe delay */
+#define DELAY_STROBE()	delay_us(2);
 
-static void bc1602e_Poll_Ready(void);
+static void bc1602e_poll_ready(void);
 
-void bc1602e_Ini(void)
+void bc1602e_ini(void)
 {
-	bc1602e_Off_Light();
+	bc1602e_off_light();
 	DATA_TO_WR();
 	OFF_RS();
 	OFF_RW();
@@ -112,21 +108,20 @@ void bc1602e_Ini(void)
 	STROBE();
 }
 
-void bc1602e_Cmd(uint8_t cmd)
-//---посылает команду, для CLEAR_DISP нужна зад. 2мс
+/* send command, (take in mind than for CLEAR_DISP delay in 2ms is needed) */
+void bc1602e_cmd(uint8_t cmd)
 {
-	bc1602e_Poll_Ready();
+	bc1602e_poll_ready();
 	OFF_RS();
 	OFF_RW();
 	TX_DATA(cmd);
 	STROBE();
 }
 
-
-void bc1602e_Set_SpecSymPos(uint8_t adr)
-//---перейти на адрес специального символа
+/* go to an adress of special symbol */
+void bc1602e_set_spec_sym_pos(uint8_t adr)
 {
-	bc1602e_Poll_Ready();
+	bc1602e_poll_ready();
 	OFF_RS();
 	OFF_RW();
 	CLRB(adr, BC1602E_DATA_7B);
@@ -135,11 +130,10 @@ void bc1602e_Set_SpecSymPos(uint8_t adr)
 	STROBE();
 }
 
-
-void bc1602e_Set_SymPos(uint8_t adr)
-//---устанавливает курсор
+/* set cursor */
+void bc1602e_set_sym_pos(uint8_t adr)
 {
-	bc1602e_Poll_Ready();
+	bc1602e_poll_ready();
 	OFF_RS();
 	OFF_RW();
 	SETB(adr, BC1602E_DATA_7B);
@@ -147,10 +141,10 @@ void bc1602e_Set_SymPos(uint8_t adr)
 	STROBE();
 }
 
-void bc1602e_Set_CurrentByte(uint8_t sym)
-//---выводит должный символ
+/* output given symbol */
+void bc1602e_set_current_byte(uint8_t sym)
 {
-	bc1602e_Poll_Ready();
+	bc1602e_poll_ready();
 	OFF_RW();
 	ON_RS();
 	TX_DATA(sym);
@@ -158,18 +152,18 @@ void bc1602e_Set_CurrentByte(uint8_t sym)
 }
 
 
-void bc1602e_Set_Byte(uint8_t pos, uint8_t sym)
-//---выводит должный символ на указанную позицию
+/* output given symbol to the given position */
+void bc1602e_set_byte(uint8_t pos, uint8_t sym)
 {
-	bc1602e_Set_SymPos(pos);
-	bc1602e_Set_CurrentByte(sym);
+	bc1602e_set_sym_pos(pos);
+	bc1602e_set_current_byte(sym);
 }
 
 
-void bc1602e_Get_Sym(uint8_t *sym)
-//---прочетать текущий символ
+/* read current symbol */
+void bc1602e_get_sym(uint8_t *sym)
 {
-	bc1602e_Poll_Ready();
+	bc1602e_poll_ready();
 	DATA_TO_RD();
 	ON_RW();
 	ON_RS();
@@ -183,10 +177,10 @@ void bc1602e_Get_Sym(uint8_t *sym)
 }
 
 
-void bc1602e_Get_Pos(uint8_t *AC)
-//---читает счетчик адреса
+/* read adress counter */
+void bc1602e_get_pos(uint8_t *AC)
 {
-	bc1602e_Poll_Ready();
+	bc1602e_poll_ready();
 	DATA_TO_RD();
 	OFF_RS();
 	ON_RW();
@@ -200,41 +194,43 @@ void bc1602e_Get_Pos(uint8_t *AC)
 }
 
 /*
-bool bc1602e_Check(void)
-//---проверка
+//---checking
+bool bc1602e_check(void)
 {
 	enum{CHECK_POS = 79, CHECK_SYMBOL = ' '};
-	bc1602e_Ini_Ports();
+	bc1602e_ini_ports();
 	uint8_t sym_pos;
-	bc1602e_Get_Pos(&sym_pos);													//прочитать текущую позицию курсора
-    bc1602e_Set_SymPos(CHECK_POS);												//перейти на проверочную позицию
+	bc1602e_get_pos(&sym_pos);													//прочитать текущую позицию курсора
+    bc1602e_Set_sym_pos(CHECK_POS);												//перейти на проверочную позицию
 	uint8_t sym;
-	bc1602e_Get_Sym(&sym);														//скопировать символ
-	bc1602e_Cmd(BC1602E_MOVE_CURSOR_LEFT);
-	bc1602e_Set_CurrentByte(CHECK_SYMBOL);										//вставить проверочный символ
-	bc1602e_Cmd(BC1602E_MOVE_CURSOR_LEFT);
+	bc1602e_get_sym(&sym);														//скопировать символ
+	bc1602e_cmd(BC1602E_MOVE_CURSOR_LEFT);
+	bc1602e_set_current_byte(CHECK_SYMBOL);										//вставить проверочный символ
+	bc1602e_cmd(BC1602E_MOVE_CURSOR_LEFT);
 	uint8_t check_sym = 0;
-	bc1602e_Get_Sym(&check_sym);												//прочитать проверочный символ
+	bc1602e_get_sym(&check_sym);												//прочитать проверочный символ
 	if (check_sym != CHECK_SYMBOL) return false;								//проверить соответствие проверочного символа
-	bc1602e_Cmd(BC1602E_MOVE_CURSOR_LEFT);
-    bc1602e_Set_CurrentByte(sym);												//вставить символ, тот что был
-	bc1602e_Set_SymPos(sym_pos);												//вернуться на прежнюю позицию
+	bc1602e_cmd(BC1602E_MOVE_CURSOR_LEFT);
+    bc1602e_set_current_byte(sym);												//вставить символ, тот что был
+	bc1602e_set_sym_pos(sym_pos);												//вернуться на прежнюю позицию
 	return true;
 }*/
 
 
-static void bc1602e_Poll_Ready(void)
-//---дожидается готовности ЖКИ
+/* waite display readiness */
+static void bc1602e_poll_ready(void)
 {
 	enum {WAITE=60000};
 	DATA_TO_RD();
 	OFF_RS();
 	ON_RW();
 	ON_EBL();
-	for (uint16_t i=0; i<WAITE; i++)
-	{
-		if (IS_RDY) break;
+
+	for (uint16_t i = 0; i < WAITE; i++) {
+		if (IS_RDY)
+			break;
 	}
+
 	OFF_EBL();
 	OFF_RW();
 	DATA_TO_WR();

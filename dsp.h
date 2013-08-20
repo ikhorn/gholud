@@ -302,17 +302,17 @@ bool dsp_Check_Disp(void);                                                      
 //макро функции
 //------------------------------------------------------------------------------
 
-#define dsp_On_Light()						bc1602e_On_Light()					//---включает подсветку
-#define dsp_Off_Light()						bc1602e_Off_Light()					//---выключает подсветку
-#define dsp_Toggle_Light()					bc1602e_Inv_Light()					//---меняет состояние подсветки на противоположное
+#define dsp_On_Light()						bc1602e_on_light()					//---включает подсветку
+#define dsp_Off_Light()						bc1602e_off_light()					//---выключает подсветку
+#define dsp_Toggle_Light()					bc1602e_inv_light()					//---меняет состояние подсветки на противоположное
 
-#define dsp_Set_CurrentByte(BYTE)			bc1602e_Set_CurrentByte(BYTE)		//---выводит символ в адресном пространстве индикатора (АПИ)
+#define dsp_Set_CurrentByte(BYTE)			bc1602e_set_current_byte(BYTE)		//---выводит символ в адресном пространстве индикатора (АПИ)
 #define dsp_Set_Byte(POS, BYTE)				bc1602e_Set_Byte(POS, BYTE)			//---выводит символ на указанную позицию в АПИ
-#define dsp_Set_SymPos(POS)					bc1602e_Set_SymPos(POS)				//---устанавливает адрес символа
+#define dsp_Set_SymPos(POS)					bc1602e_set_sym_pos(POS)				//---устанавливает адрес символа
 
-#define dsp_Set_CursorBlink()				bc1602e_Cmd(BC1602E_DISPON_BLINKCURSOR_ON)//---включает блинк курсора
-#define dsp_Off_Cursor()					bc1602e_Cmd(BC1602E_DISPON)			//---выключает курсор
-#define dsp_Shift_CursorLeft()				bc1602e_Cmd(BC1602E_DECREMENTAC_SHIFTOFF)//---сдвинуть курсор влево
+#define dsp_Set_CursorBlink()				bc1602e_cmd(BC1602E_DISPON_BLINKCURSOR_ON)//---включает блинк курсора
+#define dsp_Off_Cursor()					bc1602e_cmd(BC1602E_DISPON)			//---выключает курсор
+#define dsp_Shift_CursorLeft()				bc1602e_cmd(BC1602E_DECREMENTAC_SHIFTOFF)//---сдвинуть курсор влево
 
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
