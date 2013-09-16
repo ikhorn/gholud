@@ -131,7 +131,7 @@ void mexe_Set_ByDef(void)
 		light_Default();														//подсветка
 		rtc_Default();															//часы
 		dmem_Wr_Psw(DEF_PSW);													//пароль
-		dmem_Wr_Psw_Use(DEF_PSW_USE);											//использование пароля
+		dmem_Wr_Psw_Usage(DEF_PSW_USAGE);											//использование пароля
 		usr_Off_Executing();
 		wdt_Reset_Dev_by_Wdt();
 	}

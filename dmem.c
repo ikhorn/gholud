@@ -129,7 +129,7 @@ bool dmem_Rd_Rtc_HourSgn(uint8_t* hour_sgn)
 //PSW
 //------------------------------------------------------------------------------
 
-bool dmem_Wr_Psw_Use(uint8_t psw_use)
+bool dmem_Wr_Psw_Usage(uint8_t psw_use)
 //---записывает использование пароля
 {
 	enum {PSIZE = 1};
@@ -139,14 +139,14 @@ bool dmem_Wr_Psw_Use(uint8_t psw_use)
 	return 0;
 }
 
-bool dmem_Rd_Psw_Use(uint8_t* psw_use)
+bool dmem_Rd_Psw_Usage(uint8_t* psw_use)
 //---считывает использование пароля
 {
 	enum {PSIZE = 1};
 	uint32_t adr;
 	adr = (uint32_t)DMEM_AD_PSW__;
 	if (mem_Read_Param(adr, psw_use, PSIZE)) return 1;
-	err_Psw_Rd_Use();
+	err_Psw_Rd_Usage();
 	return 0;
 }
 
@@ -579,7 +579,7 @@ bool dmem_Rd_Trg_Type(ubase_t tnum, uint8_t* type)
 //TMP
 //------------------------------------------------------------------------------
 
-bool dmem_Wr_Tmp_Use(ubase_t snum , uint8_t use_sens)
+bool dmem_Wr_Tmp_Usage(ubase_t snum , uint8_t use_sens)
 {
 	enum {PSIZE = 1, STEP = 2, SHIFT = 0};
 	uint32_t adr;
@@ -588,13 +588,13 @@ bool dmem_Wr_Tmp_Use(ubase_t snum , uint8_t use_sens)
 	return false;
 }
 
-bool dmem_Rd_Tmp_Use(ubase_t snum , uint8_t* use_sens)
+bool dmem_Rd_Tmp_Usage(ubase_t snum , uint8_t* use_sens)
 {
 	enum {PSIZE = 1, STEP = 2, SHIFT = 0};
 	uint32_t adr;
 	adr = DMEM_AD_TMP__ + SHIFT + STEP*(uint32_t)snum;
 	if (mem_Read_Param(adr, use_sens, PSIZE)) return true;
-	err_Tmp_Rd_Use(snum);
+	err_Tmp_Rd_Usage(snum);
 	return false;
 }
 

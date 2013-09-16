@@ -66,7 +66,7 @@ void err_LightState_Rd(void);
 //------------------------------------------------------------------------------
 //PSW
 //------------------------------------------------------------------------------
-void err_Psw_Rd_Use(void);
+void err_Psw_Rd_Usage(void);
 void err_Psw_Rd_Psw(void);
 //------------------------------------------------------------------------------
 //ALM
@@ -111,4 +111,4 @@ void err_Rmd_Rd_Melody(ubase_t rnum);
 //------------------------------------------------------------------------------
 void err_Ds1631(void);
 void err_Ds18b20(void);
-void err_Tmp_Rd_Use(ubase_t snum);
+void err_Tmp_Rd_Usage(ubase_t snum);

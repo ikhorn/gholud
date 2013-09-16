@@ -22,7 +22,7 @@ extern gtmp_t gTmp;
 
 void tmp_Ini(void);
 void tmp(void);
-bool tmp_Set_Use(ubase_t sens, uint8_t use_state);
+bool tmp_Set_Usage(ubase_t sens, uint8_t use_state);
 void tmp_Default(ubase_t snum);
 
 #define TMP_1_TEMP_TO_CODE(TEMP, CODE)			CODE = ds1631_Temp_to_Code(TEMP)//преобразовывает температуру в код датчика 1

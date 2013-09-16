@@ -50,8 +50,8 @@ bool dmem_Rd_Rtc_HourSgn(uint8_t* hour_sgn);									//---считывает п�
 //------------------------------------------------------------------------------
 //PSW
 //------------------------------------------------------------------------------
-bool dmem_Wr_Psw_Use(uint8_t psw_use);											//---записывает использование пароля
-bool dmem_Rd_Psw_Use(uint8_t* psw_use);											//---считывает использование пароля
+bool dmem_Wr_Psw_Usage(uint8_t psw_use);
+bool dmem_Rd_Psw_Usage(uint8_t* psw_use);
 bool dmem_Wr_Psw(uint32_t psw);													//---записывает пароль
 bool dmem_Rd_Psw(uint32_t* psw);													//---читает пароль
 //------------------------------------------------------------------------------
@@ -138,7 +138,6 @@ bool dmem_Rd_Rmd_Melody(ubase_t rnum, uint8_t* melody);
 //------------------------------------------------------------------------------
 //TMP
 //------------------------------------------------------------------------------
-bool dmem_Wr_Tmp_Use(ubase_t snum , uint8_t use_sens);
-bool dmem_Rd_Tmp_Use(ubase_t snum , uint8_t* use_sens);
-
+bool dmem_Wr_Tmp_Usage(ubase_t snum , uint8_t use_sens);
+bool dmem_Rd_Tmp_Usage(ubase_t snum , uint8_t* use_sens);
 

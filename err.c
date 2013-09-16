@@ -162,11 +162,11 @@ void err_Ds18b20(void)
 	STA_E(STA_TMP_2);
 }
 
-void err_Tmp_Rd_Use(ubase_t snum)
+void err_Tmp_Rd_Usage(ubase_t snum)
 {
 	if (STA_IS_E(STA_MEM))
 		return;
-	tmp_Set_Use(snum, DEF_TMP_USE);
+	tmp_Set_Usage(snum, DEF_TMP_USAGE);
 }
 
 //------------------------------------------------------------------------------
@@ -184,10 +184,10 @@ void err_LightState_Rd(void)
 //PSW
 //------------------------------------------------------------------------------
 
-void err_Psw_Rd_Use(void)
+void err_Psw_Rd_Usage(void)
 {
 	if (STA_IS_E(STA_MEM)) return;
-	dmem_Wr_Psw_Use(DEF_PSW_USE);
+	dmem_Wr_Psw_Usage(DEF_PSW_USAGE);
 }
 
 void err_Psw_Rd_Psw(void)

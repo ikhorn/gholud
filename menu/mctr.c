@@ -118,7 +118,7 @@ void wrt_Handle_HotKey_1(void)
 //---быстрый вход до будильников '1'
 {
 	uint8_t psw_use = 1;
-	dmem_Rd_Psw_Use(&psw_use);
+	dmem_Rd_Psw_Usage(&psw_use);
 	if (psw_use)
 	{
 		usr_Set_InVar(uint8_t_a, MCTRL_GOTO_ALM);
@@ -136,7 +136,7 @@ void wrt_Handle_HotKey_2(void)
 //---быстрый вход до напоминалок '2'
 {
 	uint8_t psw_use = 1;
-	dmem_Rd_Psw_Use(&psw_use);
+	dmem_Rd_Psw_Usage(&psw_use);
 	usr_Set_InVar(uint8_t_c, 0);
 	if (psw_use)
 	{
@@ -190,7 +190,7 @@ void menu_I_Enter_Title(void)
 void menu_I_Enter_Enter(void)
 {
 	uint8_t psw_use = 1;
-	dmem_Rd_Psw_Use(&psw_use);
+	dmem_Rd_Psw_Usage(&psw_use);
 	if (psw_use)
 	{
 		usr_Set_Var(uint8_t_a, MCTRL_GOTO_MENU);
@@ -1275,11 +1275,11 @@ void menu_I_General_AvtoTimeShift(void)
 void menu_I_General_UsePassword(void)
 {
 	uint8_t use_psw;
-	if (!dmem_Rd_Psw_Use(&use_psw)) use_psw = 1;
+	if (!dmem_Rd_Psw_Usage(&use_psw)) use_psw = 1;
 	mopr_Disp_CheckmarkStr(note_use_password, use_psw);
 	if (USR_IS_ENTER)
 	{
-		dmem_Wr_Psw_Use(!use_psw);
+		dmem_Wr_Psw_Usage(!use_psw);
 		USR_REFRESH_DISP();
 	}
 	menu_Navigate();
@@ -1445,7 +1445,7 @@ void menu_I_TempSensSettings_On(void)
 	mopr_Disp_CheckmarkStr(note_use_sens, use_sens);
 
 	if (USR_IS_ENTER) {
-		tmp_Set_Use(usr_Get_Var(uint8_t_a), !use_sens);
+		tmp_Set_Usage(usr_Get_Var(uint8_t_a), !use_sens);
 		USR_REFRESH_DISP();
 	}
 
