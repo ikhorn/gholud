@@ -6,6 +6,7 @@
 #include "delay.h"
 
 #define TMP_SENS_USAGE		0x01
+#define TMP_SENS_STAT_USAGE	0x02
 
 
 gtmp_t gTmp;
@@ -24,6 +25,11 @@ void tmp_Ini(void)
 			SETB(gTmp.state_vector, i);
 		else
 			CLRB(gTmp.state_vector, i);
+
+		if (settings & TMP_SENS_STAT_USAGE)
+			SETB(gTmp.state_stat_vector, i);
+		else
+			CLRB(gTmp.state_stat_vector, i);
 	}
 
 	if (CHKB(gTmp.state_vector, 0)) {
@@ -76,6 +82,23 @@ bool tmp_Set_Usage(ubase_t sens, uint8_t use_state)
 	if (!dmem_Update_Tmp_Settings(sens, TMP_SENS_USAGE,
 				      use_state ? TMP_SENS_USAGE : 0))
 		return 0;
+
+	return 1;
+}
+
+/*
+ * tmp_Set_Statistic_Usage - set temperature sensor statistic usage
+ */
+bool tmp_Set_Statistic_Usage(ubase_t sens, uint8_t use_state)
+{
+	if (!dmem_Update_Tmp_Settings(sens, TMP_SENS_STAT_USAGE,
+				      use_state ? TMP_SENS_STAT_USAGE: 0))
+		return 0;
+
+	if (use_state)
+		SETB(gTmp.state_stat_vector, sens);
+	else
+		CLRB(gTmp.state_stat_vector, sens);
 
 	return 1;
 }
