@@ -1456,15 +1456,12 @@ void menu_I_TempSensSettings_StatisticOn(void)
 {
 	uint8_t use_statistic;
 
-	if (CHKB(gTmp.state_vector, usr_Get_Var(uint8_t_a)))
-		use_statistic = 1;
-	else
-		use_statistic = 0;
+	use_statistic = !!CHKB(gTmp.state_stat_vector, usr_Get_Var(uint8_t_a));
 
 	mopr_Disp_CheckmarkStr(note_use_statistic, use_statistic);
 
 	if (USR_IS_ENTER) {
-		//tmp_Set_StatisticUsage(usr_Get_Var(uint8_t_a), !use_statistic);
+		tmp_Set_Statistic_Usage(usr_Get_Var(uint8_t_a), !use_statistic);
 		USR_REFRESH_DISP();
 	}
 
