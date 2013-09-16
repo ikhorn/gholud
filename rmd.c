@@ -1,12 +1,12 @@
 #include "rmd.h"
 #include "rtc.h"
 #include "menucore/usr.h"
-#include "msg.h"
+#include "menu/msg.h"
 #include "sgn.h"
 #include "dmem.h"
 #include "def.h"
 #include "res.h"
-#include "note.h"
+#include "menu/note.h"
 
 //------------------------------------------------------------------------------
 //прототипы

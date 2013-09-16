@@ -4,7 +4,7 @@
  *
 */
 
-#include "pdef.h"
+#include "../pdef.h"
 #include "note.h"
 
 const USRC_STR_ note_wrong[] = {0xBD,0x65,0xBE,0x70,0x61,0xB3,0x2E,0x00};			/* неправ. */

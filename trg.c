@@ -1,7 +1,7 @@
 #include "trg.h"
 #include "tmp.h"
 #include "menucore/usr.h"
-#include "msg.h"
+#include "menu/msg.h"
 #include "def.h"
 #include "dmem.h"
 

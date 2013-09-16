@@ -5,7 +5,7 @@
 #include "def.h"
 #include "res.h"
 #include "menucore/usr.h"
-#include "msg.h"
+#include "menu/msg.h"
 #include "dmem.h"
 
 galm_t gAlm;

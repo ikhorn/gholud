@@ -2,8 +2,8 @@
  * обновлен.....................................................................15.11.2010 16:43:28
 */
 
-#include "menucore/usr.h"
-#include "res.h"
+#include "../menucore/usr.h"
+#include "../res.h"
 
 #ifndef MSG
 #define MSG

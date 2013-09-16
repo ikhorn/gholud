@@ -17,9 +17,9 @@
 #include "drivers/ds1631.h"
 #include "drivers/ds18b20.h"
 #include "drivers/fm24c64.h"
-#include "note.h"
+#include "menu/note.h"
 #include "dmem.h"
-#include "msg.h"
+#include "menu/msg.h"
 
 //------------------------------------------------------------------------------
 //IIC

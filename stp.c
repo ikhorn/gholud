@@ -2,7 +2,7 @@
 #include "res.h"
 #include "dsp/dsp.h"
 #include "alm.h"
-#include "note.h"
+#include "menu/note.h"
 #include "asci.h"
 
 //------------------------------------------------------------------------------

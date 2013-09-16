@@ -3,8 +3,8 @@
  * обновлен.....................................................................06.01.2011 12:44:01
 */
 
-#include "menucore/usr.h"
-#include "pdef.h"
+#include "../menucore/usr.h"
+#include "../pdef.h"
 
 #ifndef NOTE_H_
 #define NOTE_H_

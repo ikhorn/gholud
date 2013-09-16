@@ -2,7 +2,7 @@
 #include "err.h"
 #include "tdf.h"
 #include "def.h"
-#include "msg.h"
+#include "menu/msg.h"
 #include "alm.h"
 #include "rmd.h"
 #include "dmem.h"

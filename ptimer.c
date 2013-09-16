@@ -1,5 +1,5 @@
 #include "menucore/usr.h"
-#include "msg.h"
+#include "menu/msg.h"
 #include "stm.h"
 #include "rtc.h"
 #include "sgn.h"
@@ -7,7 +7,7 @@
 #include "err.h"
 #include "dsp/dsp.h"
 #include "light.h"
-#include "mopr.h"
+#include "menu/mopr.h"
 #include "ptimer.h"
 
 //------------------------------------------------------------------------------

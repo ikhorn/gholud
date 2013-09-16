@@ -215,6 +215,7 @@ build_dir:
 	@mkdir -p $(BUILD_DIR)/dsp
 	@mkdir -p $(BUILD_DIR)/menucore
 	@mkdir -p $(BUILD_DIR)/menucore/prog
+	@mkdir -p $(BUILD_DIR)/menu
 
 program: $(BUILD_DIR)/$(TARGET).hex
 	sudo $(AVRDUDE) $(AVRDUDE_FLAGS) $(AVRDUDE_WRITE_FLASH) $(AVRDUDE_WRITE_EEPROM)
@@ -263,6 +264,20 @@ ${BUILD_DIR}/menucore/%.o: menucore/%.c
 ${BUILD_DIR}/menucore/prog/%.o: menucore/prog/%.c
 	${CC} ${CFLAGS} -c -MD ${<} -o ${@}
 
+MENU_SOURCES =\
+	menu/mctr.c\
+	menu/mexe.c\
+	menu/mopr.c\
+	menu/msg.c\
+	menu/note.c\
+	menu/wrt.c\
+
+# Make automatic rules to get all objects files from all files in catalogs,
+# including even files that is not in given object list made above.
+# Option -MD needed to generate .d files in order to include them.
+${BUILD_DIR}/menu/%.o: menu/%.c
+	${CC} ${CFLAGS} -c -MD ${<} -o ${@}
+
 ROOT_SOURCES =\
 	patima.c\
 	alm.c\
@@ -279,13 +294,8 @@ ROOT_SOURCES =\
 	kbd.c\
 	light.c\
 	mat.c\
-	mctr.c\
 	mem.c\
 	mem_fm24c64.c\
-	mexe.c\
-	mopr.c\
-	msg.c\
-	note.c\
 	prm.c\
 	ptimer.c\
 	rmd.c\
@@ -303,7 +313,6 @@ ROOT_SOURCES =\
 	trg.c\
 	wdt.c\
 	wire.c\
-	wrt.c\
 	zmr.c
 
 # Make automatic rules to get all objects files from all files in catalogs,
@@ -313,7 +322,11 @@ ${BUILD_DIR}/%.o: %.c
 	${CC} ${CFLAGS} -c -MD ${<} -o ${@}
 
 
-ALL_SOURCES = ${DRIVERS_SOURCES} ${DSP_SOURCES} ${MENU_CORE_SOURCES} ${ROOT_SOURCES}
+ALL_SOURCES = ${DRIVERS_SOURCES}\
+	      ${DSP_SOURCES}\
+	      ${MENU_CORE_SOURCES}\
+	      ${MENU_SOURCES}\
+	      ${ROOT_SOURCES}
 
 
 # Make full list of object files, each name is unique and consist from catalog
