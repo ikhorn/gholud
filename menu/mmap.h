@@ -641,6 +641,7 @@ usr_wnd_t menW_TempSens = {listTempSens, list_size(listTempSens)};
 void menu_I_TempSensSettings_Title(void);
 void menu_I_TempSensSettings_On(void);
 void menu_I_TempSensSettings_StatisticOn(void);
+void menu_I_TempSensSettings_Statistic(void);
 
 //array of item's handlers
 funcp_pr_t listTempSensSettings[] =
@@ -648,14 +649,44 @@ funcp_pr_t listTempSensSettings[] =
 	menu_I_TempSensSettings_Title,
 	menu_I_TempSensSettings_On,
 	menu_I_TempSensSettings_StatisticOn,
+	menu_I_TempSensSettings_Statistic,
 };
 usr_wnd_t menW_TempSensSettings = {listTempSensSettings, list_size(listTempSensSettings)};
 
 //item's numbers
 #define ITEM_TempSensSettings_On			1
+#define ITEM_TempSensSettings_StatisticOn		2
+#define ITEM_TempSensSettings_Statistic			3
 
 //input menus of items
-#define ENTERMENU_TempSensSettings_On			menW_---
+#define ENTERMENU_TempSensSettings_Statistic		menW_TempSensStatistic
+#define ENTERITEM_TempSensSettings_Statistic		ITEM_TempSensStatistic_DayFrom
+
+//------------------------------------------------------------------------------
+//				Temperature sensor statistic
+//------------------------------------------------------------------------------
+void menu_I_TempSensSettings_Title(void);
+void menu_I_TempSensStatistic_DayFrom(void);
+void menu_I_TempSensStatistic_Day(void);
+void menu_I_TempSensStatistic_Week(void);
+void menu_I_TempSensStatistic_Month(void);
+
+//array of item's handlers
+funcp_pr_t listTempSensStatistic[] =
+{
+	menu_I_TempSensSettings_Title,
+	menu_I_TempSensStatistic_DayFrom,
+	menu_I_TempSensStatistic_Day,
+	menu_I_TempSensStatistic_Week,
+	menu_I_TempSensStatistic_Month,
+};
+usr_wnd_t menW_TempSensStatistic = {listTempSensStatistic, list_size(listTempSensStatistic)};
+
+//item's numbers
+#define ITEM_TempSensStatistic_DayFrom			1
+
+//input menus of items
+#define ENTERMENU_TempSensStatistic_On			menW_---
 
 //------------------------------------------------------------------------------
 //						ПРОГРАММЫ

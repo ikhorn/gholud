@@ -1471,6 +1471,35 @@ void menu_I_TempSensSettings_StatisticOn(void)
 	menu_Navigate();
 }
 
+void menu_I_TempSensSettings_Statistic(void)
+{
+	menu_Navigate_(TempSensSettings_Statistic);
+}
+
+//------------------------------------------------------------------------------
+//				Temperature sensor statistic
+//------------------------------------------------------------------------------
+
+void menu_I_TempSensStatistic_DayFrom(void)
+{
+	menu_Navigate();
+}
+
+void menu_I_TempSensStatistic_Day(void)
+{
+	menu_Navigate();
+}
+
+void menu_I_TempSensStatistic_Week(void)
+{
+	menu_Navigate();
+}
+
+void menu_I_TempSensStatistic_Month(void)
+{
+	menu_Navigate();
+}
+
 //------------------------------------------------------------------------------
 //						НАСТР ДАТЧИКОВ ТЕМПЕРАТУРЫ
 //------------------------------------------------------------------------------
