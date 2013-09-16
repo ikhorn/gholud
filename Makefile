@@ -213,6 +213,8 @@ build_dir:
 	@mkdir -p $(BUILD_DIR)
 	@mkdir -p $(BUILD_DIR)/drivers
 	@mkdir -p $(BUILD_DIR)/dsp
+	@mkdir -p $(BUILD_DIR)/menucore
+	@mkdir -p $(BUILD_DIR)/menucore/prog
 
 program: $(BUILD_DIR)/$(TARGET).hex
 	sudo $(AVRDUDE) $(AVRDUDE_FLAGS) $(AVRDUDE_WRITE_FLASH) $(AVRDUDE_WRITE_EEPROM)
@@ -246,15 +248,28 @@ DSP_SOURCES =\
 ${BUILD_DIR}/dsp/%.o: dsp/%.c
 	${CC} ${CFLAGS} -c -MD ${<} -o ${@}
 
+MENU_CORE_SOURCES =\
+	menucore/usr.c\
+	menucore/prog/clc.c\
+	menucore/prog/ctmp.c\
+	menucore/prog/stw.c\
+
+# Make automatic rules to get all objects files from all files in catalogs,
+# including even files that is not in given object list made above.
+# Option -MD needed to generate .d files in order to include them.
+${BUILD_DIR}/menucore/%.o: menucore/%.c
+	${CC} ${CFLAGS} -c -MD ${<} -o ${@}
+
+${BUILD_DIR}/menucore/prog/%.o: menucore/prog/%.c
+	${CC} ${CFLAGS} -c -MD ${<} -o ${@}
+
 ROOT_SOURCES =\
 	patima.c\
 	alm.c\
 	arr.c\
 	bcd.c\
 	cint.c\
-	clc.c\
 	crc.c\
-	ctmp.c\
 	def.c\
 	delay.c\
 	dmem.c\
@@ -279,7 +294,6 @@ ROOT_SOURCES =\
 	sta.c\
 	stm.c\
 	stp.c\
-	stw.c\
 	tc0.c\
 	tc1.c\
 	tc3.c\
@@ -287,7 +301,6 @@ ROOT_SOURCES =\
 	tmp.c\
 	tmr.c\
 	trg.c\
-	usr.c\
 	wdt.c\
 	wire.c\
 	wrt.c\
@@ -300,7 +313,7 @@ ${BUILD_DIR}/%.o: %.c
 	${CC} ${CFLAGS} -c -MD ${<} -o ${@}
 
 
-ALL_SOURCES = ${DRIVERS_SOURCES} ${DSP_SOURCES} ${ROOT_SOURCES}
+ALL_SOURCES = ${DRIVERS_SOURCES} ${DSP_SOURCES} ${MENU_CORE_SOURCES} ${ROOT_SOURCES}
 
 
 # Make full list of object files, each name is unique and consist from catalog

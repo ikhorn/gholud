@@ -4,7 +4,7 @@
 #include "sgn.h"
 #include "def.h"
 #include "res.h"
-#include "usr.h"
+#include "menucore/usr.h"
 #include "msg.h"
 #include "dmem.h"
 

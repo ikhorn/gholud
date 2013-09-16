@@ -7,9 +7,9 @@
 #include "tmp.h"
 #include "rmd.h"
 #include "trg.h"
-#include "usr.h"
+#include "menucore/usr.h"
 #include "sgn.h"
-#include "stw.h"
+#include "menucore/prog/stw.h"
 #include "ptimer.h"
 #include "kbd.h"
 

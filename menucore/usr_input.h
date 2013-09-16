@@ -3,8 +3,8 @@
 */
 
 #include "usrc.h"
-#include "asci.h"
-#include "arr.h"
+#include "../asci.h"
+#include "../arr.h"
 
 //------------------------------------------------------------------------------
 //

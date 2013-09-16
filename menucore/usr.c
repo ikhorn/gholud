@@ -1,7 +1,7 @@
-#include "dsp/dsp.h"
+#include "../dsp/dsp.h"
 #include "usr.h"
-#include "stm.h"
-#include "prm.h"
+#include "../stm.h"
+#include "../prm.h"
 
 
 //------------------------------------------------------------------------------

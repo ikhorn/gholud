@@ -1,6 +1,6 @@
 #include "trg.h"
 #include "tmp.h"
-#include "usr.h"
+#include "menucore/usr.h"
 #include "msg.h"
 #include "def.h"
 #include "dmem.h"

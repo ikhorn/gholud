@@ -1,5 +1,5 @@
 #include "rtc.h"
-#include "usr.h"
+#include "menucore/usr.h"
 #include "dsp/dsp.h"
 #include "alm.h"
 #include "tmr.h"

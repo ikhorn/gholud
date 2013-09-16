@@ -1,6 +1,6 @@
 #include "rmd.h"
 #include "rtc.h"
-#include "usr.h"
+#include "menucore/usr.h"
 #include "msg.h"
 #include "sgn.h"
 #include "dmem.h"

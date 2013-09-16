@@ -1,5 +1,5 @@
 #include "err.h"
-#include "usr.h"
+#include "menucore/usr.h"
 #include "tdf.h"
 #include "tmp.h"
 #include "sgn.h"

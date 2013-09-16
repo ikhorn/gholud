@@ -1,9 +1,9 @@
 #include <math.h>
-#include "arr.h"
+#include "../../arr.h"
 #include "clc.h"
 #include "clcc.h"
-#include "dsp/dsp.h"
-#include "usr.h"
+#include "../../dsp/dsp.h"
+#include "../usr.h"
 
 
 //------------------------------------------------------------------------------

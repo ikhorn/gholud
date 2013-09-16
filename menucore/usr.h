@@ -68,7 +68,7 @@
 //
 
 #include "usrm.h"
-#include "pdef.h"
+#include "../pdef.h"
 
 #ifndef USR_TEMP_TYPE
 #define USR_TEMP_TYPE

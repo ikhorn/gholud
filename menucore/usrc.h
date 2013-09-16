@@ -2,8 +2,8 @@
  * обновлен.....................................................................07.03.2011 20:10:34
 */
 
-#include "pdef.h"
-#include "dsp/dsp.h"
+#include "../pdef.h"
+#include "../dsp/dsp.h"
 
 #ifndef USRC_H_
 #define USRC_H_

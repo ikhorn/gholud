@@ -1,6 +1,6 @@
 #include "stw.h"
-#include "dsp/dsp.h"
-#include "usr.h"
+#include "../../dsp/dsp.h"
+#include "../usr.h"
 #include "fstw.h"
 #include "bstw.h"
 
