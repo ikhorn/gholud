@@ -1470,6 +1470,9 @@ void menu_I_TempSensSettings_StatisticOn(void)
 
 void menu_I_TempSensSettings_Statistic(void)
 {
+	if (USR_IS_ENTER) {
+		usr_Set_InVar(uint8_t_a, usr_Get_Var(uint8_t_a));
+	}
 	menu_Navigate_(TempSensSettings_Statistic);
 }
 
