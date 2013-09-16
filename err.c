@@ -166,7 +166,7 @@ void err_Tmp_Rd_Usage(ubase_t snum)
 {
 	if (STA_IS_E(STA_MEM))
 		return;
-	tmp_Set_Usage(snum, DEF_TMP_USAGE);
+	tmp_Set_Usage(snum, DEF_TMP_SETTINGS);
 }
 
 //------------------------------------------------------------------------------

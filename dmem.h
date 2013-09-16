@@ -138,6 +138,7 @@ bool dmem_Rd_Rmd_Melody(ubase_t rnum, uint8_t* melody);
 //------------------------------------------------------------------------------
 //TMP
 //------------------------------------------------------------------------------
-bool dmem_Wr_Tmp_Usage(ubase_t snum , uint8_t use_sens);
-bool dmem_Rd_Tmp_Usage(ubase_t snum , uint8_t* use_sens);
+bool dmem_Wr_Tmp_Settings(ubase_t snum , uint8_t use_sens);
+bool dmem_Rd_Tmp_Settings(ubase_t snum , uint8_t* use_sens);
+bool dmem_Update_Tmp_Settings(ubase_t snum, uint8_t mask, uint8_t flags);
 

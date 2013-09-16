@@ -579,7 +579,7 @@ bool dmem_Rd_Trg_Type(ubase_t tnum, uint8_t* type)
 //TMP
 //------------------------------------------------------------------------------
 
-bool dmem_Wr_Tmp_Usage(ubase_t snum , uint8_t use_sens)
+bool dmem_Wr_Tmp_Settings(ubase_t snum, uint8_t use_sens)
 {
 	enum {PSIZE = 1, STEP = 2, SHIFT = 0};
 	uint32_t adr;
@@ -588,13 +588,32 @@ bool dmem_Wr_Tmp_Usage(ubase_t snum , uint8_t use_sens)
 	return false;
 }
 
-bool dmem_Rd_Tmp_Usage(ubase_t snum , uint8_t* use_sens)
+bool dmem_Rd_Tmp_Settings(ubase_t snum, uint8_t* use_sens)
 {
 	enum {PSIZE = 1, STEP = 2, SHIFT = 0};
 	uint32_t adr;
 	adr = DMEM_AD_TMP__ + SHIFT + STEP*(uint32_t)snum;
 	if (mem_Read_Param(adr, use_sens, PSIZE)) return true;
 	err_Tmp_Rd_Usage(snum);
+	return false;
+}
+
+/*
+ * dmem_Update_Tmp_Usage - update flags in tmp settings
+ */
+bool dmem_Update_Tmp_Settings(ubase_t snum, uint8_t mask, uint8_t flags)
+{
+	uint8_t usage;
+
+	if (!dmem_Rd_Tmp_Settings(snum, &usage))
+		return false;
+
+	usage &= ~(mask);
+	usage |= flags;
+
+	if (dmem_Wr_Tmp_Settings(snum , usage))
+		return true;
+
 	return false;
 }
 

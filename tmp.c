@@ -15,7 +15,7 @@ void tmp_Ini(void)
 {
 	for (ubase_t i=0; i<TMP_NUM; i++) {
 		uint8_t use_sens;
-		if (!dmem_Rd_Tmp_Usage(i ,&use_sens))
+		if (!dmem_Rd_Tmp_Settings(i ,&use_sens))
 			return;
 
 		if (use_sens)
@@ -71,18 +71,18 @@ bool tmp_Set_Usage(ubase_t sens, uint8_t use_state)
 		CLRB(gTmp.state_vector, sens);
 	}
 
-	if (!dmem_Wr_Tmp_Usage(sens, use_state))
+	if (!dmem_Wr_Tmp_Settings(sens, use_state))
 		return 0;
 
 	return 1;
 }
 
 /*
- * tmp_Default - записывает значения по умолчанию
+ * tmp_Default - set default settings
  */
 void tmp_Default(ubase_t snum)
 {
-	dmem_Wr_Tmp_Usage(snum, DEF_TMP_USAGE);
+	dmem_Wr_Tmp_Settings(snum, DEF_TMP_SETTINGS);
 }
 
 
