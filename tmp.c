@@ -95,14 +95,14 @@ bool tmp_Set_Usage(ubase_t sens, uint8_t use_state)
  */
 bool tmp_Set_Statistic_Usage(ubase_t sens, uint8_t use_state)
 {
-	if (!dmem_Update_Tmp_Settings(sens, TMP_SENS_STAT_USAGE,
-				      use_state ? TMP_SENS_STAT_USAGE: 0))
-		return 0;
-
 	if (use_state)
 		SETB(gTmp.state_stat_vector, sens);
 	else
 		CLRB(gTmp.state_stat_vector, sens);
+
+	if (!dmem_Update_Tmp_Settings(sens, TMP_SENS_STAT_USAGE,
+				      use_state ? TMP_SENS_STAT_USAGE: 0))
+		return 0;
 
 	return 1;
 }
