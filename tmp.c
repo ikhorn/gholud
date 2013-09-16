@@ -5,6 +5,8 @@
 #include "dmem.h"
 #include "delay.h"
 
+#define TMP_SENS_USAGE		0x01
+
 
 gtmp_t gTmp;
 
@@ -14,11 +16,11 @@ static void tmp_Rd_Ds18B20_TmpCode(void);
 void tmp_Ini(void)
 {
 	for (ubase_t i=0; i<TMP_NUM; i++) {
-		uint8_t use_sens;
-		if (!dmem_Rd_Tmp_Settings(i ,&use_sens))
+		uint8_t settings;
+		if (!dmem_Rd_Tmp_Settings(i ,&settings))
 			return;
 
-		if (use_sens)
+		if (settings & TMP_SENS_USAGE)
 			SETB(gTmp.state_vector, i);
 		else
 			CLRB(gTmp.state_vector, i);
@@ -71,7 +73,8 @@ bool tmp_Set_Usage(ubase_t sens, uint8_t use_state)
 		CLRB(gTmp.state_vector, sens);
 	}
 
-	if (!dmem_Wr_Tmp_Settings(sens, use_state))
+	if (!dmem_Update_Tmp_Settings(sens, TMP_SENS_USAGE,
+				      use_state ? TMP_SENS_USAGE : 0))
 		return 0;
 
 	return 1;
