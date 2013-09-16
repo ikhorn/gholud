@@ -65,12 +65,16 @@ bool tmp_Set_Usage(ubase_t sens, uint8_t use_state)
 			if (sens) {
 				STA_N(STA_TMP_1);
 				TMP_2_SET_TMR();
-				if (!ds18b20_Ini())
+				if (!ds18b20_Ini()) {
 					err_Ds18b20();
+					return 0;
+				}
 			} else {
 				STA_N(STA_TMP_2);
-				if (!ds1631_Ini())
+				if (!ds1631_Ini()) {
 					err_Ds1631();
+					return 0;
+				}
 			}
 		}
 		SETB(gTmp.state_vector, sens);
