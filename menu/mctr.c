@@ -1458,7 +1458,7 @@ void menu_I_TempSensSettings_StatisticOn(void)
 
 	use_statistic = !!CHKB(gTmp.state_stat_vector, usr_Get_Var(uint8_t_a));
 
-	mopr_Disp_CheckmarkStr(note_use_statistic, use_statistic);
+	mopr_Disp_CheckmarkStr(note_use_log, use_statistic);
 
 	if (USR_IS_ENTER) {
 		tmp_Set_Statistic_Usage(usr_Get_Var(uint8_t_a), !use_statistic);
@@ -1470,6 +1470,8 @@ void menu_I_TempSensSettings_StatisticOn(void)
 
 void menu_I_TempSensSettings_Statistic(void)
 {
+	usr_Disp_Str(note_log);
+
 	if (USR_IS_ENTER) {
 		usr_Set_InVar(uint8_t_a, usr_Get_Var(uint8_t_a));
 	}
