@@ -309,6 +309,7 @@ ROOT_SOURCES =\
 	tc3.c\
 	tdf.c\
 	tmp.c\
+	tmp_logger.c\
 	tmr.c\
 	trg.c\
 	wdt.c\
