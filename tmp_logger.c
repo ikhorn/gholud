@@ -1,5 +1,9 @@
 #include "tmp_logger.h"
+#include "wbuf.h"
 
+static void tmplog_roll_day(struct tmp_logger *logger);
+static void tmplog_roll_week(struct tmp_logger *logger);
+static void tmplog_roll_month(struct tmp_logger *logger);
 static void tmplog_trigger(struct tmp_logger *logger);
 
 /*
@@ -19,16 +23,24 @@ void tmplog_init(struct tmp_logger *logger, time_t *time, date_t *date, int16_t*
 	logger->date = date;
 	logger->value = value;
 
+	wbuf_init(logger->last_days);
+	wbuf_init(logger->last_weeks);
+	wbuf_init(logger->last_monthes);
+
+	tmplog_roll_day(logger);
+	tmplog_roll_week(logger);
+	tmplog_roll_month(logger);
+
 	for (int i=0; i<TMPLOG_DAY_COUNT; i++) {
-		logger->last_days[i].date = 0;
+		logger->last_days.array[i].date = 0;
 	}
 
 	for (int i=0; i<TMPLOG_WEEK_COUNT; i++) {
-		logger->last_weeks[i].max.date = 0;
+		logger->last_weeks.array[i].max.date = 0;
 	}
 
 	for (int i=0; i<TMPLOG_MONTH_COUNT; i++) {
-		logger->last_month[i].max.date = 0;
+		logger->last_monthes.array[i].max.date = 0;
 	}
 }
 
@@ -37,82 +49,140 @@ void tmplog_init(struct tmp_logger *logger, time_t *time, date_t *date, int16_t*
  */
 void tmplog_log(struct tmp_logger *logger)
 {
+	struct tmp_day *day;
+	struct tmp_week *week;
+	struct tmp_month *month;
+	wbuf_getlast(logger->last_days, day);
+	wbuf_getlast(logger->last_weeks, week);
+	wbuf_getlast(logger->last_monthes, month);
+
 	tmplog_trigger(logger);
 
-	if (*logger->value > logger->last_days[0].max.value) {
-		logger->last_days[0].max.hour = logger->time->hour;
-		logger->last_days[0].max.min = logger->time->min;
-		logger->last_days[0].max.value = *logger->value;
+	if (*logger->value > day->max.value) {
+		day->max.hour = logger->time->hour;
+		day->max.min = logger->time->min;
+		day->max.value = *logger->value;
 
-		if (*logger->value > logger->last_weeks[0].max.value) {
-			logger->last_weeks[0].max.date = logger->date->date;
-			logger->last_weeks[0].max.month = logger->date->month;
-			logger->last_weeks[0].max.hour = logger->time->hour;
-			logger->last_weeks[0].max.min = logger->time->min;
-			logger->last_weeks[0].max.value = *logger->value;
+		if (*logger->value > week->max.value) {
+			week->max.date = logger->date->date;
+			week->max.month = logger->date->month;
+			week->max.hour = logger->time->hour;
+			week->max.min = logger->time->min;
+			week->max.value = *logger->value;
 
-			if (*logger->value > logger->last_month[0].max.value) {
-				logger->last_month[0].max.date = logger->date->date;
-				logger->last_month[0].max.month = logger->date->month;
-				logger->last_month[0].max.hour = logger->time->hour;
-				logger->last_month[0].max.min = logger->time->min;
-				logger->last_month[0].max.value = *logger->value;
+			if (*logger->value > month->max.value) {
+				month->max.date = logger->date->date;
+				month->max.hour = logger->time->hour;
+				month->max.min = logger->time->min;
+				month->max.value = *logger->value;
 			}
 		}
 	}
 
-	if (*logger->value < logger->last_days[0].min.value) {
-		logger->last_days[0].min.hour = logger->time->hour;
-		logger->last_days[0].min.min = logger->time->min;
-		logger->last_days[0].min.value = *logger->value;
+	if (*logger->value > day->min.value) {
+		day->min.hour = logger->time->hour;
+		day->min.min = logger->time->min;
+		day->min.value = *logger->value;
 
-		if (*logger->value > logger->last_weeks[0].min.value) {
-			logger->last_weeks[0].min.date = logger->date->date;
-			logger->last_weeks[0].min.month = logger->date->month;
-			logger->last_weeks[0].min.hour = logger->time->hour;
-			logger->last_weeks[0].min.min = logger->time->min;
-			logger->last_weeks[0].min.value = *logger->value;
+		if (*logger->value > week->min.value) {
+			week->min.date = logger->date->date;
+			week->min.month = logger->date->month;
+			week->min.hour = logger->time->hour;
+			week->min.min = logger->time->min;
+			week->min.value = *logger->value;
 
-			if (*logger->value > logger->last_month[0].min.value) {
-				logger->last_month[0].min.date = logger->date->date;
-				logger->last_month[0].min.month = logger->date->month;
-				logger->last_month[0].min.hour = logger->time->hour;
-				logger->last_month[0].min.min = logger->time->min;
-				logger->last_month[0].max.value = *logger->value;
+			if (*logger->value > month->max.value) {
+				month->min.date = logger->date->date;
+				month->min.hour = logger->time->hour;
+				month->min.min = logger->time->min;
+				month->min.value = *logger->value;
 			}
 		}
 	}
 }
 
 /*
- * tmplog_init_day_info - init new day information by current value
+ * tmplog_roll_day - add new day information by currnet
  */
-static void tmplog_init_day_info(struct tmp_logger *logger)
+static void tmplog_roll_day(struct tmp_logger *logger)
 {
-	logger->last_days[0].date = logger->date->date;
-	logger->last_days[0].month = logger->date->month;
-	logger->last_days[0].max.hour = logger->time->hour;
-	logger->last_days[0].max.min = logger->time->min;
-	logger->last_days[0].max.value = *logger->value;
-	logger->last_days[0].min.hour = logger->time->hour;
-	logger->last_days[0].min.hour = logger->time->min;
-	logger->last_days[0].min.value = *logger->value;
+	struct tmp_day *new_day;
+	wbuf_getnext(logger->last_days, new_day);
+
+	new_day->date = logger->date->date;
+	new_day->month = logger->date->month;
+
+	new_day->max.hour = logger->time->hour;
+	new_day->max.min = logger->time->min;
+	new_day->max.value = *logger->value;
+
+	new_day->min.hour = logger->time->hour;
+	new_day->min.min = logger->time->min;
+	new_day->min.value = *logger->value;
 }
 
+/*
+ * tmplog_roll_week - add new week information by currnet
+ */
+static void tmplog_roll_week(struct tmp_logger *logger)
+{
+	struct tmp_week *new_week;
+	wbuf_getnext(logger->last_weeks, new_week);
+
+	new_week->max.date = logger->date->date;
+	new_week->max.month = logger->date->month;
+	new_week->max.hour = logger->time->hour;
+	new_week->max.min = logger->time->min;
+	new_week->max.value = *logger->value;
+
+	new_week->min.date = logger->date->date;
+	new_week->min.month = logger->date->month;
+	new_week->min.hour = logger->time->hour;
+	new_week->min.min = logger->time->min;
+	new_week->min.value = *logger->value;
+}
+
+/*
+ * tmplog_roll_month - add new month information by currnet
+ */
+static void tmplog_roll_month(struct tmp_logger *logger)
+{
+	struct tmp_month *new_month;
+	wbuf_getnext(logger->last_monthes, new_month);
+
+	new_month->month = logger->date->month;
+
+	new_month->max.date = logger->date->date;
+	new_month->max.hour = logger->time->hour;
+	new_month->max.min = logger->time->min;
+	new_month->max.value = *logger->value;
+
+	new_month->min.date = logger->date->date;
+	new_month->min.hour = logger->time->hour;
+	new_month->min.min = logger->time->min;
+	new_month->min.value = *logger->value;
+}
 /*
  * tmplog_trigger - trigger logger history. If day is changed then save it in
  * last_days stack, for weeks and month does the same.
  */
 static void tmplog_trigger(struct tmp_logger *logger)
 {
-	if (logger->date->date != logger->last_days[0].date) {
-		/* resort day stack */
-		for (int i=TMPLOG_DAY_COUNT-1; i; i--) {
-			logger->last_days[i] = logger->last_days[i-1];
-		}
+	struct tmp_day *day;
+	struct tmp_month *month;
+	wbuf_getlast(logger->last_days, day);
 
-		tmplog_init_day_info(logger);
+	/* day has been triggered */
+	if (logger->date->date != day->date) {
+		tmplog_roll_day(logger);
 
-		/* resort week stack */
+		/* week has been triggered */
+		if (tdf_Date_to_Day(logger->date) == DAY_MON)
+			tmplog_roll_week(logger);
+
+		/* month has been triggered */
+		wbuf_getlast(logger->last_monthes, month);
+		if (logger->date->month != month->month)
+			tmplog_roll_month(logger);
 	}
 }

@@ -7,6 +7,7 @@
 
 #include "bcd.h"
 #include "tdf.h"
+#include "wbuf.h"
 
 /* points that indication is not logged */
 #define TMPLOG_NOT_LOGGED		0
@@ -23,7 +24,14 @@
  * min - minutes of indication
  * tmp_code - code of temperature (needs to be converted to see)
  */
-struct tmp_indication
+struct tmp_indication_day
+{
+	bcd_t hour;
+	bcd_t min;
+	int16_t value;
+};
+
+struct tmp_indication_week
 {
 	bcd_t date;
 	bcd_t month;
@@ -32,8 +40,9 @@ struct tmp_indication
 	int16_t value;
 };
 
-struct tmp_indication_day
+struct tmp_indication_month
 {
+	bcd_t date;
 	bcd_t hour;
 	bcd_t min;
 	int16_t value;
@@ -55,8 +64,8 @@ struct tmp_day
  */
 struct tmp_week
 {
-	struct tmp_indication max;
-	struct tmp_indication min;
+	struct tmp_indication_week max;
+	struct tmp_indication_week min;
 };
 
 /*
@@ -64,8 +73,9 @@ struct tmp_week
  */
 struct tmp_month
 {
-	struct tmp_indication max;
-	struct tmp_indication min;
+	bcd_t month;
+	struct tmp_indication_month max;
+	struct tmp_indication_month min;
 };
 
 /*
@@ -78,9 +88,9 @@ struct tmp_logger
 	time_t *time;
 	date_t *date;
 	int16_t *value;
-	struct tmp_day last_days[TMPLOG_DAY_COUNT];
-	struct tmp_week last_weeks[TMPLOG_WEEK_COUNT];
-	struct tmp_month last_month[TMPLOG_MONTH_COUNT];
+	WBUF_DECLARE(struct tmp_day, TMPLOG_DAY_COUNT, last_days);
+	WBUF_DECLARE(struct tmp_week, TMPLOG_WEEK_COUNT, last_weeks);
+	WBUF_DECLARE(struct tmp_month, TMPLOG_MONTH_COUNT, last_monthes);
 };
 
 void tmplog_init(struct tmp_logger *logger, time_t *time, date_t *date, int16_t* value);
