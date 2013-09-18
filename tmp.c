@@ -1,3 +1,7 @@
+/*
+ * temperature sensor module
+*/
+
 #include "tmp.h"
 #include "trg.h"
 #include "err.h"
@@ -157,6 +161,4 @@ static void tmp_Rd_Ds18B20_TmpCode(void)
 
 	err_Ds18b20();
 }
-
-
 

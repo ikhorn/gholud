@@ -1,15 +1,11 @@
-/* Модуль датчиков измерения температуры
- * проэкт.......................................................................ЖОЛУДЬ
- * обновлен.....................................................................21.12.2010 16:55:23
-*/
+#ifndef TMP_SENSOR
+#define TMP_SENSOR
 
 #include "drivers/ds1631.h"
 #include "drivers/ds18b20.h"
 
 #define TMP_NUM								2
 
-#ifndef TMP
-#define TMP
 typedef struct
 {
 	int16_t code[2];
@@ -17,7 +13,6 @@ typedef struct
 	uint8_t state_stat_vector;
 	ubase_t timer_2;
 } gtmp_t;
-#endif
 
 extern gtmp_t gTmp;
 
@@ -43,3 +38,5 @@ void tmp_Default(ubase_t snum);
 		ds18b20_Ini();															\
 	STM_END_ACT																	\
 }
+
+#endif
