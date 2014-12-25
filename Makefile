@@ -188,7 +188,8 @@ AVRDUDE_FLAGS += $(AVRDUDE_ERASE_COUNTER)
 
 SHELL = sh
 #CC = avr-gcc
-CC = avr-gcc-4.7.2
+#CC = avr-gcc-4.7.2
+CC = avr-gcc-4.8.2
 LD = avr-ld
 
 OBJCOPY = avr-objcopy
