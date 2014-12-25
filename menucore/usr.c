@@ -58,11 +58,11 @@ void usr_Ini(void)
 		else
 			gUsr.str[s] = menu_I_StrByDefault;
 	}
-	
+
 	gUsr.exe_handler = usr_Execute_Default;
 	gUsr.sp->act_strnum = 0;/////////////////////////////////////////////////////////////
-	
-	gUsr.sp = gUsr.rstack;	
+
+	gUsr.sp = gUsr.rstack;
 	gUsr.sp->window = wrtW_Ini;
 	gUsr.sp->pnum = 0;/////////////////////////////////////////////////////////////
 	gUsr.sp->wtype = USR_WND_WRT;
@@ -70,16 +70,16 @@ void usr_Ini(void)
 	gUsr.refresh = true;
 	gUsr.write = false;
 	gUsr.execute = false;
-	
+
 	gUsr.msg_ebl = true;
 #if USRC_USE_ASK_MSG == 1
 	gUsr.ask_msg = false;
 	gUsr.ans_msg = false;
 #endif
-	
+
 	STM_OFF(gUsr.t_msg);
 	STM_OFF(gUsr.t_sym_input);
-	
+
 	gUsr.layout = 'A'-1;
 }
 
@@ -91,32 +91,32 @@ void usr(void)
 	if (!(gKey || gUsr.refresh)) return;
 	usr_Key = gKey; gKey = 0;
 	gUsr.refresh = false;
-	
+
 #if USRC_USE_ASK_MSG == 1
-	
+
 	if (gUsr.ans_msg)															//если сообщение пропустили - стереть его
 	{
 		gUsr.ans_msg = false;
 		gUsr.ask_msg = false;
 	}
-	
+
 #endif
-	
+
 	stp_Handler();																//обработчик статус панели
-//	
+//
 //	gUsr.strnum = 0;															//обработать заглавную строку
 //	if (USR_WND_WRT == gUsr.sp->wtype) gUsr.strtype = USRC_WRT_TYPE_TITLE_STR;
 //	else if (USR_WND_MENU == gUsr.sp->wtype) gUsr.strtype = USRC_MENU_TYPE_TITLE_STR;
 //	else gUsr.strtype = STM_IS_2TICK ? DSP_STR_WOW_PUTTED:DSP_STR_SPACE_PUTTED;
 //	gUsr.str[0]();
-//	
+//
 //	for (gUsr.strnum=1; gUsr.strnum< USRC_STRNUM; gUsr.strnum++)				//обработать остальные строки
 //	{
 //		if (gUsr.strnum == gUsr.sp->act_strnum) gUsr.strtype = USRC_TYPE_ACTITEM_STR;
 //		else gUsr.strtype = USRC_TYPE_ITEM_STR;
 //		gUsr.str[gUsr.strnum]();
 //	}
-//	
+//
 	gUsr.strnum = 0;															//обработать заглавную строку
 	if (gUsr.sp->wtype < USR_WND_MENU) gUsr.strtype = USRC_TYPE_ITEM_STR;
 	else if (USR_WND_MENU == gUsr.sp->wtype) gUsr.strtype = USRC_MENU_TYPE_TITLE_STR;
@@ -124,9 +124,9 @@ void usr(void)
 	else gUsr.strtype = STM_IS_2TICK ? USRC_MSG_TYPE_TITLE_STR:USRC_TYPE_ITEM_STR;
 #elif USRC_DISP_REFRESH_FRQ == ___USRC_TWO_SYSTICK
 	else gUsr.strtype = STM_IS_4TICK ? USRC_MSG_TYPE_TITLE_STR:USRC_TYPE_ITEM_STR;
-#endif 
+#endif
 	gUsr.str[0]();
-	
+
 	for (gUsr.strnum=1; gUsr.strnum< USRC_STRNUM; gUsr.strnum++)				//обработать остальные строки
 	{
 		if (gUsr.strnum == gUsr.sp->act_strnum && USR_WND_MENU == gUsr.sp->wtype)
@@ -233,7 +233,7 @@ void usr_Open_Window(void)
 			gUsr.str[a] = usr_Rd_Item(open_window, i);
 		}
 	}
-	gUsr.refresh = true;	
+	gUsr.refresh = true;
 }
 
 
@@ -244,7 +244,7 @@ void usr_ScrollUp_Window(void)
 	ubase_t typesize;
 	if (gUsr.sp->wtype >= USR_WND_MENU) typesize = 1;							//если тип окна - меню или сообщение
 	else typesize = 0;															//если рабочий стол или пространство
-	
+
 	if (window_size_ < USRC_STRNUM)												//строк < чем на мониторе
 	{
 		if (gUsr.sp->act_strnum > typesize)
@@ -262,7 +262,7 @@ void usr_ScrollUp_Window(void)
 	{
 		if (gUsr.sp->pnum > typesize) --gUsr.sp->pnum;
 		else gUsr.sp->pnum = window_size_;
-	
+
 		if (gUsr.sp->act_strnum > typesize) --gUsr.sp->act_strnum;
 		else																	//листануть
 		{
@@ -281,7 +281,7 @@ void usr_ScrollDown_Window(void)
 	ubase_t typesize;
 	if (gUsr.sp->wtype >= USR_WND_MENU) typesize = 1;							//если тип окна - меню или сообщение
 	else typesize = 0;															//если рабочий стол или пространство
-	
+
 	if (window_size_ < USRC_STRNUM)												//строк < чем на мониторе
 	{
 		if (gUsr.sp->act_strnum < window_size_)
@@ -299,7 +299,7 @@ void usr_ScrollDown_Window(void)
 	{
 		if (gUsr.sp->pnum < window_size_) gUsr.sp->pnum++;						//назначить новый пункт
 		else gUsr.sp->pnum = typesize;
-							
+
 		enum {MAX_ACT_STRNUM = USRC_STRNUM-1};
 		if (gUsr.sp->act_strnum < MAX_ACT_STRNUM) gUsr.sp->act_strnum++;
 		else
@@ -332,7 +332,7 @@ void usr_ScrollDown_Window(void)
 //	{
 //		if (gUsr.sp->pnum > 1) --gUsr.sp->pnum;
 //		else gUsr.sp->pnum = window_size_;
-//	
+//
 //		if (gUsr.sp->act_strnum > 1) --gUsr.sp->act_strnum;
 //		else																	//листануть
 //		{
@@ -364,7 +364,7 @@ void usr_ScrollDown_Window(void)
 //	{
 //		if (gUsr.sp->pnum < window_size_) gUsr.sp->pnum++;						//назначить новый пункт
 //		else gUsr.sp->pnum = 1;
-//		
+//
 //		enum {MAX_ACT_STRNUM = USRC_STRNUM-1};
 //		if (gUsr.sp->act_strnum < MAX_ACT_STRNUM) gUsr.sp->act_strnum++;
 //		else
@@ -375,4 +375,3 @@ void usr_ScrollDown_Window(void)
 //	}
 //	gUsr.refresh = true;
 //}
-
