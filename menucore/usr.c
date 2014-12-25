@@ -10,7 +10,7 @@
 
 no_init_ gusr_t gUsr;
 extern ubase_t gKey;
-extern usr_wnd_t wrtW_Ini;
+extern usr_wnd_t *wrtW_Ini;
 
 void usr_Open_Window(void);														//---открывает текущее окно
 void usr_ScrollUp_Window(void);													//---прокручивает окно вверх
@@ -51,10 +51,10 @@ void usr_Ini(void)
 	for (ubase_t s=0; s < USRC_STRNUM; s++)										//проинициализировать текущие обработчики строк
 	{
 		ubase_t wnd_size;
-		wnd_size = usr_Rd_WndSize(&wrtW_Ini);
+		wnd_size = usr_Rd_WndSize(wrtW_Ini);
 		if (s < wnd_size)
 			//gUsr.str[s] = wrtW_Ini.item[s];
-			gUsr.str[s] = usr_Rd_Item(&wrtW_Ini, s);
+			gUsr.str[s] = usr_Rd_Item(wrtW_Ini, s);
 		else
 			gUsr.str[s] = menu_I_StrByDefault;
 	}
@@ -63,7 +63,7 @@ void usr_Ini(void)
 	gUsr.sp->act_strnum = 0;/////////////////////////////////////////////////////////////
 	
 	gUsr.sp = gUsr.rstack;	
-	gUsr.sp->window = &wrtW_Ini;
+	gUsr.sp->window = wrtW_Ini;
 	gUsr.sp->pnum = 0;/////////////////////////////////////////////////////////////
 	gUsr.sp->wtype = USR_WND_WRT;
 

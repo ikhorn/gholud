@@ -48,23 +48,23 @@ usrcw_ func_t* const listInf[] =
 usr_wnd_t wrtW_Inf = {listInf, list_size(listInf)};
 //рабочие столы для перехода
 #define LEFTWRT_Inf							wrtW_LunarPhase
-#define RIGHTWRT_Inf						wrtW_Ini
+#define RIGHTWRT_Inf						wrtW_TimeDate
 
 //------------------------------------------------------------------------------
 //								 ВРЕМЯ/ДАТА
 //------------------------------------------------------------------------------
-void wrt_I_Ini_Time(void);
-void wrt_I_Ini_Date(void);
+void wrt_I_TimeDate_Time(void);
+void wrt_I_TimeDate_Date(void);
 //массив обработчиков пунктов
-usrcw_ func_t* const listIni[] =
+usrcw_ func_t* const listWrtTimeDate[] =
 {
- 	wrt_I_Ini_Time,
- 	wrt_I_Ini_Date,
+ 	wrt_I_TimeDate_Time,
+ 	wrt_I_TimeDate_Date,
 };
-usr_wnd_t wrtW_Ini = {listIni, list_size(listIni)};
+usr_wnd_t wrtW_TimeDate = {listWrtTimeDate, list_size(listWrtTimeDate)};
 //рабочие столы для перехода
-#define LEFTWRT_INI							wrtW_Inf
-#define RIGHTWRT_INI						wrtW_TimeTemp
+#define LEFTWRT_TIMEDATE					wrtW_Inf
+#define RIGHTWRT_TIMEDATE					wrtW_TimeTemp
 
 //------------------------------------------------------------------------------
 //								 ВРЕМЯ/ТЕМПЕРАТУРА
@@ -79,7 +79,7 @@ usrcw_ func_t* const listTimeTemp[] =
 };
 usr_wnd_t wrtW_TimeTemp = {listTimeTemp, list_size(listTimeTemp)};
 //рабочие столы для перехода
-#define LEFTWRT_TIMETEMP					wrtW_Ini
+#define LEFTWRT_TIMETEMP					wrtW_TimeDate
 #define RIGHTWRT_TIMETEMP					wrtW_Bd
 
 //------------------------------------------------------------------------------
@@ -154,7 +154,8 @@ usr_wnd_t wrtW_Np = {listNp, list_size(listNp)};
 #define DOWNWRT_NP							wrtW_Bd
 #define UPWRT_NP							wrtW_Tr
 
-
+/* setup initialization window, it's also a default window */
+usr_wnd_t *wrtW_Ini = &wrtW_TimeTemp;
 
 //------------------------------------------------------------------------------
 //пункты
@@ -177,18 +178,18 @@ void wrt_I_Inf_Version(void)
 //								 ВРЕМЯ/ДАТА
 //------------------------------------------------------------------------------
 
-void wrt_I_Ini_Time(void)
+void wrt_I_TimeDate_Time(void)
 {
 	mopr_Disp_RtcTime();
 }
 
-void wrt_I_Ini_Date(void)
+void wrt_I_TimeDate_Date(void)
 {
 	mopr_Disp_RtcDate();
     const usr_wnd_t* right_wnd;
-    if (CHKB(gTmp.state_vector, 0) || CHKB(gTmp.state_vector, 1)) right_wnd = &RIGHTWRT_INI;
+    if (CHKB(gTmp.state_vector, 0) || CHKB(gTmp.state_vector, 1)) right_wnd = &RIGHTWRT_TIMEDATE;
     else right_wnd = &RIGHTWRT_TIMETEMP;
- 	wrt_Scan_Key(&LEFTWRT_INI, right_wnd);
+ 	wrt_Scan_Key(&LEFTWRT_TIMEDATE, right_wnd);
 }
 
 //------------------------------------------------------------------------------
